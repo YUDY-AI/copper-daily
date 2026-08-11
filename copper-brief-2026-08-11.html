@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COPPER DAILY｜Peter 專屬銅金屬情報｜2026年8月11日</title>
+<style>
+  /* === 全域設定 === */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background-color: #f5f0eb;
+    color: #2d1a0e;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px 48px;
+  }
+
+  /* === 報頭 Masthead === */
+  .masthead {
+    background: linear-gradient(135deg, #2d1a0e 0%, #7c3a10 100%);
+    padding: 18px 28px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 18px rgba(44,26,14,0.3);
+    margin-bottom: 0;
+  }
+  .masthead-left {}
+  .masthead-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #f5c87a;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+  .masthead-subtitle {
+    font-size: 0.85rem;
+    color: #e0c4a0;
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+  .masthead-date {
+    text-align: right;
+    color: #e0c4a0;
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+  .masthead-date span {
+    display: block;
+    font-size: 1.05rem;
+    color: #f5c87a;
+    font-weight: 600;
+  }
+
+  /* === 彩帶分隔線 === */
+  .divider-tape {
+    height: 5px;
+    background: linear-gradient(90deg, #e07b39 0%, #f5c87a 50%, #e07b39 100%);
+    margin-bottom: 22px;
+  }
+
+  /* === 頭條 Hero === */
+  .hero {
+    background: linear-gradient(135deg, #2d1a0e 0%, #5a2a08 60%, #7c3a10 100%);
+    border-radius: 10px;
+    padding: 28px 32px 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 24px rgba(44,26,14,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "★ BREAKING";
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: #e07b39;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.12em;
+  }
+  .hero-label {
+    font-size: 0.7rem;
+    color: #f5c87a;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .hero-headline {
+    font-family: Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #f5c87a;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    border-left: 4px solid #e07b39;
+    padding-left: 14px;
+  }
+  .hero-body {
+    color: #e0d0b8;
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+  .hero-body p { margin-bottom: 6px; }
+  .hero-body strong { color: #f5c87a; }
+
+  /* === 儀表板 Dashboard === */
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: #7c3a10;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-left: 2px;
+  }
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    gap: 14px;
+    margin-bottom: 26px;
+  }
+  .dash-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 18px 14px;
+    box-shadow: 0 2px 12px rgba(44,26,14,0.1);
+    border-top: 4px solid #7c3a10;
+    position: relative;
+  }
+  .dash-card .dc-label {
+    font-size: 0.7rem;
+    color: #8a6652;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .dash-card .dc-value {
+    font-family: Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #2d1a0e;
+    line-height: 1.1;
+  }
+  .dash-card .dc-unit {
+    font-size: 0.75rem;
+    color: #8a6652;
+    font-weight: 400;
+    margin-left: 4px;
+  }
+  .dc-change {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  .dc-change.up { color: #d32f2f; }
+  .dc-change.down { color: #2e7d32; }
+  .dc-sub {
+    font-size: 0.72rem;
+    color: #8a6652;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #e0d0b8;
+  }
+  .backwardation-badge {
+    display: inline-block;
+    background: #e07b39;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .contango-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  /* === 區段卡片 === */
+  .section-card {
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 14px rgba(44,26,14,0.08);
+  }
+  .sc-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(255,255,255,0.35);
+  }
+  .sc-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+  .sc-title {
+    font-family: Georgia, serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+  }
+  .sc-item {
+    margin-bottom: 16px;
+  }
+  .sc-item:last-child { margin-bottom: 0; }
+  .sc-item-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sc-item-body {
+    font-size: 0.87rem;
+    line-height: 1.72;
+    opacity: 0.92;
+  }
+  .sc-impact {
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    opacity: 0.82;
+    padding-left: 10px;
+    border-left: 2px solid rgba(255,255,255,0.4);
+  }
+  .price-tag {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-weight: 700;
+    background: rgba(255,255,255,0.25);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  /* 廢銅（銅棕色系） */
+  .card-scrap {
+    background: linear-gradient(135deg, #7c3a10 0%, #9a4d1a 100%);
+    color: #f5ece0;
+  }
+  .card-scrap .sc-title { color: #f5c87a; }
+  .card-scrap .sc-item-title { color: #f5c87a; }
+  .card-scrap .sc-impact { border-color: #f5c87a80; color: #f5c87a; }
+
+  /* 政策貿易（橘色系） */
+  .card-policy {
+    background: linear-gradient(135deg, #bf5a0f 0%, #d97c35 100%);
+    color: #fff0e0;
+  }
+  .card-policy .sc-title { color: #fff; }
+  .card-policy .sc-item-title { color: #fff8e8; }
+  .card-policy .sc-impact { border-color: #fff8; color: #ffe8cc; }
+
+  /* 供需動態（藍色系） */
+  .card-supply {
+    background: linear-gradient(135deg, #1565c0 0%, #1e88e5 100%);
+    color: #e8f4fd;
+  }
+  .card-supply .sc-title { color: #fff; }
+  .card-supply .sc-item-title { color: #fff; }
+  .card-supply .sc-impact { border-color: #ffffff80; color: #c8e4fc; }
+
+  /* 物流航運（青色系） */
+  .card-shipping {
+    background: linear-gradient(135deg, #00695c 0%, #00897b 100%);
+    color: #e0f5f2;
+  }
+  .card-shipping .sc-title { color: #fff; }
+  .card-shipping .sc-item-title { color: #a7ffeb; }
+  .card-shipping .sc-impact { border-color: #ffffff80; color: #b2dfdb; }
+  .route-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    font-size: 0.87rem;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .route-row .route-name { font-weight: 700; color: #a7ffeb; flex: 0 0 auto; }
+  .route-row .route-price { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 700; color: #fff; }
+  .route-row .route-status {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .status-tight { background: #ff7043; color: #fff; }
+  .status-normal { background: #66bb6a; color: #fff; }
+  .status-loose { background: #29b6f6; color: #fff; }
+
+  /* 戰爭地緣（紅色系） */
+  .card-geopo {
+    background: linear-gradient(135deg, #7f0000 0%, #c62828 100%);
+    color: #ffebee;
+  }
+  .card-geopo .sc-title { color: #ffcdd2; }
+  .card-geopo .sc-item-title { color: #ffcdd2; }
+  .card-geopo .sc-impact { border-color: #ef9a9a80; color: #ef9a9a; }
+
+  /* 其他注意（紫色系） */
+  .card-other {
+    background: linear-gradient(135deg, #4527a0 0%, #6a1b9a 100%);
+    color: #ede7f6;
+  }
+  .card-other .sc-title { color: #e1bee7; }
+  .card-other .sc-item-title { color: #e1bee7; }
+  .card-other .sc-impact { border-color: #ce93d880; color: #ce93d8; }
+
+  /* === 給 Peter 的一句話 === */
+  .peter-note {
+    background: linear-gradient(135deg, #c8860a 0%, #e6a020 100%);
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px rgba(200,134,10,0.3);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .peter-note-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .peter-note-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: #5a3500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .peter-note-text {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d1a0e;
+    line-height: 1.5;
+  }
+
+  /* === 頁尾 === */
+  footer {
+    border-top: 2px solid #d4b896;
+    padding-top: 16px;
+    font-size: 0.73rem;
+    color: #8a7060;
+  }
+  footer h4 {
+    font-size: 0.75rem;
+    color: #7c3a10;
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+  footer ul { list-style: none; padding: 0; }
+  footer ul li { margin-bottom: 4px; }
+  footer a { color: #8a6652; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* 響應式 */
+  @media (max-width: 600px) {
+    .masthead { flex-direction: column; gap: 10px; text-align: center; }
+    .masthead-date { text-align: center; }
+    .masthead-title { font-size: 2rem; }
+    .hero-headline { font-size: 1.3rem; }
+    .dashboard-grid { grid-template-columns: 1fr 1fr; }
+    .dash-card .dc-value { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ■ 報頭 Masthead -->
+  <div class="masthead">
+    <div class="masthead-left">
+      <div class="masthead-title">COPPER DAILY</div>
+      <div class="masthead-subtitle">Peter 專屬銅金屬情報 ｜ 每日晨報</div>
+    </div>
+    <div class="masthead-date">
+      <span>2026年8月11日 星期二</span>
+      銅市深度分析 · 決策級情報
+    </div>
+  </div>
+  <div class="divider-tape"></div>
+
+  <!-- ■ 頭條 Hero -->
+  <div class="hero">
+    <div class="hero-label">📰 今日頭條</div>
+    <div class="hero-headline">剛果禁礦＋Codelco 封礦＋酸供應崩潰：三重衝擊推銅價衝歷史高點，LME 現貨升水創年內最大</div>
+    <div class="hero-body">
+      <p>剛果民主共和國（DRC）自 6 月 29 日起全面禁止銅礦精礦出口、Codelco 旗下 El Teniente 礦山 Andes Norte 擴建案因深層地震風險於 8 月 4 日緊急叫停、加上中國 4-8 月暫停硫酸出口衝擊全球 SX-EW 採銅產能，三重供給衝擊在 8 月首週爆發，<strong>LME 三個月銅飆破 $14,369/噸歷史新高</strong>，COMEX 盤中最高觸及 $6.90/lb。</p>
+      <p>現貨升水（Backwardation）最高擴大至 <strong>+$119/噸</strong>，LME 有效庫存（on-warrant）跌至 <strong>94,200 噸</strong>，為今年最低，實物現貨極度緊俏訊號明確。</p>
+      <p>廢銅市場同步承壓，Bare Bright 報價隨精銅走高至 <strong>$5.35-5.88/lb</strong>，精廢價差仍維持偏高水平，廢銅採購競爭加劇。</p>
+    </div>
+  </div>
+
+  <!-- ■ 行情儀表板 -->
+  <div class="section-label">📊 即時行情儀表板（截至 2026/08/08 週收盤）</div>
+  <div class="dashboard-grid">
+
+    <!-- LME Cash -->
+    <div class="dash-card">
+      <div class="dc-label">LME 銅 Cash</div>
+      <div class="dc-value">9,482<span class="dc-unit">USD/噸</span></div>
+      <div class="dc-change up">▲ +289 (+3.14%) 週漲</div>
+      <div class="dc-sub">約 $6.56/lb｜週高 $6.70/lb</div>
+    </div>
+
+    <!-- LME 3M -->
+    <div class="dash-card">
+      <div class="dc-label">LME 銅 3M</div>
+      <div class="dc-value">9,363<span class="dc-unit">USD/噸</span></div>
+      <div class="dc-change up">▲ +267 (+2.93%) 週漲</div>
+      <div class="dc-sub">
+        Cash vs 3M 價差：<strong>+$119/噸</strong>
+        <span class="backwardation-badge">⚡ BACKWARDATION</span>
+        <br>逆價差=現貨極緊俏，實物供應吃緊！
+      </div>
+    </div>
+
+    <!-- SHFE -->
+    <div class="dash-card">
+      <div class="dc-label">SHFE 滬銅（主力）</div>
+      <div class="dc-value">103,800<span class="dc-unit">CNY/噸</span></div>
+      <div class="dc-change up">▲ +1,250 (+1.22%)</div>
+      <div class="dc-sub">匯率約 7.24｜換算 USD ≈ $14,337</div>
+    </div>
+
+    <!-- LME 庫存 -->
+    <div class="dash-card">
+      <div class="dc-label">LME 銅庫存（on-warrant）</div>
+      <div class="dc-value">94,200<span class="dc-unit">噸</span></div>
+      <div class="dc-change down">▼ -7,225 本週減少</div>
+      <div class="dc-sub">總庫存 223,000 噸；有效庫存創今年最低<br>大量被搬往美國港口規避關稅</div>
+    </div>
+
+    <!-- 精廢價差 -->
+    <div class="dash-card">
+      <div class="dc-label">精廢價差（精銅 vs No.1 廢銅）</div>
+      <div class="dc-value">~$2,550<span class="dc-unit">USD/噸</span></div>
+      <div class="dc-change up">▲ 擴大（廢銅相對便宜）</div>
+      <div class="dc-sub">No.1 廢銅 ≈ $11,740/噸<br>精廢價差擴大 → 廢銅需求熱、性價比高</div>
+    </div>
+
+    <!-- 大陸→北美運費 -->
+    <div class="dash-card">
+      <div class="dc-label">大陸 → 北美運費（西岸）</div>
+      <div class="dc-value">$2,100<span class="dc-unit">USD/FEU</span></div>
+      <div class="dc-change up">▲ 旺季趨升</div>
+      <div class="dc-sub">東岸：$3,350/FEU<br>8-10 月旺季，艙位趨緊</div>
+    </div>
+
+  </div><!-- /dashboard-grid -->
+
+  <!-- ■ 廢銅價格區段 -->
+  <div class="section-card card-scrap">
+    <div class="sc-header">
+      <span class="sc-icon">🔶</span>
+      <span class="sc-title">廢銅行情、精廢價差與 TC/RC</span>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🥇 No.1 Copper / Bare Bright（光亮裸銅）</div>
+      <div class="sc-item-body">
+        當前美國收購價：<span class="price-tag">$5.35–$5.88/lb</span>（約 $11,793–$12,962/噸）。Bare Bright 為最高純度廢銅，隨 LME 高位同步拉升，各廠收購競爭激烈。
+      </div>
+      <div class="sc-impact">▶ 影響評估：精廢價差約 $2,550/噸，廢銅性價比仍高，若庫存允許應積極收料。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🥈 No.2 Copper（Birch & Cliff，二號銅）</div>
+      <div class="sc-item-body">
+        當前市場報價：<span class="price-tag">$4.57–$5.22/lb</span>（約 $10,075–$11,508/噸）。No.2 含有焊錫或塗漆，折扣約 10–15% vs No.1。
+      </div>
+      <div class="sc-impact">▶ 影響評估：No.2 vs 精銅價差更大（約 $3,000+/噸），適合大批量採購分攤成本。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🔌 Berry（絕緣銅線 / Insulated Copper Wire）</div>
+      <div class="sc-item-body">
+        當前市場報價：<span class="price-tag">$1.00–$2.80/lb</span>，視銅含量折算，通常以精銅 55–70% 換算。皮料含量越高折扣越大。
+      </div>
+      <div class="sc-impact">▶ 影響評估：需精確測量銅含量，避免高皮料比 Berry 拖累整批均價。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">📉 TC/RC 冶煉費：史上最低，礦商翻轉掌控全局</div>
+      <div class="sc-item-body">
+        2026 年年度 TC/RC 基準：<strong>$0/噸（零冶煉費！）</strong>，為有史以來最低年度基準。更極端的是，2026 年 6 月底現貨 TC 已跌至 <strong>-$126.80/噸</strong>——即冶煉廠要付錢給礦商才能拿到精礦！Antofagasta 與中國冶煉廠協商結果是 TC $0、RC $0。
+      </div>
+      <div class="sc-impact">▶ 影響評估：TC/RC 為負值 = 礦石極度稀缺、礦商強勢。冶煉廠利潤嚴重受壓，精銅供應可能持續偏緊，長期支撐精銅高價。廢銅因此成為冶煉廠替代原料的關鍵，廢銅需求結構性升溫。</div>
+    </div>
+
+  </div><!-- /card-scrap -->
+
+  <!-- ■ 政策與貿易 -->
+  <div class="section-card card-policy">
+    <div class="sc-header">
+      <span class="sc-icon">🌍</span>
+      <span class="sc-title">政策與貿易</span>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🇨🇩 DRC 剛果銅精礦出口禁令（6/29 生效）</div>
+      <div class="sc-item-body">
+        剛果民主共和國（DRC）依 6 月 29 日政府命令，全面禁止銅與鈷精礦出口，目的是推動境內精煉加工升級。DRC 為全球第二大銅供應國，此禁令對全球精礦供應形成實質衝擊，至今尚未見解除跡象。
+      </div>
+      <div class="sc-impact">▶ 影響評估：已直接推動 LME 銅創歷史新高。禁令若持續 3-6 個月，精礦缺口難以由其他礦區填補，精銅高價格局將延續。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🇺🇸 美國關稅不確定性：大量銅流入美港搶囤</div>
+      <div class="sc-item-body">
+        7 月份有超過 20 萬噸銅湧入美國港口，創十年來最大單月進口量，為規避潛在追加關稅。COMEX 庫存 8 月 7 日攀升至 653,300 噸，同期 LME 有效庫存大幅下降。
+      </div>
+      <div class="sc-impact">▶ 影響評估：美國囤貨潮抽走 LME 可用庫存，加劇 Backwardation 壓力。若關稅明朗化，此套利資金可能逆流，短期存在急跌風險。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🇨🇳 中國硫酸出口禁令（4-8 月）</div>
+      <div class="sc-item-body">
+        中國自 2026 年 4 月禁止硫酸出口至 8 月，影響全球硫酸總供給約 25%。SX-EW（濕法採銅）製程需仰賴硫酸，此禁令威脅全球 15-20% 的銅精煉產量。
+      </div>
+      <div class="sc-impact">▶ 影響評估：禁令預計 8 月底解除，屆時 SX-EW 產量恢復可能帶來供給面短暫緩解，需密切追蹤。</div>
+    </div>
+
+  </div><!-- /card-policy -->
+
+  <!-- ■ 供需動態 -->
+  <div class="section-card card-supply">
+    <div class="sc-header">
+      <span class="sc-icon">🏭</span>
+      <span class="sc-title">供需動態</span>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">⛏️ Codelco El Teniente — Andes Norte 擴建緊急叫停</div>
+      <div class="sc-item-body">
+        Codelco 於 8 月 4 日宣布，因發現新的深層地震風險，暫停全球最大地下銅礦 El Teniente 的 Andes Norte 擴建工程，停工時間可能長達兩年。
+      </div>
+      <div class="sc-impact">▶ 影響評估：Codelco 已連年面臨產量下滑困境，此次叫停進一步打擊市場對智利供給回升的預期，為中長期銅價提供底部支撐。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">⛏️ Freeport-McMoRan Grasberg — 全面恢復延至 2028</div>
+      <div class="sc-item-body">
+        印尼 Grasberg 礦山在致命泥流事故後，目前僅維持 40-50% 產能運轉，全面恢復時程延至 2028 年初。Freeport 股價本週因供給利多上漲 5.75%，收 $67.30。
+      </div>
+      <div class="sc-impact">▶ 影響評估：全球前三大銅礦同時出現問題，罕見地震疊加意外，礦業供給風險溢價明顯提升。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🇨🇳 中國需求：電網投資年增 13%，需求韌性強</div>
+      <div class="sc-item-body">
+        中國 2026 上半年電網投資年增 13%，電線電纜訂單依然旺盛。AI 數據中心建設帶動電力基礎設施銅需求強勁。電動車滲透率持續提升，銅用量不減反增。SHFE 庫存 7 月底已由 6 月底 201,700 噸下滑至 69,300 噸，約減半。
+      </div>
+      <div class="sc-impact">▶ 影響評估：中國需求基本面穩健，SHFE 庫存快速消耗，短期不存在明顯需求崩潰跡象。</div>
+    </div>
+
+  </div><!-- /card-supply -->
+
+  <!-- ■ 物流與航運 -->
+  <div class="section-card card-shipping">
+    <div class="sc-header">
+      <span class="sc-icon">🚢</span>
+      <span class="sc-title">物流與航運運費分析（2026/08 最新）</span>
+    </div>
+
+    <div class="route-row">
+      <span class="route-name">大陸 → 北美西岸</span>
+      <span class="route-price">$2,100 / FEU</span>
+      <span class="route-status status-tight">艙位偏緊</span>
+    </div>
+    <div class="route-row">
+      <span class="route-name">大陸 → 北美東岸</span>
+      <span class="route-price">$3,350 / FEU</span>
+      <span class="route-status status-tight">艙位偏緊</span>
+    </div>
+    <div class="route-row">
+      <span class="route-name">大陸 → 歐洲</span>
+      <span class="route-price">$3,500–$4,500 / FEU</span>
+      <span class="route-status status-tight">偏緊（繞行好望角）</span>
+    </div>
+    <div class="route-row">
+      <span class="route-name">大陸 → 印度（孟買 / 清奈）</span>
+      <span class="route-price">$1,575–$1,925 / 40ft</span>
+      <span class="route-status status-loose">艙位寬鬆（↓42.6%）</span>
+    </div>
+
+    <div class="sc-item" style="margin-top:14px;">
+      <div class="sc-item-title">🌍 大陸 → 北美（美西 / 美東）詳細分析</div>
+      <div class="sc-item-body">
+        8 月已進入旺季視窗（8-10 月）。美西 $2,100/FEU，較年初低位上漲約 30-40%；美東 $3,350/FEU，艙位明顯偏緊，部分船次爆倉。船公司陸續加收 PSS 旺季附加費（Peak Season Surcharge），約 $200-500/FEU。
+        <br>因美國銅囤貨潮（7 月 20 萬噸流入），部分船公司對金屬散貨艙位優先安排，一般貨物空間受壓。
+      </div>
+      <div class="sc-impact">▶ 影響評估：廢銅進口美國的採購成本面臨艙位競爭壓力；若有出貨至美國客戶，建議提前訂艙，避免爆艙被 rollover。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🌍 大陸 → 歐洲詳細分析</div>
+      <div class="sc-item-body">
+        紅海危機持續，所有歐洲航線繞行好望角（Cape of Good Hope），增加 10-14 天航期，消耗全球有效船舶容量。現貨運費 $3,500-4,500/FEU，較正常（非紅海危機）水平高出 25-40%。WRS（戰爭風險附加費）對於部分航線仍在收取。
+      </div>
+      <div class="sc-impact">▶ 影響評估：歐洲買家採購中國廢銅成本大幅抬高，可能使部分歐洲訂單轉向短程供應鏈。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🇮🇳 大陸 → 印度詳細分析</div>
+      <div class="sc-item-body">
+        印度航線運費本月大幅回落 42.6%，孟買（Nhava Sheva）/清奈 報價降至 $1,575-1,925/40ft，為近 1.5 年最低水平。艙位供給充足，目前是印度採購的好窗口。中印之間 CIC（貨櫃不平衡附加費）約 $50-150/箱。
+      </div>
+      <div class="sc-impact">▶ 影響評估：印度運費窗口難得，若有對印報價機會，此時運費成本具競爭力，建議把握。</div>
+    </div>
+
+  </div><!-- /card-shipping -->
+
+  <!-- ■ 地緣政治 -->
+  <div class="section-card card-geopo">
+    <div class="sc-header">
+      <span class="sc-icon">⚔️</span>
+      <span class="sc-title">戰爭與地緣政治</span>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🔴 紅海危機持續——好望角繞行成常態</div>
+      <div class="sc-item-body">
+        胡塞武裝（Houthi）對紅海商船威脅未見明顯消退，幾乎所有主要船公司維持繞行好望角方案。額外 10-14 天航期持續消耗全球船舶有效運力，歐洲、印度、中東航線受影響最大。
+      </div>
+      <div class="sc-impact">▶ 影響評估：紅海緊張若出現任何緩解跡象，歐洲線運費將迅速回落；反之若局勢惡化，$5,000+/FEU 的歐洲線運費不排除。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🇨🇩 DRC 政治局勢——禁礦令執行風險</div>
+      <div class="sc-item-body">
+        DRC 銅精礦出口禁令在政治層面有多重解讀：部分分析人士認為是向礦業公司施壓談判手段，而非長期政策。Glencore 等礦業巨頭仍在 DRC 境內運作，後續談判動向需密切追蹤。
+      </div>
+      <div class="sc-impact">▶ 影響評估：若禁令在 9 月前鬆動，精銅可能出現快速回檔；若禁令維持，Q4 銅價有望繼續衝高。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🇺🇸🇨🇳 美中貿易——關稅預期引發套利囤貨</div>
+      <div class="sc-item-body">
+        市場普遍預期美國可能對銅進口追加關稅，導致 7 月大量精銅提前湧入美港。此預防性套利行為已造成 LME vs COMEX 價格明顯分化，扭曲全球定價機制。
+      </div>
+      <div class="sc-impact">▶ 影響評估：關稅政策明朗化前，LME/COMEX 價差可能繼續維持異常，外部客戶報價需特別留意定價基準選擇。</div>
+    </div>
+
+  </div><!-- /card-geopo -->
+
+  <!-- ■ 其他值得注意 -->
+  <div class="section-card card-other">
+    <div class="sc-header">
+      <span class="sc-icon">💡</span>
+      <span class="sc-title">其他值得注意</span>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">📈 銅價年初至今漲幅達 +38.98%</div>
+      <div class="sc-item-body">
+        Cochilco 報告指出，LME 銅 2026 年均價已達 <strong>$5.98/lb</strong>，較 2025 年同期暴增 38.98%。這對廢銅採購成本與客戶報價均造成重大挑戰，合約定價條款需要動態調整。
+      </div>
+      <div class="sc-impact">▶ 影響評估：若長期合約是以固定銅價報的，需立即評估是否需要重談或加入浮動條款。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🤖 AI 數據中心 + 電網升級：銅需求新常態</div>
+      <div class="sc-item-body">
+        AI 基礎設施建設大量消耗電力，帶動電網、變壓器、電線電纜需求。IEA 預測 2026-2030 年全球電網投資將以每年 +12-15% 速度成長，銅消費長期成長趨勢確立。
+      </div>
+      <div class="sc-impact">▶ 影響評估：廢銅長期需求結構支撐強勁，適度增加庫存佈局具有戰略意義。</div>
+    </div>
+
+  </div><!-- /card-other -->
+
+  <!-- ■ 給 Peter 的一句話 -->
+  <div class="peter-note">
+    <div class="peter-note-icon">🎯</div>
+    <div>
+      <div class="peter-note-label">給 Peter 的今日操作提醒</div>
+      <div class="peter-note-text">精廢價差約 $2,550/噸、廢銅性價比高，但 LME 創歷史新高後波動劇烈——短期衝高後的回檔風險切勿忽視：DRC 禁令若鬆動或美國關稅明朗化，都可能引發 $500–$1,000/噸急跌，建議廢銅採購分批進貨、不要重倉押注單一窗口，同時把印度航線低運費窗口（$1,575/40ft）列為優先出貨路線。</div>
+    </div>
+  </div>
+
+  <!-- ■ 頁尾來源 -->
+  <footer>
+    <h4>📎 資料來源 / Sources</h4>
+    <ul>
+      <li><a href="https://www.miningreporters.com/noticia/news/2026/08/copper-price-closes-at-6-46-dollars-cochilco-weekly-report" target="_blank">Cochilco 週報：銅收盤 $6.46/lb，受剛果精礦出口禁令影響（2026/08）</a></li>
+      <li><a href="https://chinaglobalsouth.com/2026/08/08/drc-copper-cobalt-export-ban-prices/" target="_blank">China Global South：DRC 銅鈷出口禁令與價格影響（2026/08/08）</a></li>
+      <li><a href="https://www.techtimes.com/articles/323370/20260806/copper-hits-all-time-record-congo-bans-exports-acid-supply-collapses.htm" target="_blank">TechTimes：銅創歷史新高——剛果禁礦＋酸供應崩潰（2026/08/06）</a></li>
+      <li><a href="https://connectore.org/posts/copper-weekly-brief-7th-august-2026/" target="_blank">ConnectOre：Copper Weekly Brief（2026/08/07）</a></li>
+      <li><a href="https://www.brecorder.com/news/amp/40434130" target="_blank">Business Recorder：中國銅佔 LME 可用庫存比例下降（2026/07）</a></li>
+      <li><a href="https://www.cruxinvestor.com/posts/global-copper-supply-disruptions-record-prices-what-the-new-market-dislocation-means-for-investors" target="_blank">Crux Investor：全球銅供應中斷與創紀錄高價分析（2026/08）</a></li>
+      <li><a href="https://discoveryalert.com.au/treatment-refining-charges-global-copper-markets-2026/" target="_blank">Discovery Alert：日本冶煉廠 2026 TC/RC 談判分析</a></li>
+      <li><a href="https://www.mining.com/web/antofagasta-agrees-zero-copper-processing-charges-for-2026-with-chinese-smelter/" target="_blank">Mining.com：Antofagasta 同意 2026 年 TC/RC 為零（2025/12）</a></li>
+      <li><a href="https://iscrapapp.com/metals/bare-bright-copper/" target="_blank">iScrapApp：Bare Bright Copper 廢銅現貨價（2026/08/10）</a></li>
+      <li><a href="https://theloadstar.com/relief-for-importers-as-rates-on-china-to-india-trades-start-to-ease/" target="_blank">The Loadstar：大陸→印度運費鬆動（2026/08）</a></li>
+      <li><a href="https://www.greathensen.com/en/guide/middle-east-shipping-rates.html" target="_blank">Great Hensen：中東航運費率 2026 年 8 月深度分析</a></li>
+      <li><a href="https://suaidglobal.com/insights/red-sea-shipping-crisis-2026/" target="_blank">Suaid Global：2026 年紅海航運危機——費率、繞行、過境分析</a></li>
+      <li><a href="https://www.riotimesonline.com/copper-markets-latam-tuesday-august-4-2026/" target="_blank">Rio Times Online：銅市場拉丁美洲週報（2026/08/04）</a></li>
+    </ul>
+    <p style="margin-top:12px; font-size:0.68rem; color:#aaa;">本報告由 AI 自動生成，僅供決策參考，不構成投資建議。數據以搜尋時點為準，實際報價以交易所官方為準。</p>
+  </footer>
+
+</div><!-- /wrapper -->
+</body>
+</html>

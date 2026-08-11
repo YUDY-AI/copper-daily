@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COPPER DAILY｜Peter 銅金屬情報彙整</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background: #f5f0eb;
+    color: #222;
+    min-height: 100vh;
+  }
+  .masthead {
+    background: #2d1a0e;
+    color: #fff;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .masthead-title {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #f5c87a;
+  }
+  .masthead-sub { font-size: 0.82rem; color: #c9a96e; margin-top: 2px; }
+  .masthead-rule { height: 4px; background: linear-gradient(90deg, #7c3a10, #e07b39, #c8860a, #e07b39, #7c3a10); }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 32px 16px; }
+
+  .stats-row { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+  .stat-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    flex: 1;
+    min-width: 140px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+    border-top: 3px solid #b5451b;
+  }
+  .stat-card .num { font-size: 2rem; font-weight: 700; font-family: Georgia, serif; color: #7c3a10; }
+  .stat-card .lbl { font-size: 0.75rem; color: #888; margin-top: 4px; }
+
+  .section-title {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #7c3a10;
+    border-left: 5px solid #e07b39;
+    padding-left: 12px;
+    margin-bottom: 16px;
+  }
+
+  .report-list { list-style: none; }
+  .report-item {
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .report-item:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.10); }
+
+  .report-date-bar {
+    width: 90px;
+    flex-shrink: 0;
+    background: linear-gradient(160deg, #7c3a10, #4a1f06);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 8px;
+    text-align: center;
+  }
+  .report-date-bar .month { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #f5c87a; }
+  .report-date-bar .day { font-size: 2rem; font-weight: 900; font-family: Georgia, serif; line-height: 1; }
+  .report-date-bar .year { font-size: 0.68rem; color: #c9a96e; }
+  .report-date-bar .weekday { font-size: 0.65rem; color: #b8936a; margin-top: 2px; }
+
+  .report-body {
+    flex: 1;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .report-body .headline { font-size: 0.92rem; font-weight: 600; color: #222; line-height: 1.5; flex: 1; min-width: 200px; }
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-right: 6px; vertical-align: middle; }
+  .tag-latest { background: #d32f2f; color: #fff; }
+  .tag-normal { background: #fbe9e7; color: #bf360c; }
+
+  .report-open-btn {
+    display: inline-block;
+    background: #7c3a10;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .report-open-btn:hover { background: #4a1f06; }
+
+  footer { text-align: center; font-size: 0.75rem; color: #aaa; margin-top: 40px; padding-bottom: 20px; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div>
+    <div class="masthead-title">COPPER DAILY</div>
+    <div class="masthead-sub">Peter 專屬銅金屬情報｜歷史報告彙整</div>
+  </div>
+  <div style="font-size:0.82rem; color:#c9a96e; text-align:right;">
+    LME 銅價 × 廢銅價差 × TC/RC × 供需政策
+  </div>
+</div>
+<div class="masthead-rule"></div>
+
+<div class="container">
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="num" id="total-count">—</div>
+      <div class="lbl">累積報告份數</div>
+    </div>
+    <div class="stat-card">
+      <div class="num" id="latest-date">—</div>
+      <div class="lbl">最新一份日期</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">每天</div>
+      <div class="lbl">自動更新頻率</div>
+    </div>
+  </div>
+
+  <div class="section-title">🔶 報告列表</div>
+  <ul class="report-list" id="report-list"></ul>
+
+</div>
+
+<footer>COPPER DAILY · Peter 專屬情報 · 每個工作日自動產製</footer>
+
+<script>
+  // ── 報告清單（最新的放最前面）──────────────────────────────────
+  const reports = [
+    // 日報將由排程自動插入
+  ];
+  // ────────────────────────────────────────────────────────────────
+
+  const MONTH_ZH = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
+
+  function render() {
+    const list = document.getElementById("report-list");
+    if (!reports.length) {
+      list.innerHTML = '<li style="padding:60px;text-align:center;color:#aaa;font-size:1.1rem;">📋 報告產製中，明天起每天更新</li>';
+      document.getElementById("total-count").textContent = "0";
+      document.getElementById("latest-date").textContent = "—";
+      return;
+    }
+    document.getElementById("total-count").textContent = reports.length;
+    document.getElementById("latest-date").textContent = reports[0].date.slice(5).replace("-", "/");
+    list.innerHTML = reports.map((r, i) => {
+      const [yyyy, mm, dd] = r.date.split("-");
+      const month = MONTH_ZH[parseInt(mm) - 1];
+      const tag = i === 0
+        ? '<span class="tag tag-latest">最新</span>'
+        : `<span class="tag tag-normal">${month}</span>`;
+      return `
+        <li class="report-item">
+          <div class="report-date-bar">
+            <div class="month">${month}</div>
+            <div class="day">${dd}</div>
+            <div class="year">${yyyy}</div>
+            <div class="weekday">${r.weekday}</div>
+          </div>
+          <div class="report-body">
+            <div class="headline">${tag}${r.headline}</div>
+            <a class="report-open-btn" href="copper-brief-${r.date}.html">開啟報告 →</a>
+          </div>
+        </li>`;
+    }).join("");
+  }
+  render();
+</script>
+</body>
+</html>
