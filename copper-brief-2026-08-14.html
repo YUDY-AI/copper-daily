@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COPPER DAILY 2026-08-14</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #f5f0eb;
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    color: #2d1a0e;
+    line-height: 1.6;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 16px 40px; }
+
+  /* MASTHEAD */
+  .masthead {
+    background: linear-gradient(135deg, #2d1a0e 0%, #7c3a10 100%);
+    padding: 18px 24px;
+    text-align: center;
+    border-bottom: 4px solid #f5c87a;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3rem;
+    color: #f5c87a;
+    letter-spacing: 0.12em;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  }
+  .masthead .subtitle {
+    color: #e07b39;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+  .masthead .date-line {
+    color: #f5c87a;
+    font-size: 0.85rem;
+    margin-top: 6px;
+    opacity: 0.8;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, #2d1a0e 0%, #5a2a0a 60%, #7c3a10 100%);
+    border-radius: 12px;
+    margin: 20px 0 16px;
+    padding: 36px 32px;
+    box-shadow: 0 6px 24px rgba(45,26,14,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "📰";
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    font-size: 3rem;
+    opacity: 0.15;
+  }
+  .hero-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    color: #e07b39;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .hero-headline {
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    color: #f5c87a;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  .hero-body {
+    color: rgba(245,240,235,0.88);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* DASHBOARD */
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-shadow: 0 3px 10px rgba(124,58,16,0.1);
+    border-left: 5px solid #e07b39;
+    transition: transform 0.15s;
+  }
+  .card:hover { transform: translateY(-2px); }
+  .card-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7c3a10;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .card-value {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d1a0e;
+    line-height: 1.1;
+  }
+  .card-unit { font-size: 0.85rem; color: #7c3a10; margin-left: 4px; }
+  .change-up { color: #d32f2f; font-weight: 700; font-size: 0.9rem; }
+  .change-down { color: #2e7d32; font-weight: 700; font-size: 0.9rem; }
+  .card-note { font-size: 0.78rem; color: #5a4030; margin-top: 4px; }
+  .backwardation-badge {
+    display: inline-block;
+    background: #e07b39;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+  .contango-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  /* SECTION CARDS */
+  .section {
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 14px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  }
+  .section-header {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-copper { background: #fdf3e8; border-left: 5px solid #e07b39; }
+  .section-copper .section-header { color: #7c3a10; }
+  .section-policy { background: #fff4e6; border-left: 5px solid #f57c00; }
+  .section-policy .section-header { color: #e65100; }
+  .section-supply { background: #e8f0fe; border-left: 5px solid #1565c0; }
+  .section-supply .section-header { color: #0d47a1; }
+  .section-shipping { background: #e0f7fa; border-left: 5px solid #00838f; }
+  .section-shipping .section-header { color: #006064; }
+  .section-geo { background: #fdecea; border-left: 5px solid #c62828; }
+  .section-geo .section-header { color: #b71c1c; }
+  .section-other { background: #f3e5f5; border-left: 5px solid #6a1b9a; }
+  .section-other .section-header { color: #4a148c; }
+
+  .news-item { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed rgba(0,0,0,0.1); }
+  .news-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .news-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: inherit;
+    margin-bottom: 5px;
+  }
+  .news-body { font-size: 0.88rem; line-height: 1.65; color: #3d2a1a; }
+  .news-impact {
+    font-style: italic;
+    font-size: 0.82rem;
+    color: #5a4030;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-left: 3px solid #e07b39;
+  }
+
+  /* Shipping route table */
+  .route-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 8px; }
+  .route-row {
+    background: rgba(255,255,255,0.65);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr;
+    gap: 8px;
+    align-items: center;
+    font-size: 0.88rem;
+  }
+  .route-name { font-weight: 700; color: #006064; }
+  .route-rate { font-weight: 700; font-size: 1.1rem; color: #2d1a0e; }
+  .route-status { font-size: 0.8rem; color: #004d40; background: #b2dfdb; padding: 2px 8px; border-radius: 8px; text-align: center; }
+
+  /* PETER'S NOTE */
+  .peter-note {
+    background: linear-gradient(135deg, #c8860a 0%, #e8a920 100%);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0 10px;
+    box-shadow: 0 4px 16px rgba(200,134,10,0.3);
+  }
+  .peter-note-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #2d1a0e;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .peter-note-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d1a0e;
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 2px solid #e07b39;
+  }
+  .footer h4 { font-size: 0.8rem; color: #7c3a10; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em; }
+  .footer a { font-size: 0.78rem; color: #7c3a10; text-decoration: none; display: block; margin-bottom: 3px; }
+  .footer a:hover { color: #e07b39; }
+
+  /* Stat table for scrap */
+  .stat-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.88rem; }
+  .stat-table th { background: rgba(124,58,16,0.15); padding: 7px 10px; text-align: left; font-size: 0.78rem; color: #7c3a10; text-transform: uppercase; }
+  .stat-table td { padding: 7px 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .stat-table tr:last-child td { border-bottom: none; }
+  .big-num { font-weight: 700; font-size: 1.05rem; }
+
+  @media (max-width: 600px) {
+    .masthead h1 { font-size: 2rem; }
+    .hero-headline { font-size: 1.3rem; }
+    .card-value { font-size: 1.5rem; }
+    .route-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <h1>⚙ COPPER DAILY</h1>
+    <div class="subtitle">Peter 專屬銅金屬情報 · 每日行情與供需速覽</div>
+    <div class="date-line">2026年8月14日 星期五 ｜ 資料截至 2026-08-13 收盤</div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-label">▌ 今日頭條</div>
+    <div class="hero-headline">Codelco 宣告放棄增產目標、LME 庫存銳減至年初新低，銅價逆價差擴至 $105 — 現貨供應緊繃訊號全面亮燈</div>
+    <div class="hero-body">
+      全球最大銅礦商 Codelco 正式宣布放棄 2026 年 134 萬噸的增產計畫，智利同步下修全年銅產出預測。LME 銅現貨庫存 8 月初已跌破 22.3 萬噸，可用庫存更降至 10.1 萬噸以下——這是 2026 年以來最低水平。現貨對三個月期價差（Backwardation 逆價差）攀升至 $105/噸，為今年最強，清楚顯示近端銅料供應偏緊。美國 50% 銅半成品關稅效應持續將金屬流量導向北美，進一步拉光 LME 倉庫。
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard">
+
+    <div class="card">
+      <div class="card-label">LME 銅 Cash</div>
+      <div class="card-value">14,484<span class="card-unit">USD/噸</span></div>
+      <div class="change-down">▼ 0.44%（約 -64）</div>
+      <div class="card-note">6.57 USD/lb · 8月13日收盤</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">LME 銅 3M</div>
+      <div class="card-value">14,379<span class="card-unit">USD/噸</span></div>
+      <div class="change-down">▼ 跟隨 Cash 下行</div>
+      <div class="card-note">Cash vs 3M 價差：<strong style="color:#e07b39">-$105（逆價差）</strong></div>
+      <div><span class="backwardation-badge">⚠ Backwardation 逆價差</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">SHFE 滬銅（主力合約）</div>
+      <div class="card-value">≈112,800<span class="card-unit">CNY/噸</span></div>
+      <div class="change-down">▼ 隨外盤小幅回落</div>
+      <div class="card-note">依 LME 換算估算；官方數字以 SHFE 為準</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">LME 銅庫存</div>
+      <div class="card-value">223,000<span class="card-unit">噸</span></div>
+      <div class="change-down">▼ 大幅下降（-100,275 vs 6月底）</div>
+      <div class="card-note">可用庫存僅 ~101,425 噸，年初新低</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">精廢價差（精銅 vs No.1 廢銅）</div>
+      <div class="card-value">≈2,140<span class="card-unit">USD/噸</span></div>
+      <div class="change-up">▲ 擴大中</div>
+      <div class="card-note">精銅 $14,484 vs No.1 廢銅 ~$12,344/噸</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">大陸 → 北美 西岸運費</div>
+      <div class="card-value">≈4,200<span class="card-unit">USD/FEU</span></div>
+      <div class="change-down">▼ 8月整體運費回落 7.6%</div>
+      <div class="card-note">東岸：$5,800–$7,200；艙位：正常偏緊</div>
+    </div>
+
+  </div>
+
+  <!-- SECTION: SCRAP PRICES -->
+  <div class="section section-copper">
+    <div class="section-header">🔶 廢銅價格、精廢價差與 TC/RC 動態</div>
+
+    <table class="stat-table">
+      <thead>
+        <tr>
+          <th>品項</th>
+          <th>美國市場報價（估算）</th>
+          <th>折換 USD/噸</th>
+          <th>備註</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>No.1 Copper（Bare Bright）</strong></td>
+          <td class="big-num">~$5.60/lb</td>
+          <td class="big-num">~$12,346/噸</td>
+          <td>光銅、廢銅最高品位</td>
+        </tr>
+        <tr>
+          <td><strong>No.2 Copper（Birch/Cliff）</strong></td>
+          <td class="big-num">~$5.20/lb</td>
+          <td class="big-num">~$11,463/噸</td>
+          <td>帶鍍錫、氧化或焊接銅</td>
+        </tr>
+        <tr>
+          <td><strong>Berry（Insulated Wire）</strong></td>
+          <td class="big-num">~$3.20–3.80/lb</td>
+          <td class="big-num">~$7,055–8,378/噸</td>
+          <td>帶絕緣皮電線，含銅率 85%</td>
+        </tr>
+        <tr>
+          <td><strong>精銅（LME Cash）</strong></td>
+          <td class="big-num">$6.57/lb</td>
+          <td class="big-num">$14,484/噸</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>精廢價差（精銅 vs No.1）</strong></td>
+          <td colspan="2" class="big-num" style="color:#e07b39">約 $2,138/噸 ▲ 擴大</td>
+          <td>價差擴大 = 廢銅競爭力上升</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="news-item" style="margin-top:16px">
+      <div class="news-title">精廢價差擴大，廢銅採購吸引力提升</div>
+      <div class="news-body">精銅 $14,484/噸 vs No.1 廢銅約 $12,346/噸，價差約 $2,138/噸。對冶煉廠與銅加工廠而言，廢銅替代效益明顯。No.1 廢銅相對精銅折讓約 14.8%，目前仍具吸引力。惟美國 50% 關稅影響進口廢銅報價結構，需特別注意。</div>
+      <div class="news-impact">▶ 影響評估：廢銅需求可望維持，但精廢價差若因精銅價格下跌而收窄，短期套利空間可能壓縮。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">TC/RC 現貨負值創歷史極端：-$126.80/噸</div>
+      <div class="news-body">銅精礦冶煉費（TC/RC）現貨持續為負，目前報 -$126.80/噸，代表冶煉廠必須「倒貼」才能取得精礦原料。2026 年 Antofagasta 與中國冶煉廠年度長期協議已降至 $0/噸（2025 年為 $21.25/噸），年內跌至負值的趨勢愈來愈清楚。Grasberg（印尼）與 Kamoa-Kakula（剛果）礦山停工加劇精礦緊缺。</div>
+      <div class="news-impact">▶ 影響評估：TC/RC 深度負值代表礦端話語權超強，冶煉廠利潤遭嚴重壓縮；精銅供應未來數月可能進一步趨緊，支撐高銅價。</div>
+    </div>
+  </div>
+
+  <!-- SECTION: POLICY -->
+  <div class="section section-policy">
+    <div class="section-header">🌍 政策與貿易動態</div>
+
+    <div class="news-item">
+      <div class="news-title">美國對銅製品實施 50% 關稅，半成品受全面衝擊</div>
+      <div class="news-body">自 2025 年 8 月 1 日起，川普政府對銅管、銅線、電氣零件等半成品課徵 50% 關稅，2026 年 4 月 6 日進一步將銅密集型衍生品稅率調整至 25%。目前商務部報告建議 2027 年對精銅再加徵 15% 關稅、2028 年升至 30%。這一政策持續將 LME 倉庫庫存吸走流向北美，導致全球可用現貨快速縮水。</div>
+      <div class="news-impact">▶ 影響評估：廢銅（scrap）目前豁免於此輪關稅，對廢銅貿易商相對有利；但精銅進口成本上升，將支撐廢銅溢價需求。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">中美銅供應鏈「脫鉤戰」持續升溫</div>
+      <div class="news-body">美國正積極減少對中國銅供應鏈的依賴，包括發展本土精煉、搶奪拉美礦山控制權。中國則加大全球廢銅收購力度，以彌補 TC/RC 虧損下冶煉廠利潤受壓的困境。「誰掌控廢銅流量，誰就在銅市博弈中佔主動」成為 2026 年供應鏈的關鍵邏輯。</div>
+      <div class="news-impact">▶ 影響評估：廢銅貿易受地緣政治影響加深，定價談判更複雜，建議報價時保留更大彈性空間。</div>
+    </div>
+  </div>
+
+  <!-- SECTION: SUPPLY/DEMAND -->
+  <div class="section section-supply">
+    <div class="section-header">🏭 供需動態：礦山、精煉與中國需求</div>
+
+    <div class="news-item">
+      <div class="news-title">Codelco 放棄增產目標，生產量跌至 20 年新低</div>
+      <div class="news-body">彭博報導（8 月 12 日），Codelco 正式放棄 2026 年 134 萬噸銅產出目標，礦山事故與設備老化持續拖累進度。智利政府緊急注資 $24 億美元（8 月 10 日）並允許 Codelco 保留 2025 年全年利潤（約 $24.2 億）用於債務與投資重建。Codelco 主席表示未來數年產量預期持平，無明顯增長空間。Freeport-McMoRan 在 El Abra 的 $75 億擴產計畫仍在評估中。</div>
+      <div class="news-impact">▶ 影響評估：全球最大銅礦商供應受限，精銅供應端緊俏格局將延續至 2027 年，支撐銅價高位運行。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">中國銅需求強勁：EV、AI 數據中心、電網三大引擎</div>
+      <div class="news-body">中國 2026 年 NEV（新能源車）用銅需求預計達 184 萬噸（同比增 20%+），預計 2027 年超過 200 萬噸。AI 數據中心建設對高純銅箔與精密電纜需求暴增，寧波金田銅業的 NEV 用扁平漆包線訂單已排至 2027 年下半年。中國 2026 年 Q1 精銅產量 379 萬噸（+9.3% YoY），銅材產量 563 萬噸（+4% YoY），但冶煉廠 TC/RC 虧損情況嚴峻。</div>
+      <div class="news-impact">▶ 影響評估：中國需求旺盛且結構性增長明顯，是 2026 年銅價的核心支撐；廢銅需求預期隨之走高。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">LME 庫存中中國銅佔比下滑，可用庫存創低</div>
+      <div class="news-body">7 月底 LME 可用銅庫存銳減近半至 10.1 萬噸（6 月底 20.17 萬噸），其中中國籍銅佔 LME 可用庫存比例從 59% 降至 42%，絕對值縮減 75,600 噸。SHFE 庫存同步去化，供給偏緊信號持續加強。</div>
+      <div class="news-impact">▶ 影響評估：雙市庫存同步下行，Cash 逆價差擴大至 $105，交易商應警惕短期擠倉風險。</div>
+    </div>
+  </div>
+
+  <!-- SECTION: SHIPPING -->
+  <div class="section section-shipping">
+    <div class="section-header">🚢 物流與航運運費分析（2026 年 8 月）</div>
+
+    <div class="route-grid">
+      <div class="route-row">
+        <div class="route-name">🇨🇳 → 🇺🇸 北美西岸</div>
+        <div class="route-rate">$3,000–5,500/FEU<br><small style="font-size:0.75rem">東岸 $4,200–7,200</small></div>
+        <div class="route-status">正常偏緊</div>
+      </div>
+      <div class="route-row">
+        <div class="route-name">🇨🇳 → 🇪🇺 歐洲</div>
+        <div class="route-rate">$4,653–5,506/FEU<br><small style="font-size:0.75rem">鹿特丹 $4,653 / 熱那亞 $5,506</small></div>
+        <div class="route-status">艙位趨鬆 ▼14%</div>
+      </div>
+      <div class="route-row">
+        <div class="route-name">🇨🇳 → 🇮🇳 印度</div>
+        <div class="route-rate">$1,575–1,925/FEU<br><small style="font-size:0.75rem">近期大幅下跌</small></div>
+        <div class="route-status">艙位寬鬆 ▼43%</div>
+      </div>
+    </div>
+
+    <div class="news-item" style="margin-top:16px">
+      <div class="news-title">8 月整體運費全線回落，旺季附加費效應結束</div>
+      <div class="news-body">全球 196 個目的地中有 139 個 40 呎箱運費下跌，整體均值 8 月回落 7.6%，主因是 7 月 1 日旺季附加費（PSS）效期屆滿所致。歐洲線跌幅最深（法國 -21%、德國/荷蘭/比利時/英國 -19.5%）；印度線跌幅最大達 43%，目前 $1,575–1,925/FEU，是三條航線中最便宜的。北美線仍受美國進口關稅帶動的旺盛備貨需求支撐，跌幅最小。</div>
+      <div class="news-impact">▶ 影響評估：廢銅海運成本整體下降有助採購方降低 C&F 到港成本；但北美線仍需加計 50% 關稅，總體進口成本實際上仍高昂。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">紅海航線：7 月封鎖衝擊後趨穩，好望角繞行仍是主流</div>
+      <div class="news-body">胡賽武裝 7 月對沙烏地阿拉伯實施海上封鎖，導致 Bab el-Mandeb 海峽船流量驟降 24%（油輪 -42%），但整體貨運容量衝擊已趨穩定。大多數航商維持繞行好望角（Cape of Good Hope）路線為預設選項，業界共識認為繞行情況將延續至 2027 年以後。Asia–Europe 運費因繞行仍比危機前高出 25–40%，每箱紅海風險溢價約 $800–$1,500。</div>
+      <div class="news-impact">▶ 影響評估：大陸→歐洲廢銅運輸成本仍有隱性附加，計算採購成本時需保留緩衝空間；大陸→印度不受紅海影響，成本優勢較大。</div>
+    </div>
+  </div>
+
+  <!-- SECTION: GEOPOLITICS -->
+  <div class="section section-geo">
+    <div class="section-header">⚔️ 戰爭與地緣政治</div>
+
+    <div class="news-item">
+      <div class="news-title">胡賽武裝持續擾亂紅海，沙烏地石油繞道出口</div>
+      <div class="news-body">紅海武裝衝突 2026 年 7–8 月進入新高峰，沙烏地阿拉伯原油透過「部分卸載 + Sumed 管線」繞過蘇伊士運河繼續出口。胡賽武裝宣稱針對與以色列有關的船隻，但實際上波及範圍更廣，保險風險費率持續高位。大宗商品海運（包括廢銅）整體繞行好望角估計每次航程增加 10–14 天。</div>
+      <div class="news-impact">▶ 影響評估：廢銅跨大西洋（歐洲→亞洲）航線在途時間拉長，報價有效期需縮短，提貨後資金占用成本上升。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">美中銅供應鏈對抗成結構性主軸</div>
+      <div class="news-body">美國 Section 232 銅關稅持續重塑全球銅流向，並與中國在拉美礦山控制權的爭奪相互交織。智利政府注資 Codelco 部分是為保住國有礦山不被外資收購。分析師預期 2027 年精銅關稅若再提升，將進一步刺激全球廢銅需求。</div>
+      <div class="news-impact">▶ 影響評估：長期結構對廢銅業者相對有利，但地緣風險也意味著報價與合約需更多避險設計。</div>
+    </div>
+  </div>
+
+  <!-- SECTION: OTHER -->
+  <div class="section section-other">
+    <div class="section-header">💡 其他值得注意</div>
+
+    <div class="news-item">
+      <div class="news-title">銅價年漲幅達 46.84%，年初至今強勢格局延續</div>
+      <div class="news-body">LME 銅過去 12 個月漲幅約 46.84%，換算後 6.57 USD/lb（$14,484/噸）已遠超 2025 年同期水平。高銅價同時推高廢銅市場價值，但也壓縮終端客戶採購意願，需留意 Q3 淡季需求回落的可能性。</div>
+      <div class="news-impact">▶ 影響評估：高位銅價環境下廢銅採購成本同步走高，應持續追蹤 LME 與 COMEX CFTC 持倉，避免在高點過度備貨。</div>
+    </div>
+  </div>
+
+  <!-- PETER'S NOTE -->
+  <div class="peter-note">
+    <div class="peter-note-label">💬 給 Peter 的一句話</div>
+    <div class="peter-note-text">
+      今天最重要的信號是：LME 逆價差 $105 + Codelco 放棄增產 + TC/RC 深度負值三個警報同時亮起，現貨銅料緊俏已是事實——廢銅如果手上有料，這是出貨的有利視窗；如果要補貨，建議鎖定大陸→印度這條運費大跌（-43%）的航線進行採購，降低整體 C&F 成本。
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <h4>資料來源</h4>
+    <a href="https://tradingeconomics.com/commodity/copper" target="_blank">Trading Economics – Copper Price (6.57 USD/lb, Aug 13 2026)</a>
+    <a href="https://thevaultreport.com/lme/copper" target="_blank">The Vault Report – LME Copper Warehouse Stock 307K / 223K mt</a>
+    <a href="https://www.brecorder.com/news/amp/40434130" target="_blank">Business Recorder – Chinese copper share LME stocks falls 42% July</a>
+    <a href="https://www.mining.com/web/antofagasta-agrees-zero-copper-processing-charges-for-2026-with-chinese-smelter/" target="_blank">Mining.com – Antofagasta zero TC/RC 2026</a>
+    <a href="https://discoveryalert.com.au/negative-copper-treatment-charges-tcrcs-supply-crunch-2026/" target="_blank">Discovery Alert – Negative TC/RC -$126.80/t</a>
+    <a href="https://www.bloomberg.com/news/articles/2026-08-12/codelco-abandons-copper-growth-target-as-mine-setbacks-mount" target="_blank">Bloomberg – Codelco abandons copper growth target Aug 12, 2026</a>
+    <a href="https://www.bloomberg.com/news/articles/2026-08-11/chile-cuts-copper-production-forecast-again-as-mine-woes-persist" target="_blank">Bloomberg – Chile cuts copper production forecast Aug 11, 2026</a>
+    <a href="https://www.bloomberg.com/news/articles/2026-08-10/chile-gives-struggling-copper-giant-codelco-a-2-4-billion-boost" target="_blank">Bloomberg – Chile gives Codelco $2.4B boost Aug 10, 2026</a>
+    <a href="https://www.sino-shipping.com/global-freight-market-update-August-2026/" target="_blank">SINO Shipping – Global Freight Market Update August 2026</a>
+    <a href="https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry" target="_blank">Drewry – World Container Index Aug 6, 2026</a>
+    <a href="https://www.lloydslist.com/LL1158141/The-Week-in-Charts-Red-Sea-shipping-stabilises-after-Julys-Houthi-blockade-shock--War-disruption-and-rerouting-fail-to-derail-container-demand" target="_blank">Lloyd's List – Red Sea stabilises after July Houthi blockade shock</a>
+    <a href="https://rockawayrecycling.com/scrap-metal-prices/" target="_blank">Rockaway Recycling – Scrap Metal Prices Aug 13, 2026</a>
+    <a href="https://discoveryalert.com.au/copper-import-tariffs-trade-flows-section-232-2026/" target="_blank">Discovery Alert – US Copper Import Tariffs Section 232 2026</a>
+    <a href="http://en.people.cn/n3/2026/0604/c90000-20463602.html" target="_blank">People's Daily – Emerging industries fuel copper demand China 2026</a>
+    <p style="margin-top:8px; font-size:0.72rem; color:#9e7b62;">本報告由 Claude AI 自動生成，供決策參考；數字請以 LME 官方數據為準。完整歷史報告：https://YUDY-AI.github.io/copper-daily/</p>
+  </div>
+
+</div>
+</body>
+</html>
