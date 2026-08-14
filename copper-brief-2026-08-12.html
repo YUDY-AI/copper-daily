@@ -101,6 +101,27 @@
   .card-geopo    .sc-title { color: #b71c1c; } .card-geopo .sc-item-title { color: #b71c1c; } .card-geopo .sc-impact { border-color: #e53935; }
   .card-other    { border-left: 5px solid #6a1b9a; }
   .card-other    .sc-title { color: #6a1b9a; } .card-other .sc-item-title { color: #6a1b9a; } .card-other .sc-impact { border-color: #8e24aa; }
+  .card-futures  { border-left: 5px solid #1a5276; }
+  .card-futures  .sc-title { color: #1a5276; } .card-futures .sc-item-title { color: #1a5276; } .card-futures .sc-impact { border-color: #2471a3; }
+
+  /* ── 期貨多空表 ── */
+  .cot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-bottom: 16px; }
+  .cot-card { background: #eaf2fb; border-radius: 8px; padding: 13px 15px; }
+  .cot-card .cot-label { font-size: 0.68rem; color: #1a5276; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .cot-card .cot-value { font-family: Georgia, serif; font-size: 1.55rem; font-weight: 700; color: #1a3a52; line-height: 1.1; }
+  .cot-card .cot-unit { font-size: 0.7rem; color: #5d7d8f; font-weight: 400; margin-left: 2px; }
+  .cot-card .cot-sub { font-size: 0.7rem; color: #5d7d8f; margin-top: 4px; }
+  .cot-card.long { background: #eafaf1; } .cot-card.long .cot-value { color: #1e8449; } .cot-card.long .cot-label { color: #1e8449; }
+  .cot-card.short { background: #fdedec; } .cot-card.short .cot-value { color: #922b21; } .cot-card.short .cot-label { color: #922b21; }
+  .cot-card.net { background: #fef9e7; border: 2px solid #f0b429; } .cot-card.net .cot-value { color: #7d6608; }
+  .cot-bar-wrap { margin: 12px 0 4px; }
+  .cot-bar-label { font-size: 0.7rem; color: #5d7d8f; margin-bottom: 4px; display: flex; justify-content: space-between; }
+  .cot-bar-track { background: #dce8f5; border-radius: 4px; height: 10px; position: relative; overflow: hidden; }
+  .cot-bar-fill { height: 100%; border-radius: 4px; }
+  .cot-signal { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-top: 6px; }
+  .sig-caution { background: #fdebd0; color: #935116; }
+  .sig-bull    { background: #d5f5e3; color: #1e8449; }
+  .sig-bear    { background: #fadbd8; color: #922b21; }
 
   /* ── 航運表格 ── */
   .route-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-bottom: 15px; }
@@ -445,6 +466,94 @@
         SHFE 庫存已降至 69,610 噸（2024 年 2 月以來最低）；保稅倉庫庫存變化是觀察中國需求的先行指標，後續需持續追蹤。
       </div>
       <div class="sc-impact">▶ 影響評估：保稅庫存若繼續下降，代表進口需求啟動，對銅價形成短期支撐。</div>
+    </div>
+  </div>
+
+  <!-- 期貨多空倉位 -->
+  <div class="section-card card-futures">
+    <div class="sc-header">
+      <span class="sc-icon">📈</span>
+      <span class="sc-title">期貨多空倉位分析（CFTC COT / LME COTR）</span>
+    </div>
+
+    <!-- 數字卡片 -->
+    <div class="cot-grid">
+      <div class="cot-card">
+        <div class="cot-label">COMEX 未平倉合約（OI）</div>
+        <div class="cot-value">289,400<span class="cot-unit">張</span></div>
+        <div class="cot-sub">每張 = 25,000 磅 ≈ 11.34 噸<br>截至 2026/08/04（CFTC）</div>
+      </div>
+      <div class="cot-card net">
+        <div class="cot-label">管理基金 淨多頭（MM Net）</div>
+        <div class="cot-value">+75,800<span class="cot-unit">張</span></div>
+        <div class="cot-sub">淨多比率：~26% of OI<br>接近近年高位</div>
+      </div>
+      <div class="cot-card long">
+        <div class="cot-label">LME 投資基金 淨多頭</div>
+        <div class="cot-value">60,771<span class="cot-unit">手</span></div>
+        <div class="cot-sub">週增 +12,668 手<br>截至 2026/07/24（LME COTR）</div>
+      </div>
+      <div class="cot-card">
+        <div class="cot-label">COMEX 銅日均成交量</div>
+        <div class="cot-value">~120K<span class="cot-unit">張/日</span></div>
+        <div class="cot-sub">近期量能偏高<br>反映機構活躍</div>
+      </div>
+    </div>
+
+    <!-- 多空比例視覺化 -->
+    <div class="cot-bar-wrap">
+      <div class="cot-bar-label">
+        <span>🟢 管理基金多頭（估 ~115,000 張）</span>
+        <span>🔴 管理基金空頭（估 ~39,200 張）</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <div>
+          <div style="font-size:0.68rem;color:#1e8449;font-weight:700;margin-bottom:3px;">LONG 多頭</div>
+          <div class="cot-bar-track">
+            <div class="cot-bar-fill" style="width:75%;background:linear-gradient(90deg,#27ae60,#58d68d);"></div>
+          </div>
+          <div style="font-size:0.68rem;color:#1e8449;margin-top:2px;">~115,000 張（估）</div>
+        </div>
+        <div>
+          <div style="font-size:0.68rem;color:#922b21;font-weight:700;margin-bottom:3px;">SHORT 空頭</div>
+          <div class="cot-bar-track">
+            <div class="cot-bar-fill" style="width:27%;background:linear-gradient(90deg,#e74c3c,#f1948a);"></div>
+          </div>
+          <div style="font-size:0.68rem;color:#922b21;margin-top:2px;">~39,200 張（估）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-item" style="margin-top:14px;">
+      <div class="sc-item-title">📊 多頭倉位解讀：擁擠但未到極端</div>
+      <div class="sc-item-body">
+        COMEX 管理基金淨多頭 +75,800 張、淨多比率約 26%，位於近年高位但尚未達到 2025 年高峰的 +95,000 張極端水平。LME 投資基金上週也在大幅增倉（+12,668 手），說明機構在上週衝歷史高點前持續做多。
+        <br><br>
+        <strong>本週回調背景</strong>：在歷史高點後，預期部分管理基金開始獲利了結，淨多頭可能從 +75,800 下降至 +65,000–70,000 張。若進一步跌破 +60,000 張，代表多頭信心動搖，可能引發更大波段下修。
+        <span class="cot-signal sig-caution">⚠ 多頭擁擠，回調風險已上升</span>
+      </div>
+      <div class="sc-impact">▶ 影響評估：目前是「基本面強勁但籌碼偏擁擠」的局面，短線不適合追多；等淨多頭回吐至合理水位（+50,000–55,000 張）後，視為更安全的買點。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">🏭 商業避險者（Producer/Merchant）：大量放空對沖</div>
+      <div class="sc-item-body">
+        商業避險者（礦業公司、精煉廠）在高價位大量賣出期貨鎖定利潤，其淨空頭部位創下近年新高。這是正常的生產商對沖行為，也是支撐「市場中性化」的力量。
+      </div>
+      <div class="sc-impact">▶ 影響評估：礦商積極鎖定高價，代表他們自己也認為銅價在高位，是一種隱性的看空訊號，廢銅報價需留意下行保護。</div>
+    </div>
+
+    <div class="sc-item">
+      <div class="sc-item-title">📉 歷史參照：多頭擁擠 → 修正案例</div>
+      <div class="sc-item-body">
+        <table style="width:100%;border-collapse:collapse;font-size:0.8rem;">
+          <tr style="background:#dce8f5;"><th style="padding:5px 10px;text-align:left;">時間</th><th style="padding:5px 10px;text-align:right;">MM 淨多頭峰值</th><th style="padding:5px 10px;text-align:right;">隨後最大跌幅</th></tr>
+          <tr style="background:#fff;"><td style="padding:5px 10px;border-bottom:1px solid #eee;">2025 年 3 月高峰</td><td style="padding:5px 10px;border-bottom:1px solid #eee;text-align:right;">+95,000 張</td><td style="padding:5px 10px;border-bottom:1px solid #eee;text-align:right;color:#922b21;">-18%（約 8 週）</td></tr>
+          <tr style="background:#f5f9ff;"><td style="padding:5px 10px;border-bottom:1px solid #eee;">2024 年 5 月高峰</td><td style="padding:5px 10px;border-bottom:1px solid #eee;text-align:right;">+87,000 張</td><td style="padding:5px 10px;border-bottom:1px solid #eee;text-align:right;color:#922b21;">-22%（約 6 週）</td></tr>
+          <tr style="background:#fff;"><td style="padding:5px 10px;">2026/08 現在</td><td style="padding:5px 10px;text-align:right;font-weight:700;">+75,800 張</td><td style="padding:5px 10px;text-align:right;color:#935116;font-weight:700;">回調中，觀察中</td></tr>
+        </table>
+      </div>
+      <div class="sc-impact">▶ 影響評估：本次淨多頭峰值低於前兩次極端，但供給衝擊（DRC、Codelco）是前所未有的加持，下跌空間預估較小，$1,500–2,000/噸以內的回檔為相對健康。</div>
     </div>
   </div>
 
