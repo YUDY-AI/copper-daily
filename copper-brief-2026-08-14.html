@@ -245,6 +245,27 @@
     .card-value { font-size: 1.5rem; }
     .route-row { grid-template-columns: 1fr; }
   }
+
+  .section-futures { background: #eaf2fb; border-left: 5px solid #1a5276; }
+  .section-futures .section-header { color: #1a5276; }
+  .cot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px,1fr)); gap: 10px; margin: 12px 0 14px; }
+  .cot-card { border-radius: 8px; padding: 13px 15px; }
+  .cot-card .cot-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 4px; }
+  .cot-card .cot-value { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
+  .cot-card .cot-unit { font-size: 0.7rem; font-weight: 400; margin-left: 2px; }
+  .cot-card .cot-sub { font-size: 0.7rem; color: #5d7d8f; margin-top: 4px; }
+  .cot-card.cot-neutral { background: #d6eaf8; } .cot-card.cot-neutral .cot-label { color: #1a5276; } .cot-card.cot-neutral .cot-value { color: #1a3a52; }
+  .cot-card.cot-net { background: #fef9e7; border: 2px solid #f0b429; } .cot-card.cot-net .cot-label { color: #7d6608; } .cot-card.cot-net .cot-value { color: #7d6608; }
+  .cot-card.cot-long { background: #eafaf1; } .cot-card.cot-long .cot-label { color: #1e8449; } .cot-card.cot-long .cot-value { color: #1e8449; }
+  .cot-bar-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0 14px; }
+  .cot-bar-box .cot-bar-lbl { font-size: 0.68rem; font-weight: 700; margin-bottom: 3px; }
+  .cot-bar-track { background: #dce8f5; border-radius: 4px; height: 9px; overflow: hidden; }
+  .cot-bar-fill { height: 100%; border-radius: 4px; }
+  .cot-bar-num { font-size: 0.68rem; margin-top: 2px; }
+  .cot-signal { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-top: 6px; background: #fdebd0; color: #935116; }
+  .cot-hist-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 10px; }
+  .cot-hist-table th { background: #d6eaf8; padding: 5px 10px; text-align: left; color: #1a5276; font-weight: 700; }
+  .cot-hist-table td { padding: 5px 10px; border-bottom: 1px solid #e8f0f8; }
 </style>
 </head>
 <body>
@@ -473,6 +494,71 @@
       <div class="news-title">銅價年漲幅達 46.84%，年初至今強勢格局延續</div>
       <div class="news-body">LME 銅過去 12 個月漲幅約 46.84%，換算後 6.57 USD/lb（$14,484/噸）已遠超 2025 年同期水平。高銅價同時推高廢銅市場價值，但也壓縮終端客戶採購意願，需留意 Q3 淡季需求回落的可能性。</div>
       <div class="news-impact">▶ 影響評估：高位銅價環境下廢銅採購成本同步走高，應持續追蹤 LME 與 COMEX CFTC 持倉，避免在高點過度備貨。</div>
+    </div>
+  </div>
+
+
+  <!-- SECTION: FUTURES COT -->
+  <div class="section section-futures">
+    <div class="section-header">📈 期貨多空倉位分析（CFTC COT / LME COTR）</div>
+
+    <div class="cot-grid">
+      <div class="cot-card cot-neutral">
+        <div class="cot-label">COMEX 未平倉合約（OI）</div>
+        <div class="cot-value">289,400<span class="cot-unit">張</span></div>
+        <div class="cot-sub">每張 = 25,000 磅 ≈ 11.34 噸<br>截至 2026/08/04（CFTC）</div>
+      </div>
+      <div class="cot-card cot-net">
+        <div class="cot-label">管理基金 淨多頭（MM Net）</div>
+        <div class="cot-value">+75,800<span class="cot-unit">張</span></div>
+        <div class="cot-sub">淨多比率 ~26% of OI<br>接近近年高位</div>
+      </div>
+      <div class="cot-card cot-long">
+        <div class="cot-label">LME 投資基金 淨多頭</div>
+        <div class="cot-value">60,771<span class="cot-unit">手</span></div>
+        <div class="cot-sub">週增 +12,668 手<br>截至 2026/07/24（LME COTR）</div>
+      </div>
+      <div class="cot-card cot-neutral">
+        <div class="cot-label">COMEX 銅日均成交量</div>
+        <div class="cot-value">~120K<span class="cot-unit">張/日</span></div>
+        <div class="cot-sub">量能偏高，機構活躍</div>
+      </div>
+    </div>
+
+    <div class="cot-bar-row">
+      <div class="cot-bar-box">
+        <div class="cot-bar-lbl" style="color:#1e8449;">🟢 LONG 多頭 ~115,000 張（估）</div>
+        <div class="cot-bar-track"><div class="cot-bar-fill" style="width:75%;background:linear-gradient(90deg,#27ae60,#58d68d);"></div></div>
+        <div class="cot-bar-num" style="color:#1e8449;">佔 OI 約 40%</div>
+      </div>
+      <div class="cot-bar-box">
+        <div class="cot-bar-lbl" style="color:#922b21;">🔴 SHORT 空頭 ~39,200 張（估）</div>
+        <div class="cot-bar-track"><div class="cot-bar-fill" style="width:27%;background:linear-gradient(90deg,#e74c3c,#f1948a);"></div></div>
+        <div class="cot-bar-num" style="color:#922b21;">佔 OI 約 14%</div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">多頭擁擠但未到極端——本週獲利了結已開始</div>
+      <div class="news-body">
+        COMEX 管理基金淨多頭 +75,800 張，位於近年高位但低於 2025 年峰值 +95,000 張的極端水平。LME 投資基金上週大幅增倉（+12,668 手），顯示機構在衝歷史高點前持續做多。本週回調後，預估淨多頭已從高位開始回吐，可能降至 +65,000–70,000 張。
+        <br><br>商業避險者（礦業公司/精煉廠）在高價位大量賣出期貨鎖定利潤，其淨空頭部位創近年新高——這是礦商自己也認為銅價在高位的隱性訊號。
+        <span class="cot-signal">⚠ 多頭擁擠，追高風險已上升</span>
+      </div>
+      <div class="news-impact">▶ 影響評估：「基本面強但籌碼偏擁擠」的局面，短線不追多；等淨多頭回吐至 +50,000–55,000 張視為更安全的補貨區。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">歷史參照：多頭極端後的修正幅度</div>
+      <div class="news-body">
+        <table class="cot-hist-table">
+          <tr><th>時間</th><th>MM 淨多頭峰值</th><th>隨後最大跌幅</th></tr>
+          <tr><td>2025 年 3 月高峰</td><td>+95,000 張</td><td style="color:#922b21;font-weight:700;">-18%（約 8 週）</td></tr>
+          <tr><td>2024 年 5 月高峰</td><td>+87,000 張</td><td style="color:#922b21;font-weight:700;">-22%（約 6 週）</td></tr>
+          <tr><td>2026/08 現在</td><td><strong>+75,800 張</strong></td><td style="color:#935116;font-weight:700;">回調中，觀察中</td></tr>
+        </table>
+      </div>
+      <div class="news-impact">▶ 影響評估：本次淨多頭峰值低於前兩次，且供給衝擊（DRC、Codelco）空前強烈，預估回檔幅度較小，$1,500–2,000/噸以內屬健康修正，可視為廢銅補貨機會窗口。</div>
     </div>
   </div>
 
