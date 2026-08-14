@@ -263,6 +263,29 @@
   .cot-bar-fill { height: 100%; border-radius: 4px; }
   .cot-bar-num { font-size: 0.68rem; margin-top: 2px; }
   .cot-signal { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-top: 6px; background: #fdebd0; color: #935116; }
+
+  .price-compare-wrap { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; margin: 14px 0; align-items: stretch; }
+  .pc-side { border-radius: 8px; padding: 14px 16px; }
+  .pc-side.pc-long { background: linear-gradient(135deg, #eafaf1 0%, #d5f5e3 100%); border: 1.5px solid #27ae60; }
+  .pc-side.pc-short { background: linear-gradient(135deg, #fdedec 0%, #fadbd8 100%); border: 1.5px solid #e74c3c; }
+  .pc-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .pc-long .pc-label { color: #1e8449; }
+  .pc-short .pc-label { color: #922b21; }
+  .pc-avg { font-family: Georgia, serif; font-size: 1.55rem; font-weight: 700; line-height: 1.1; }
+  .pc-long .pc-avg { color: #1a5c2f; }
+  .pc-short .pc-avg { color: #922b21; }
+  .pc-unit { font-size: 0.7rem; font-weight: 400; }
+  .pc-pnl { display: inline-block; margin-top: 6px; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .pc-long .pc-pnl { background: #27ae60; color: #fff; }
+  .pc-short .pc-pnl { background: #e74c3c; color: #fff; }
+  .pc-meta { font-size: 0.68rem; color: #555; margin-top: 5px; }
+  .pc-mid { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 12px; }
+  .pc-current-price { background: #1a5276; color: #fff; border-radius: 8px; padding: 10px 16px; text-align: center; min-width: 110px; }
+  .pc-current-price .pcp-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; opacity: 0.85; }
+  .pc-current-price .pcp-val { font-family: Georgia, serif; font-size: 1.3rem; font-weight: 700; }
+  .pc-current-price .pcp-sub { font-size: 0.65rem; opacity: 0.8; margin-top: 2px; }
+  .pain-box { background: #fef9e7; border: 1.5px solid #f0b429; border-radius: 8px; padding: 10px 14px; margin-top: 12px; font-size: 0.78rem; }
+  .pain-box .pain-title { font-weight: 700; color: #7d6608; margin-bottom: 5px; }
   .cot-hist-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 10px; }
   .cot-hist-table th { background: #d6eaf8; padding: 5px 10px; text-align: left; color: #1a5276; font-weight: 700; }
   .cot-hist-table td { padding: 5px 10px; border-bottom: 1px solid #e8f0f8; }
@@ -546,6 +569,49 @@
         <span class="cot-signal">⚠ 多頭擁擠，追高風險已上升</span>
       </div>
       <div class="news-impact">▶ 影響評估：「基本面強但籌碼偏擁擠」的局面，短線不追多；等淨多頭回吐至 +50,000–55,000 張視為更安全的補貨區。</div>
+    </div>
+
+
+    <div class="news-item">
+      <div class="news-title">多空均價對比——當前誰在浮盈？</div>
+      <div class="news-body">
+
+        <div class="price-compare-wrap">
+          <div class="pc-side pc-long">
+            <div class="pc-label">🟢 多頭（MM Long）平均建倉成本</div>
+            <div class="pc-avg">$12,850<span class="pc-unit">/噸</span></div>
+            <div class="pc-avg" style="font-size:1.1rem;margin-top:2px;">$5.83<span class="pc-unit">/磅</span></div>
+            <span class="pc-pnl">浮盈 +$1,634/噸（+12.7%）</span>
+            <div class="pc-meta">建倉期：2025Q4–2026Q1 拉升段<br>估算方式：CFTC 倉位增減×對應週均價</div>
+          </div>
+          <div class="pc-mid">
+            <div class="pc-current-price">
+              <div class="pcp-label">LME 現價</div>
+              <div class="pcp-val">$14,484</div>
+              <div class="pcp-sub">$6.57/磅<br>2026/08/13</div>
+            </div>
+          </div>
+          <div class="pc-side pc-short">
+            <div class="pc-label">🔴 空頭（MM Short）平均建倉成本</div>
+            <div class="pc-avg">$13,820<span class="pc-unit">/噸</span></div>
+            <div class="pc-avg" style="font-size:1.1rem;margin-top:2px;">$6.27<span class="pc-unit">/磅</span></div>
+            <span class="pc-pnl">浮虧 −$664/噸（−4.8%）</span>
+            <div class="pc-meta">建倉期：2026Q2 衝高後空頭入場<br>主要押注：高位反轉 / 中國需求走弱</div>
+          </div>
+        </div>
+
+        <div class="pain-box">
+          <div class="pain-title">⚡ 關鍵水位分析</div>
+          <table style="width:100%;font-size:0.75rem;border-collapse:collapse;">
+            <tr><td style="padding:3px 8px;font-weight:700;color:#1a5276;">多頭平均成本</td><td style="padding:3px 8px;">$12,850/噸（$5.83/磅）</td><td style="padding:3px 8px;color:#1e8449;">目前距此 +$1,634，有足夠緩衝</td></tr>
+            <tr style="background:#f9f9f9;"><td style="padding:3px 8px;font-weight:700;color:#922b21;">空頭平均成本</td><td style="padding:3px 8px;">$13,820/噸（$6.27/磅）</td><td style="padding:3px 8px;color:#922b21;">目前被套 $664/噸，止損壓力不大但存在</td></tr>
+            <tr><td style="padding:3px 8px;font-weight:700;color:#7d6608;">空頭止損觸發點</td><td style="padding:3px 8px;">$14,800–15,000/噸</td><td style="padding:3px 8px;color:#7d6608;">若突破此區，空頭大規模回補 → 助推上漲</td></tr>
+            <tr style="background:#f9f9f9;"><td style="padding:3px 8px;font-weight:700;color:#5d6d7e;">多頭支撐關口</td><td style="padding:3px 8px;">$13,500–13,800/噸</td><td style="padding:3px 8px;color:#5d6d7e;">若跌破此區，多頭止損湧現 → 加速回調</td></tr>
+          </table>
+        </div>
+
+      </div>
+      <div class="news-impact">▶ 影響評估：多頭目前浮盈豐厚，不急於停損；空頭被套但尚未到強制止損區。短線方向由宏觀數據（Fed 態度、中國需求）決定，$13,500 是多頭第一條生死線。</div>
     </div>
 
     <div class="news-item">
