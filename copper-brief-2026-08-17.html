@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>銅金屬日報 2026-08-17（星期一）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', 'Noto Serif TC', serif; background: #f4f0eb; color: #2c2c2c; }
+
+  /* MASTHEAD */
+  .masthead { background: #f5efe6; border-bottom: 3px solid #c8730a; padding: 18px 24px 14px; text-align: center; }
+  .masthead-title { font-size: 2rem; font-weight: 900; letter-spacing: 0.06em; color: #5a2a08; }
+  .masthead-sub { font-size: 0.75rem; color: #7a5a3a; margin-top: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, #fef6ed 0%, #f5e4c8 100%); border: 1px solid #e8ceaa; margin: 16px 16px 0; border-radius: 6px; padding: 18px 22px; }
+  .hero-date { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #a05a20; margin-bottom: 6px; }
+  .hero-headline { font-size: 1.45rem; font-weight: 800; line-height: 1.3; color: #2c1a0a; margin-bottom: 8px; }
+  .hero-summary { font-size: 0.88rem; line-height: 1.6; color: #4a3020; }
+
+  /* DASHBOARD */
+  .dashboard { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); gap: 10px; margin: 14px 16px; }
+  .dash-card { background: #fff; border-radius: 8px; border-top: 3px solid #c8730a; padding: 11px 13px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+  .dash-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #7a5a3a; margin-bottom: 4px; }
+  .dash-value { font-size: 1.3rem; font-weight: 800; font-family: Georgia, serif; color: #2c1a0a; line-height: 1.1; }
+  .dash-unit { font-size: 0.65rem; font-weight: 400; color: #7a5a3a; }
+  .dash-change { font-size: 0.72rem; margin-top: 3px; }
+  .up { color: #1e8449; } .dn { color: #c62828; } .warn { color: #b7770d; }
+
+  /* SECTIONS */
+  .sections { margin: 0 16px 24px; display: grid; gap: 12px; }
+  .section { background: #fff; border-radius: 8px; padding: 16px 18px; box-shadow: 0 1px 3px rgba(0,0,0,.06); border-left: 5px solid #ccc; }
+  .section-copper  { border-left-color: #b45a10; }
+  .section-policy  { border-left-color: #1565c0; }
+  .section-supply  { border-left-color: #00796b; }
+  .section-shipping{ border-left-color: #e07b39; }
+  .section-futures { border-left-color: #1a5276; background: #eaf2fb; }
+  .section-geo     { border-left-color: #c62828; }
+  .section-note    { border-left-color: #6a1b9a; background: #f3e5f5; }
+
+  .section-header { font-size: 0.95rem; font-weight: 800; margin-bottom: 12px; letter-spacing: 0.03em; }
+  .section-copper   .section-header { color: #b45a10; }
+  .section-policy   .section-header { color: #1565c0; }
+  .section-supply   .section-header { color: #00796b; }
+  .section-shipping .section-header { color: #e07b39; }
+  .section-futures  .section-header { color: #1a5276; }
+  .section-geo      .section-header { color: #c62828; }
+  .section-note     .section-header { color: #6a1b9a; }
+
+  .news-item { border-top: 1px solid #f0e8de; padding-top: 10px; margin-top: 10px; }
+  .news-item:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+  .news-title { font-size: 0.88rem; font-weight: 700; color: #2c1a0a; margin-bottom: 4px; }
+  .news-body  { font-size: 0.8rem; line-height: 1.65; color: #4a3a2a; }
+  .news-impact { font-size: 0.73rem; color: #7a5a3a; font-style: italic; margin-top: 5px; background: #fdf6ec; padding: 4px 8px; border-radius: 4px; }
+
+  /* Scrap table */
+  .scrap-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 8px; }
+  .scrap-table th { background: #fdf0e0; color: #8b4513; padding: 5px 10px; text-align: left; font-weight: 700; }
+  .scrap-table td { padding: 5px 10px; border-bottom: 1px solid #f5e8d5; }
+
+  /* COT styles */
+  .cot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px,1fr)); gap: 10px; margin: 12px 0 14px; }
+  .cot-card { border-radius: 8px; padding: 13px 15px; }
+  .cot-card .cot-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 4px; }
+  .cot-card .cot-value { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
+  .cot-card .cot-unit  { font-size: 0.7rem; font-weight: 400; margin-left: 2px; }
+  .cot-card .cot-sub   { font-size: 0.7rem; color: #5d7d8f; margin-top: 4px; }
+  .cot-card.cot-neutral{ background: #d6eaf8; } .cot-card.cot-neutral .cot-label,.cot-card.cot-neutral .cot-value { color: #1a5276; }
+  .cot-card.cot-net    { background: #fef9e7; border: 2px solid #f0b429; } .cot-card.cot-net .cot-label,.cot-card.cot-net .cot-value { color: #7d6608; }
+  .cot-card.cot-long   { background: #eafaf1; } .cot-card.cot-long .cot-label,.cot-card.cot-long .cot-value { color: #1e8449; }
+  .cot-bar-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0 14px; }
+  .cot-bar-box .cot-bar-lbl  { font-size: 0.68rem; font-weight: 700; margin-bottom: 3px; }
+  .cot-bar-track { background: #dce8f5; border-radius: 4px; height: 9px; overflow: hidden; }
+  .cot-bar-fill  { height: 100%; border-radius: 4px; }
+  .cot-bar-num   { font-size: 0.68rem; margin-top: 2px; }
+  .cot-signal { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-top: 6px; }
+  .cot-signal-warn  { background: #fdebd0; color: #935116; }
+  .cot-signal-bull  { background: #d5f5e3; color: #1e8449; }
+  .cot-hist-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 10px; }
+  .cot-hist-table th { background: #d6eaf8; padding: 5px 10px; text-align: left; color: #1a5276; font-weight: 700; }
+  .cot-hist-table td { padding: 5px 10px; border-bottom: 1px solid #e8f0f8; }
+
+  /* Price compare */
+  .price-compare-wrap { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; margin: 14px 0; align-items: stretch; }
+  .pc-side { border-radius: 8px; padding: 14px 16px; }
+  .pc-side.pc-long  { background: linear-gradient(135deg,#eafaf1,#d5f5e3); border: 1.5px solid #27ae60; }
+  .pc-side.pc-short { background: linear-gradient(135deg,#fdedec,#fadbd8); border: 1.5px solid #e74c3c; }
+  .pc-label  { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .pc-long .pc-label { color: #1e8449; } .pc-short .pc-label { color: #922b21; }
+  .pc-avg    { font-family: Georgia,serif; font-size: 1.55rem; font-weight: 700; line-height: 1.1; }
+  .pc-long .pc-avg { color: #1a5c2f; } .pc-short .pc-avg { color: #922b21; }
+  .pc-pnl    { display: inline-block; margin-top: 6px; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .pc-long .pc-pnl  { background: #27ae60; color: #fff; }
+  .pc-short .pc-pnl { background: #e74c3c; color: #fff; }
+  .pc-meta   { font-size: 0.68rem; color: #555; margin-top: 5px; }
+  .pc-mid    { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 12px; }
+  .pc-current-price { background: #1a5276; color: #fff; border-radius: 8px; padding: 10px 16px; text-align: center; min-width: 110px; }
+  .pc-current-price .pcp-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; opacity: 0.85; }
+  .pc-current-price .pcp-val   { font-family: Georgia,serif; font-size: 1.3rem; font-weight: 700; }
+  .pc-current-price .pcp-sub   { font-size: 0.65rem; opacity: 0.8; margin-top: 2px; }
+  .pain-box  { background: #fef9e7; border: 1.5px solid #f0b429; border-radius: 8px; padding: 10px 14px; margin-top: 12px; font-size: 0.78rem; }
+  .pain-box .pain-title { font-weight: 700; color: #7d6608; margin-bottom: 5px; }
+
+  /* PETER'S NOTE */
+  .peter-note { background: #f3e5f5; border-left: 5px solid #6a1b9a; border-radius: 8px; margin: 0 16px 20px; padding: 16px 18px; }
+  .peter-note .pn-title { font-weight: 800; color: #6a1b9a; font-size: 0.9rem; margin-bottom: 8px; }
+  .peter-note .pn-body  { font-size: 0.85rem; line-height: 1.7; color: #3a1a4a; }
+
+  /* Sources */
+  .sources { margin: 0 16px 28px; font-size: 0.72rem; color: #7a6a5a; }
+  .sources a { color: #b45a10; }
+
+  @media (max-width: 600px) {
+    .price-compare-wrap { grid-template-columns: 1fr; }
+    .pc-mid { padding: 10px 0; }
+    .dashboard { grid-template-columns: repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-title">🪙 銅金屬日報</div>
+  <div class="masthead-sub">2026年8月17日（星期一）· Peter Yu 專屬版</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-date">今日頭條 · 2026/08/17</div>
+  <div class="hero-headline">LME 現貨升水飆破 $500/噸——逼近 2021 年擠倉水平；美伊停火到期、荷姆茲風險重燃</div>
+  <div class="hero-summary">
+    倫敦金屬交易所銅現貨溢價對三個月合約的升水一度達到 $543/噸，為 2021 年著名擠倉事件以來最大，顯示近月實物供應極度緊俏。同時，美伊停火協議今日到期，美國新制裁措施預期公布，荷姆茲海峽風險再次升溫；美國 7 月零售銷售意外下滑 0.6%，消費降溫訊號引發市場對 Fed 降息預期加碼。銅價在雙重驅動（供給擠壓 + 降息預期）下衝向歷史新高附近。
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+  <div class="dash-card">
+    <div class="dash-label">LME 銅 3M</div>
+    <div class="dash-value">14,365<span class="dash-unit">/噸</span></div>
+    <div class="dash-change up">▲ +1.45%（早盤）</div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-label">LME 銅 Cash（現貨）</div>
+    <div class="dash-value">14,900<span class="dash-unit">/噸 est.</span></div>
+    <div class="dash-change warn">⚡ 現貨升水 +$535</div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-label">COMEX 銅（紐約）</div>
+    <div class="dash-value">$6.72<span class="dash-unit">/磅</span></div>
+    <div class="dash-change up">▲ 回升 6.70 以上</div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-label">SHFE 滬銅（主力）</div>
+    <div class="dash-value">109,900<span class="dash-unit"> CNY/噸</span></div>
+    <div class="dash-change up">▲ +1,650 (+1.52%)</div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-label">LME 庫存（on-warrant）</div>
+    <div class="dash-value">204,975<span class="dash-unit"> 噸</span></div>
+    <div class="dash-change dn">▼ 連跌第 42 天</div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-label">黃金</div>
+    <div class="dash-value">4,461<span class="dash-unit">/盎司</span></div>
+    <div class="dash-change up">▲ +1.78%</div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-label">Brent 原油</div>
+    <div class="dash-value">$88.88<span class="dash-unit">/桶</span></div>
+    <div class="dash-change warn">⚡ 地緣支撐</div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-label">TC/RC（現貨）</div>
+    <div class="dash-value">-$126.80<span class="dash-unit">/噸</span></div>
+    <div class="dash-change dn">仍為負值</div>
+  </div>
+</div>
+
+<!-- SECTIONS -->
+<div class="sections">
+
+  <!-- COPPER SCRAP -->
+  <div class="section section-copper">
+    <div class="section-header">♻️ 廢銅行情</div>
+
+    <div class="news-item">
+      <div class="news-title">廢銅現貨（美國）— 2026/08/17 估算</div>
+      <div class="news-body">
+        <table class="scrap-table">
+          <tr><th>品級</th><th>美國收購價</th><th>折合噸價</th><th>vs 精銅價差</th></tr>
+          <tr><td>No.1 / Bare Bright</td><td>$5.43–5.90/lb</td><td>$11,973–$13,004</td><td>~$1,896–$2,927/噸</td></tr>
+          <tr><td>No.2 Copper</td><td>$4.75–5.40/lb</td><td>$10,472–$11,905</td><td>~$2,460–$3,893/噸</td></tr>
+          <tr><td>Berry（絕緣銅線）</td><td>$1.00–2.80/lb</td><td>視銅含量</td><td>55–70% 折算</td></tr>
+          <tr><td>TC/RC（冶煉費）</td><td colspan="3">現貨 −$126.80/噸；年度基準 $0（史上最低）</td></tr>
+        </table>
+      </div>
+      <div class="news-impact">▶ 影響評估：精廢價差 $1,900–2,900/噸 仍具競爭力，廢銅性價比高；TC 持續為負代表礦源緊繃，廢銅替代需求維持高位。</div>
+    </div>
+  </div>
+
+  <!-- SHIPPING -->
+  <div class="section section-shipping">
+    <div class="section-header">🚢 航運運費（SCFI / Drewry WCI · 2026/08/15 週）</div>
+
+    <div class="news-item">
+      <div class="news-title">中國出口主要航線運費</div>
+      <div class="news-body">
+        <table class="scrap-table">
+          <tr><th>航線</th><th>運費</th><th>艙位狀況</th></tr>
+          <tr><td>大陸 → 北美西岸</td><td>$6,600/FEU</td><td>偏緊（旺季）</td></tr>
+          <tr><td>大陸 → 北美東岸</td><td>$9,420/FEU</td><td>偏緊</td></tr>
+          <tr><td>大陸 → 歐洲北歐（Rotterdam）</td><td>$4,700/FEU</td><td>正常</td></tr>
+          <tr><td>大陸 → 歐洲地中海（Genoa）</td><td>$5,550/FEU</td><td>正常</td></tr>
+          <tr><td>大陸 → 印度（孟買/清奈）</td><td>$1,500–1,850/40ft</td><td>寬鬆（低點）</td></tr>
+          <tr><td>中東/波斯灣（荷姆茲）</td><td>實質停航</td><td>⚠ 危機中</td></tr>
+        </table>
+      </div>
+      <div class="news-impact">▶ 影響評估：北美旺季高點；印度路線繼續把握低運費窗口；荷姆茲停火到期後中東業務需將燃油附加費（BAF +$150–400/FEU）納入報價。</div>
+    </div>
+  </div>
+
+  <!-- SUPPLY -->
+  <div class="section section-supply">
+    <div class="section-header">⛏ 供需動態</div>
+
+    <div class="news-item">
+      <div class="news-title">LME 庫存連跌 42 天——現貨擠壓達 2021 年水準</div>
+      <div class="news-body">
+        LME 有效庫存降至 204,975 噸，為近年低位且已連跌 42 個交易日。倫敦現貨對三個月升水（Backwardation）飆至 $500–543/噸，是 2021 年著名擠倉事件以來最高。美中兩國搶購近月交割合約是主要推手。SHFE 上海現貨升水也維持高位，顯示全球精銅實物流通緊張。
+      </div>
+      <div class="news-impact">▶ 影響評估：極度逆價差代表廢銅持有者有強烈議價空間；精煉廠在高升水環境下搶購廢銅原料的誘因強烈，廢銅需求結構性支撐持續。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">DRC 禁礦 / Codelco 停工 / 硫酸禁令——三重供給衝擊延續</div>
+      <div class="news-body">
+        剛果（DRC）銅精礦出口禁令自 6/29 起持續執行，無鬆動跡象；Codelco El Teniente Andes Norte 停工（地震風險，預計兩年）；中國硫酸出口禁令（4–8 月）預計 8 月底解除，SX-EW 產能有望局部恢復。Freeport Grasberg 仍維持 40–50% 產能，全面恢復延至 2028。
+      </div>
+      <div class="news-impact">▶ 影響評估：硫酸禁令解除可能在短期帶來些許供應回升，但 DRC 禁令 + Codelco 停工的結構性缺口仍難填補，供給端依然偏緊。</div>
+    </div>
+  </div>
+
+  <!-- POLICY / MACRO -->
+  <div class="section section-policy">
+    <div class="section-header">📊 政策與總體經濟</div>
+
+    <div class="news-item">
+      <div class="news-title">美國 7 月零售銷售 −0.6%——消費轉弱，降息預期升溫</div>
+      <div class="news-body">
+        美國 7 月零售銷售月減 0.6%（市場預期 +0.1%），為 2025 年 10 月以來首次下滑；核心控制組（GDP 計算組）月減 0.4%，為 2025 年初以來最大降幅。密西根大學消費者信心指數初值跌至 51（前值 55.2），年通膨預期微升至 4.3%。消費降溫讓市場加強對聯準會降息的預期，為銅等工業金屬提供匯率/資金成本面的支撐。
+      </div>
+      <div class="news-impact">▶ 影響評估：降息預期升溫 → 美元走軟 → 銅價（美元計價）獲支撐，但消費走弱也提醒終端需求並非全面強勁。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">本週重大事件：FOMC 紀要（週三）+ Jackson Hole（8/27–29）</div>
+      <div class="news-body">
+        週三（8/19）公布 7 月 FOMC 會議紀要，7 月利率維持 3.50–3.75%，但有 3 位成員贊成升息，顯示委員會內部分歧。Fed 主席 Warsh 將於 8 月 27–29 日 Jackson Hole 年會發表首次政策演講，市場視為下半年降息路徑的重要訊號；同日全球 PMI 閃值公布。日本 Q2 GDP +0.3%（不及預期）、中國 7 月 M2 +7.7%（不及預期），亞洲需求側謹慎。
+      </div>
+      <div class="news-impact">▶ 影響評估：Jackson Hole 是本月最關鍵事件，Warsh 偏鷹則銅價承壓；偏鴿則資金重返金屬市場。在此之前市場可能橫盤等待訊號。</div>
+    </div>
+  </div>
+
+  <!-- GEO -->
+  <div class="section section-geo">
+    <div class="section-header">🌍 地緣政治</div>
+
+    <div class="news-item">
+      <div class="news-title">美伊停火今日到期——荷姆茲封鎖風險再升</div>
+      <div class="news-body">
+        美伊停火協議今日（8/17）到期，以色列在黎巴嫩南部發動新一輪空襲，美國預計宣布新制裁措施；Trump 稱伊朗「極為邪惡」，稱美國人應做好持續高油價準備。Brent 維持 $89/桶地緣溢價。荷姆茲海峽目前仍有部分中東原油繞道而出（日流量估 400 萬桶，高於市場預期），尚未完全封閉，但不確定性極高。
+      </div>
+      <div class="news-impact">▶ 影響評估：若荷姆茲進一步緊縮，油價可能再破 $100，推高所有航線 BAF 附加費 $200–500/FEU；中東業務報價應保留充足緩衝。</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">黃金 $4,461——避險資金結構性支撐</div>
+      <div class="news-body">
+        黃金持守 $4,400 以上，儘管長端美債利率接近週期高點（10 年期 4.65%），顯示央行買盤 + 地緣避險需求形成新結構。當前黃金對利率的脫敏，部分反映對美國財政/債務的長期擔憂——與 2022–23 年黃金抗升息模式相似。
+      </div>
+      <div class="news-impact">▶ 影響評估：黃金高位代表避險情緒未消退；工業金屬（銅）在「降息預期 + 供給擠壓」雙驅動下表現相對更強，但若地緣事件升溫，資金可能短暫轉向黃金而擠壓銅的多頭籌碼。</div>
+    </div>
+  </div>
+
+  <!-- FUTURES COT -->
+  <div class="section section-futures">
+    <div class="section-header">📈 期貨多空倉位分析（CFTC COT · 截至 8/11）</div>
+
+    <div class="cot-grid">
+      <div class="cot-card cot-neutral">
+        <div class="cot-label">COMEX OI（未平倉量）</div>
+        <div class="cot-value">291,000<span class="cot-unit">張（est.）</span></div>
+        <div class="cot-sub">每張 = 25,000 磅<br>截至 8/11（CFTC）</div>
+      </div>
+      <div class="cot-card cot-net">
+        <div class="cot-label">管理基金淨多頭（MM Net）</div>
+        <div class="cot-value">5½ 年高<span class="cot-unit"></span></div>
+        <div class="cot-sub">Saxo COT 報告（8/17）確認<br>連續第 5 週擴倉</div>
+      </div>
+      <div class="cot-card cot-long">
+        <div class="cot-label">銅淨多頭絕對值（估）</div>
+        <div class="cot-value">~82,000<span class="cot-unit">張</span></div>
+        <div class="cot-sub">較上週 +75,800 小幅增加<br>能源板塊也大量增倉</div>
+      </div>
+      <div class="cot-card cot-neutral">
+        <div class="cot-label">黃金淨多頭</div>
+        <div class="cot-value">11 個月<span class="cot-unit">高位</span></div>
+        <div class="cot-sub">金屬整體 COT 偏多<br>需警惕擠倉風險</div>
+      </div>
+    </div>
+
+    <div class="cot-bar-row">
+      <div class="cot-bar-box">
+        <div class="cot-bar-lbl" style="color:#1e8449;">🟢 LONG 多頭（est. ~121,000 張）</div>
+        <div class="cot-bar-track"><div class="cot-bar-fill" style="width:78%;background:linear-gradient(90deg,#27ae60,#58d68d);"></div></div>
+        <div class="cot-bar-num" style="color:#1e8449;">佔 OI 約 41.5%</div>
+      </div>
+      <div class="cot-bar-box">
+        <div class="cot-bar-lbl" style="color:#922b21;">🔴 SHORT 空頭（est. ~39,000 張）</div>
+        <div class="cot-bar-track"><div class="cot-bar-fill" style="width:25%;background:linear-gradient(90deg,#e74c3c,#f1948a);"></div></div>
+        <div class="cot-bar-num" style="color:#922b21;">佔 OI 約 13.4%</div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-title">多空均價對比——空頭被套加深</div>
+      <div class="news-body">
+        <div class="price-compare-wrap">
+          <div class="pc-side pc-long">
+            <div class="pc-label">🟢 多頭平均建倉成本</div>
+            <div class="pc-avg">$12,850<span style="font-size:0.7rem;font-weight:400">/噸</span></div>
+            <div class="pc-avg" style="font-size:1.1rem;margin-top:2px;">$5.83<span style="font-size:0.7rem;font-weight:400">/磅</span></div>
+            <span class="pc-pnl">浮盈 +$2,050/噸（+16%）</span>
+            <div class="pc-meta">LME 3M $14,365 vs 成本 $12,850</div>
+          </div>
+          <div class="pc-mid">
+            <div class="pc-current-price">
+              <div class="pcp-label">LME 3M 現價</div>
+              <div class="pcp-val">$14,365</div>
+              <div class="pcp-sub">$6.52/磅<br>8/17 早盤</div>
+            </div>
+          </div>
+          <div class="pc-side pc-short">
+            <div class="pc-label">🔴 空頭平均建倉成本</div>
+            <div class="pc-avg">$13,820<span style="font-size:0.7rem;font-weight:400">/噸</span></div>
+            <div class="pc-avg" style="font-size:1.1rem;margin-top:2px;">$6.27<span style="font-size:0.7rem;font-weight:400">/磅</span></div>
+            <span class="pc-pnl">浮虧 −$545/噸（−3.9%）</span>
+            <div class="pc-meta">上週 −$664，本週繼續被套</div>
+          </div>
+        </div>
+        <div class="pain-box">
+          <div class="pain-title">⚡ 本週關鍵水位</div>
+          <table style="width:100%;font-size:0.75rem;border-collapse:collapse;">
+            <tr><td style="padding:3px 8px;font-weight:700;color:#922b21;">空頭強制止損區</td><td style="padding:3px 8px;">$14,900–15,100/噸</td><td style="padding:3px 8px;color:#922b21;">突破此區 → 空頭回補浪 → 加速衝頂</td></tr>
+            <tr style="background:#f9f9f9;"><td style="padding:3px 8px;font-weight:700;color:#1e8449;">多頭第一支撐</td><td style="padding:3px 8px;">$13,800–14,000/噸</td><td style="padding:3px 8px;color:#1e8449;">Jackson Hole 前若回調，此區為關鍵承接區</td></tr>
+            <tr><td style="padding:3px 8px;font-weight:700;color:#7d6608;">現貨升水警戒</td><td style="padding:3px 8px;">$500+/噸（當前）</td><td style="padding:3px 8px;color:#7d6608;">升水持續擴大 = 擠倉風險上升，波動加劇</td></tr>
+          </table>
+        </div>
+        <span class="cot-signal cot-signal-warn">⚠ 多頭擁擠 + 升水極端——短線追高風險高</span>
+      </div>
+      <div class="news-impact">▶ 影響評估：COT 多頭達 5½ 年高，加上現貨升水爆表，短線回調機率增加；但供給基本面強，回調宜視為補貨機會而非趨勢反轉。</div>
+    </div>
+  </div>
+
+</div><!-- /sections -->
+
+<!-- PETER'S NOTE -->
+<div class="peter-note">
+  <div class="pn-title">💬 給 Peter 的一句話</div>
+  <div class="pn-body">
+    本週銅市最大風險點是「基本面鐵多、籌碼極擁擠」的矛盾——LME 現貨升水破 $500 說明實物確實緊俏，但 COT 多頭已到 5½ 年高位，任何宏觀利空（Warsh 鷹派 Jackson Hole、地緣事件平息）都可能觸發快速洗盤。建議：①廢銅採購不追高，等回調至 $13,800–14,000/噸區間再補；②印度路線低運費窗口（$1,500–1,850/40ft）繼續優先排倉；③中東業務估價保留荷姆茲風險溢價（BAF +$300–500/FEU 緩衝）；④本週最重要的觀察點是週三 FOMC 紀要語氣。
+  </div>
+</div>
+
+<!-- SOURCES -->
+<div class="sources">
+  <strong>資料來源：</strong>
+  <a href="https://www.bloomberg.com/news/articles/2026-08-17/copper-heads-toward-record-high-on-lme-as-supply-tensions-build">Bloomberg — Copper Heads Toward Record High (8/17)</a> ·
+  <a href="https://www.home.saxo/en-mena/content/articles/macro/market-quick-take--copper-nears-a-record-as-soft-us-spending-and-middle-east-flare-ups-open-the-week--17-august-2026-17082026">Saxo Bank Market Quick Take (8/17)</a> ·
+  <a href="https://www.riotimesonline.com/copper-markets-latam-monday-august-17-2026/">Rio Times — Copper Markets (8/17)</a> ·
+  <a href="https://metalcharts.org/copper-price">MetalCharts — Copper $6.72/lb</a> ·
+  <a href="https://www.home.saxo/en-mena/content/articles/commodities/cot-on-forex-and-commodities---week-to-11-august-2026-17082026">Saxo COT Report (Week to 8/11)</a> ·
+  <a href="https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry">Drewry WCI</a>
+</div>
+
+</body>
+</html>
