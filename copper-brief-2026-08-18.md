@@ -1,122 +1,110 @@
 # 🪙 銅金屬日報 2026-08-18（星期二）
-> Peter Yu 專屬版 · Daily Copper Intelligence
+
+**Peter Yu 專屬版 · 自動產出**
 
 ---
 
 ## 今日頭條
 
-**【荷姆茲危機持續 + 美國半成品銅關稅8/1上路，LME銅維持強勢$6.60/lb，廢銅精廢價差仍低於歷史均值】**
+【銅市驚驚漲】LME 現貨突破 $14,550/噸，期現價差逾 $300 逼近 2021 年擠倉水準
 
-霍姆茲海峽自2月底以來幾近封閉，繞行好望角導致亞洲→中東/歐洲航程延長12-15天，運費大幅攀升。美國自8月1日起對半成品銅徵收50%關稅（精煉銅暫時豁免至2027年1月），推動精廢價差收窄，採購廢銅時機具吸引力。LME銅現貨報$14,551/噸，庫存加速去化，基本面偏多。
+繼 8月7日 LME 三月期銅觸及歷史高點 $14,258/噸後，現貨銅持續走強，Cash-3M 逆價差擴大至 +$300/噸，創 2021 年以來最大。智利銅產量預測下修 2.6%，Codelco 面臨「四年艱難期」；霍姆茲海峽危機持續，伊朗-阿曼談判進展為本週最大觀察點。
 
 ---
 
-## 行情數字一覽
+## 行情數字
 
-| 指標 | 數值 | 變化 |
+| 指標 | 數值 | 備註 |
 |------|------|------|
-| LME 銅 Cash | $14,551/噸 | ▲ +0.5% |
-| LME 銅 3M | $14,440/噸 | ▲ +0.3% |
-| Cash–3M 價差 | +$111/噸 | 現貨升水 |
-| SHFE 滬銅 近月 | ¥109,200/噸 | ▲ +0.4% |
-| LME 庫存 | 195,000 MT | ▼ 連續去化42日 |
-| 精廢價差 | $3,175/噸 ($1.44/lb) | 廢銅有利 |
-| Drewry WCI 綜合 | $4,339/40ft | ▲ +1% W/W |
-| TC/RC 冶煉費 | ≈ $0/噸 | 歷史最低 |
+| LME 銅 Cash | $14,551/噸（$6.60/lb） | 近歷史高點 |
+| LME 銅 3M | $14,251/噸（$6.46/lb） | 多月高位 |
+| Cash-3M 逆價差 | +$300/噸 | 2021年以來最大 |
+| SHFE 滬銅 | ¥106,500/噸（≈$14,690） | 強勁走勢 |
+| LME 庫存 | ~101,000 mt | 42連跌，年內新低 |
+| 精廢價差 | $1.25/lb（$2,755/噸） | 廢銅採購窗口開放 |
+| TC/RC | -$126.80/噸 | 持續負值，礦商強勢 |
 
 ---
 
-## ♻️ 廢銅行情
+## 廢銅行情
 
-| 品種 | 美元/lb | 美元/噸 | LME折扣% |
-|------|---------|---------|-----------|
-| No.1 Copper / Bare Bright | $5.20 | $11,463 | ~79% |
-| No.2 Copper（雜銅） | $4.75 | $10,472 | ~72% |
-| Berry（絕緣銅線） | $4.90 | $10,802 | ~74% |
+| 品級 | 美國報價 ($/lb) | 折算 ($/噸) |
+|------|----------------|------------|
+| Bare Bright（裸光銅線） | $5.30–$5.40 | $11,685–$11,905 |
+| #1 Copper（一號銅） | $5.10–$5.51 | $11,243–$12,148 |
+| #2 Copper（二號銅） | $4.62–$5.28 | $10,186–$11,640 |
+| Berry（絕緣銅線） | $3.80–$4.20 | $8,378–$9,259 |
 
-- **精廢價差**：$3,175/噸 — 位於近3年中低位，廢銅採購窗口具吸引力
-- **TC/RC**：2026年基準降至$0/噸（安托法加斯塔×中國冶煉廠），部分負值，礦源供應極度緊張
+精廢價差（Bare Bright 對 LME Cash）= $1.25/lb = 19% 折讓，位於合理採購帶（15–25%）。
 
----
-
-## 🚢 航運運費
-
-| 航線 | Drewry WCI | SCFI | 週變化 | 艙位 |
-|------|-----------|------|--------|------|
-| 大陸→北美西岸 (LA) | $6,244/40ft | $6,484/FEU | ▲ +4.1% | 偏緊 |
-| 大陸→北美東岸 (NY) | $8,706/40ft | $9,290/FEU | ▲ +2.6% | 偏緊 |
-| 大陸→歐洲北歐 (Rotterdam) | $4,425/40ft | $3,800/FEU（估） | ▼ −5% | 略鬆 |
-| 大陸→歐洲地中海 (Genoa) | $5,080/40ft | $4,200/FEU（估） | ▼ −8% | 鬆 |
-| 大陸→印度孟買/清奈 | $1,950/40ft（估） | $1,800/40ft（估） | ▲ +5%（估） | 緊 |
-
-**⚠️ 荷姆茲海峽危機（Day 169）**：幾乎封閉，每日通過商船從73艘→個位數，亞洲→中東/歐洲繞行好望角多12-15天。
+**TC/RC 現狀：** 2026 年度基準 $0/噸（Antofagasta 協議），現貨 -$126.80/噸，持續負值。
 
 ---
 
-## ⛏ 供需動態
+## 航運運費（Drewry WCI，2026-08-13）
 
-- **智利**：2026年全年產量預估527萬噸（−2.6% YoY），但6月回升（+5.1%）
-- **Codelco**：6月產12.02萬噸（+17% YoY）——較Q1大幅回升
-- **Escondida (BHP)**：6月產11.14萬噸（+45.8% YoY）
-- **LME庫存**：6月底201,700噸→7月底可用庫存101,425噸，連續42日去化（2014年來最長）
-- **DRC**：短暫出口禁令，影響有限
+WCI 整體指數：$4,339/FEU（週漲 +1%）
 
----
+| 航線 | 運費 ($/FEU) | 週漲跌 | 艙位況 |
+|------|-------------|--------|--------|
+| 大陸→北美西岸（LA/LB） | $6,244 | ▲ +6% | 偏緊，空白船次持續 |
+| 大陸→北美東岸（NY/Savannah） | $8,706 | ▲ +10% | 緊張，巴拿馬附加費9月起 |
+| 大陸→歐洲北歐（Rotterdam） | $4,425 | ▼ -5% | 相對寬鬆 |
+| 大陸→歐洲地中海（Genoa） | $4,850 | → 持平 | 繞道成本+$400 |
+| 大陸→印度（Mumbai/Chennai） | $2,950 | ▲ +3% | 中等，好望角路線穩 |
 
-## 📊 政策與總體經濟
-
-- **美國50%銅關稅**（8/1生效）：半成品銅（線、管、棒、電氣元件），精煉銅暫豁免至2027/1/1（屆時15%）
-- **Fed**：8月維持利率，9月降息機率低
-- **中國**：人行寬鬆偏向，基建+綠能需求支撐
+**霍姆茲海峽：** 通航量約10艘/日（正常88–130艘），伊朗-阿曼談判進行中。
 
 ---
 
-## 📈 期貨多空倉位（CFTC COT）
+## 供需動態
+
+- **智利：** 2026年銅產量預測下修 2.6% → 527萬噸。Codelco 主席稱面臨「四年艱難期」，340億投資計畫恐難全額融資。政府將 Codelco 2025年利潤 $24.2億全數轉投資。
+- **Freeport/Kamoa-Kakula：** 礦山中斷未全恢復，年化影響約 40–60萬噸。
+- **中國需求：** 電網、新能源、AI數據中心三大驅動，SHFE庫存持續偏低。
+- **LME庫存：** 已連跌 42 個交易日，為 2014 年以來最長連跌。
+
+---
+
+## 政策與總體經濟
+
+中國宣示「更積極財政、適度寬鬆貨幣」，EV與AI基建持續拉動銅需求。美聯儲 Q3–Q4 降息預期升溫，美元維持區間，對銅無明顯打壓。Cochilco 上調 2026 銅均價預測至 $5.95/lb。
+
+---
+
+## 期貨多空倉位（CFTC COT，2026-08-12）
 
 | 指標 | 數值 |
 |------|------|
-| COMEX 未平倉量 | ~285,000 口 |
-| Managed Money 淨多頭 | +71,974 口 |
-| LME 投資基金淨多 | ~+38,000 口（估） |
+| COMEX 未平倉量（OI） | 115,127 口 |
+| 管理基金多頭 | 39,275 口 |
+| 管理基金空頭 | 15,629 口 |
+| 管理基金淨多頭 | **+23,646 口** |
+| 多頭均價 | $12,850/噸（$5.83/lb） → 浮盈 +$1,701/噸 |
+| 空頭均價 | $13,820/噸（$6.27/lb） → 浮虧 -$731/噸 |
+| 當前市價 | $14,551/噸（$6.60/lb） |
 
-### 多空均價對比
-| | 均價 | 浮盈/浮虧 |
-|--|------|-----------|
-| 📗 多頭均價 | $12,850/噸（$5.83/lb） | **浮盈 +$1,701/噸** |
-| 📍 當前市價 | $14,551/噸（$6.60/lb） | — |
-| 📕 空頭均價 | $13,820/噸（$6.27/lb） | **浮虧 −$731/噸** |
-
-### 歷史對比
-| 事件 | 淨多頭峰 | 峰值後走勢 |
-|------|---------|-----------|
-| 2025年極端多頭 | +95,000口 | −18%（約$2,500/噸） |
-| 2024年多頭峰 | +87,000口 | −22%（約$3,100/噸） |
-| 當前2026-08 | +71,974口 | 持續觀察 |
-
-⚠️ **信號**：淨多頭偏高但尚未達極端，空頭回補仍可能提供上行動力。
+**歷史對比：** 2025年峰值 +95K 口後跌 18%；2024年峰值 +87K 口後跌 22%。當前 +23,646 口僅為歷史峰值 25%，**多頭擁擠訊號：🟢 安全**。
 
 ---
 
-## 💬 給 Peter 的一句話
+## 給 Peter 的一句話
 
-**廢銅採購**：精廢價差 $3,175/噸 ($1.44/lb) 仍具吸引力，No.1 ~$5.20/lb、No.2 ~$4.75/lb，可考慮分批建倉。若LME突破$6.80/lb，廢銅相對優勢將更明顯。
-
-**航線選擇**：荷姆茲封閉中，中東/印度貨需提前30-45天訂艙。歐洲運費（Rotterdam $4,425）本週下跌5%是三大主線中空間最多的選擇。
-
-**本週觀察重點**：① 美伊談判進展；② 精煉銅豁免期間能否繼續累庫；③ 下週CFTC數據（若淨多>80K口則警示）。
+> **廢銅採購：** 精廢價差 19% 折讓落在合理採購帶，建議本週積極詢價 Bare Bright 及 #1 Copper。TC/RC 負值使冶煉廠增加廢銅採購意願，競爭者增多宜盡快鎖價。
+>
+> **航線：** 北美出貨優先考慮西岸（$6,244 vs 東岸 $8,706），省 $2,462/FEU。歐洲可趁北歐路線 -5% 窗口鎖艙。地中海目的地建議加入霍姆茲風險溢價。
+>
+> **本週三大觀察：** ①伊朗-阿曼談判（霍姆茲開關）②LME 庫存是否跌破 10 萬噸 ③CFTC 淨多頭是否突破 30,000 口。
 
 ---
 
 ## 資料來源
 
-- [LME Copper](https://www.lme.com/metals/non-ferrous/lme-copper)
-- [Drewry WCI (Aug 13)](https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry)
-- [SCFI / Container News](https://container-news.com/scfi/)
-- [ScrapMonster Copper Scrap](https://www.scrapmonster.com/scrap-prices/category/Copper-Scrap/128/1/1)
-- [Cochilco Chile Output](https://www.mining.com/web/chile-copper-output-to-fall-2-6-in-2026-before-rebound-cochilco-says)
-- [CFTC COT MacroMicro](https://en.macromicro.me/series/8311/copper-futures-and-options-manage-money-net-position)
-- [Strait of Hormuz Tracker](https://straits.live/)
-- [US Copper Tariff 50%](https://www.allynintl.com/en/news-publications/entry/copper-tariff-announcement-shakes-markets-ahead-of-august-1-implementation)
-
----
-*自動生成 · 2026-08-18 · GitHub Pages: https://YUDY-AI.github.io/copper-daily/*
+- LME 銅價：[Kitco](https://www.kitco.com/price/base-metals/copper)、[metalcharts.org](https://metalcharts.org/copper-price)
+- LME 庫存：[ADM Investor Services](https://www.admis.com/copper-finds-bullish-support/)、[The Vault Report](https://thevaultreport.com/lme/copper)
+- Drewry WCI：[The DCN - 2026-08-13](https://www.thedcn.com.au/news/world-container-index-13-august-2026)
+- 廢銅報價：[iScrapApp](https://iscrapapp.com/metals/bare-bright-copper/)
+- TC/RC：[Mining.com](https://www.mining.com/web/antofagasta-agrees-zero-copper-processing-charges-for-2026-with-chinese-smelter/)
+- 智利供給：[NAI500](https://nai500.com/blog/2026/08/copper-prices-fluctuate-at-high-levels-while-lowered-chilean-production-forecast-intensifies-supply-concerns/)
+- 霍姆茲：[Wikipedia](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
+- CFTC COT：[CFTC.gov](https://www.cftc.gov/dea/futures/deacmxsf.htm)

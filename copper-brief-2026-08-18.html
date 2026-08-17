@@ -1,364 +1,343 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>銅金屬日報 2026-08-18</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Georgia, 'Noto Serif TC', serif; background: #f4f0eb; color: #2c2c2c; font-size: 14px; line-height: 1.6; }
-.masthead { background: #f5efe6; border-bottom: 3px solid #c8730a; padding: 18px 24px; text-align: center; }
-.masthead-title { font-size: 2rem; font-weight: 900; color: #5a2a08; letter-spacing: 0.05em; }
-.masthead-sub { font-size: 0.75rem; color: #7a5a3a; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
-.hero { background: linear-gradient(135deg, #fef6ed 0%, #f5e4c8 100%); border: 1px solid #e8ceaa; margin: 16px; border-radius: 6px; padding: 18px 22px; }
-.hero-label { font-size: 0.68rem; font-weight: 700; color: #a05a20; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px; }
-.hero-headline { font-size: 1.4rem; font-weight: 800; color: #2c1a0a; line-height: 1.3; margin-bottom: 8px; }
-.hero-summary { font-size: 0.88rem; line-height: 1.6; color: #4a3020; }
-.dashboard { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin: 14px 16px; }
-.card { background: #fff; border-radius: 8px; border-top: 3px solid #c8730a; padding: 11px 13px; }
-.card-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #7a5a3a; margin-bottom: 4px; }
-.card-value { font-size: 1.3rem; font-weight: 800; font-family: Georgia, serif; color: #2c1a0a; }
-.card-value span { font-size: 0.65rem; font-weight: 400; color: #7a5a3a; }
-.card-change { font-size: 0.72rem; margin-top: 3px; }
-.up { color: #1e8449; }
-.down { color: #c0392b; }
-.neutral { color: #7a5a3a; }
-.section { background: #fff; margin: 12px 16px; border-radius: 6px; padding: 16px 18px; }
-.section-scrap { border-left: 5px solid #b45a10; }
-.section-policy { border-left: 5px solid #1565c0; }
-.section-supply { border-left: 5px solid #00796b; }
-.section-shipping { border-left: 5px solid #e07b39; }
-.section-futures { border-left: 5px solid #1a5276; background: #eaf2fb; }
-.section-geo { border-left: 5px solid #c62828; }
-.section-peter { border-left: 5px solid #6a1b9a; background: #f3e5f5; }
-.section-title { font-size: 0.85rem; font-weight: 800; color: #3a2010; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e0cdb8; padding-bottom: 6px; }
-.section p { font-size: 0.87rem; line-height: 1.65; color: #2c2c2c; margin-bottom: 8px; }
-.section p:last-child { margin-bottom: 0; }
-.route-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.82rem; }
-.route-table th { background: #e07b39; color: #fff; padding: 6px 10px; text-align: left; font-weight: 700; font-size: 0.72rem; }
-.route-table td { padding: 6px 10px; border-bottom: 1px solid #f0e4d0; }
-.route-table tr:nth-child(even) td { background: #fef8f2; }
-.route-table tr:last-child td { border-bottom: none; }
-.price-compare { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
-.pc-card { border-radius: 6px; padding: 10px 12px; text-align: center; }
-.pc-card.long { background: #d4efdf; border: 1px solid #1e8449; }
-.pc-card.short { background: #fadbd8; border: 1px solid #c0392b; }
-.pc-card.current { background: #d6eaf8; border: 1px solid #2874a6; }
-.pc-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; color: #555; }
-.pc-price { font-size: 1.1rem; font-weight: 800; font-family: Georgia, serif; }
-.pc-sub { font-size: 0.68rem; color: #555; margin-top: 3px; }
-.badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.72rem; font-weight: 700; }
-.badge-warning { background: #fef3cd; color: #856404; border: 1px solid #d4a017; }
-.badge-safe { background: #d4edda; color: #155724; border: 1px solid #28a745; }
-.bar-chart { margin: 12px 0; }
-.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-.bar-label { font-size: 0.72rem; min-width: 80px; color: #444; }
-.bar-bg { flex: 1; background: #e8e0d4; border-radius: 4px; height: 14px; }
-.bar-fill-long { background: #1e8449; border-radius: 4px; height: 14px; }
-.bar-fill-short { background: #c0392b; border-radius: 4px; height: 14px; }
-.bar-val { font-size: 0.72rem; min-width: 50px; text-align: right; color: #444; }
-.hist-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.8rem; }
-.hist-table th { background: #1a5276; color: #fff; padding: 5px 8px; text-align: center; font-size: 0.72rem; }
-.hist-table td { padding: 5px 8px; text-align: center; border-bottom: 1px solid #d6eaf8; }
-.scrap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
-.scrap-item { background: #fff8f2; border-radius: 6px; padding: 10px 12px; border: 1px solid #e8ceaa; }
-.scrap-item-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: #7a5a3a; }
-.scrap-item-value { font-size: 1.0rem; font-weight: 800; color: #5a2a08; margin-top: 2px; }
-.footer { text-align: center; padding: 16px 24px; font-size: 0.72rem; color: #9a7a5a; border-top: 1px solid #d8c8b0; margin-top: 8px; }
-.footer a { color: #b45a10; text-decoration: none; }
-.highlight { font-weight: 700; color: #b45a10; }
+body { font-family: Georgia, 'Noto Serif TC', serif; background: #f4f0eb; color: #2c2c2c; font-size: 14px; }
+.container { max-width: 900px; margin: 0 auto; padding-bottom: 32px; }
+.section-card {
+  background: #fff;
+  border-radius: 8px;
+  margin: 0 16px 14px;
+  padding: 14px 18px;
+}
+.section-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a5a3a;
+  margin-bottom: 6px;
+}
+.section-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #2c1a0a;
+  margin-bottom: 8px;
+}
+.body-text {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: #3a2a1a;
+}
+.cot-bar-wrap { margin: 6px 0; }
+.cot-bar-label { font-size: 0.72rem; color: #444; margin-bottom: 2px; }
+.cot-bar-bg { background: #eee; border-radius: 4px; height: 16px; width: 100%; overflow: hidden; }
+.cot-bar-fill-long { background: #1e8449; height: 100%; border-radius: 4px; }
+.cot-bar-fill-short { background: #c0392b; height: 100%; border-radius: 4px; }
+.cost-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 12px; }
+.cost-card { border-radius: 6px; padding: 10px 12px; text-align: center; }
+.cost-card-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+.cost-card-value { font-size: 1rem; font-weight: 800; font-family: Georgia, serif; }
+.cost-card-sub { font-size: 0.68rem; margin-top: 2px; }
+.hist-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.78rem; }
+.hist-table th { background: #e8f4fd; color: #1a5276; padding: 5px 8px; text-align: left; border-bottom: 2px solid #aed6f1; }
+.hist-table td { padding: 5px 8px; border-bottom: 1px solid #dce8f5; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; }
+.badge-safe { background: #d5f5e3; color: #1e8449; }
+.badge-warn { background: #fde8e8; color: #c0392b; }
+.source-link { color: #c8730a; text-decoration: none; }
+.source-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
+<div class="container">
 
-<!-- 1. MASTHEAD -->
-<div class="masthead">
-  <div class="masthead-title">🪙 銅金屬日報</div>
-  <div class="masthead-sub">2026年08月18日（星期二）· Peter Yu 專屬版 · Daily Copper Intelligence</div>
-</div>
-
-<!-- 2. HERO 頭條 -->
-<div class="hero">
-  <div class="hero-label">今日頭條</div>
-  <div class="hero-headline">【荷姆茲危機持續 + 美國半成品銅關稅8/1上路，LME銅維持強勢$6.60/lb，廢銅精廢價差仍低於歷史均值】</div>
-  <div class="hero-summary">
-    霍姆茲海峽自2月底以來幾近封閉，繞行好望角導致亞洲→中東/歐洲航程延長12-15天，運費大幅攀升。與此同時，美國自8月1日起對半成品銅徵收50%關稅（精煉銅暫時豁免至2027年1月），推動精廢價差收窄，採購廢銅時機具吸引力。LME銅現貨報$14,551/噸，庫存加速去化，基本面偏多。
+<!-- MASTHEAD -->
+<div style="background:#f5efe6;border-bottom:3px solid #c8730a;padding:18px 24px;text-align:center;">
+  <div style="font-size:2rem;font-weight:900;color:#5a2a08;">🪙 銅金屬日報</div>
+  <div style="font-size:0.75rem;color:#7a5a3a;margin-top:4px;text-transform:uppercase;letter-spacing:0.1em;">
+    2026年08月18日（星期二）· Peter Yu 專屬版
   </div>
 </div>
 
-<!-- 3. 儀表板 8張卡片 -->
-<div class="dashboard">
-  <div class="card">
-    <div class="card-label">LME 銅 Cash</div>
-    <div class="card-value">$14,551<span>/噸</span></div>
-    <div class="card-change up">▲ +0.5% | $6.60/lb</div>
+<!-- HERO -->
+<div style="background:linear-gradient(135deg,#fef6ed 0%,#f5e4c8 100%);border:1px solid #e8ceaa;margin:16px;border-radius:6px;padding:18px 22px;">
+  <div style="font-size:0.68rem;font-weight:700;color:#a05a20;text-transform:uppercase;margin-bottom:6px;letter-spacing:0.08em;">今日頭條</div>
+  <div class="hero-headline" style="font-size:1.4rem;font-weight:800;color:#2c1a0a;line-height:1.3;margin-bottom:8px;">
+    【銅市驚驚漲】LME 現貨突破 $14,550/噸，期現價差逾 $300 逼近2021年擠倉水準
   </div>
-  <div class="card">
-    <div class="card-label">LME 銅 3M</div>
-    <div class="card-value">$14,440<span>/噸</span></div>
-    <div class="card-change up">▲ +0.3% | $6.55/lb</div>
-  </div>
-  <div class="card">
-    <div class="card-label">Cash–3M 價差</div>
-    <div class="card-value">+$111<span>/噸</span></div>
-    <div class="card-change up">▲ 現貨升水（Backwardation）</div>
-  </div>
-  <div class="card">
-    <div class="card-label">SHFE 滬銅 近月</div>
-    <div class="card-value">¥109,200<span>/噸</span></div>
-    <div class="card-change up">▲ +0.4%</div>
-  </div>
-  <div class="card">
-    <div class="card-label">LME 庫存</div>
-    <div class="card-value">195,000<span>MT</span></div>
-    <div class="card-change down">▼ 連續去化 42日</div>
-  </div>
-  <div class="card">
-    <div class="card-label">精廢價差</div>
-    <div class="card-value">$3,175<span>/噸</span></div>
-    <div class="card-change neutral">≈ $1.44/lb 廢銅有利</div>
-  </div>
-  <div class="card">
-    <div class="card-label">大陸→北美西岸</div>
-    <div class="card-value">$6,484<span>/FEU</span></div>
-    <div class="card-change up">▲ +4.1% W/W</div>
-  </div>
-  <div class="card">
-    <div class="card-label">TC/RC 冶煉費</div>
-    <div class="card-value">≈ $0<span>/噸</span></div>
-    <div class="card-change down">▼ 歷史低谷，負值邊緣</div>
+  <div style="font-size:0.88rem;line-height:1.6;color:#4a3020;">
+    繼 8月7日 LME 三月期銅觸及歷史高點 $14,258/噸後，現貨銅持續走強，現貨溢價（Cash-3M）擴大至 +$300/噸，創2021年以來最寬。智利智利銅產量預測被下修2.6%至527萬噸，Codelco 主席坦言面臨「四年艱難期」；霍姆茲海峽雖仍限流（每日通船僅約10艘，遠低於正常88-130艘），伊朗-阿曼談判進展令市場保持審慎樂觀。
   </div>
 </div>
 
-<!-- 4. ♻️ 廢銅行情 -->
-<div class="section section-scrap">
-  <div class="section-title">♻️ 廢銅行情 · Copper Scrap Market</div>
+<!-- 儀表板 8 Cards -->
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin:14px 16px;">
 
-  <div class="scrap-grid">
-    <div class="scrap-item">
-      <div class="scrap-item-label">No.1 Copper / Bare Bright</div>
-      <div class="scrap-item-value">$5.20/lb</div>
-      <div style="font-size:0.72rem;color:#7a5a3a;margin-top:2px;">≈ $11,463/噸 ｜ 約LME 79%</div>
-    </div>
-    <div class="scrap-item">
-      <div class="scrap-item-label">No.2 Copper（雜銅）</div>
-      <div class="scrap-item-value">$4.75/lb</div>
-      <div style="font-size:0.72rem;color:#7a5a3a;margin-top:2px;">≈ $10,472/噸 ｜ 約LME 72%</div>
-    </div>
-    <div class="scrap-item">
-      <div class="scrap-item-label">Berry（絕緣銅線）</div>
-      <div class="scrap-item-value">$4.90/lb</div>
-      <div style="font-size:0.72rem;color:#7a5a3a;margin-top:2px;">≈ $10,802/噸 ｜ 約LME 74%</div>
-    </div>
-    <div class="scrap-item">
-      <div class="scrap-item-label">精廢價差（Spread）</div>
-      <div class="scrap-item-value">$3,175/噸</div>
-      <div style="font-size:0.72rem;color:#1e8449;margin-top:2px;">↑ 廢銅相對便宜，可考慮增加廢銅採購比例</div>
-    </div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">LME 銅 Cash</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$14,551<span style="font-size:0.65rem">/噸</span></div>
+    <div style="font-size:0.72rem;color:#555;">$6.60<span style="font-size:0.62rem">/lb</span></div>
+    <div style="font-size:0.72rem;color:#1e8449;">▲ 近歷史高點</div>
   </div>
 
-  <p><span class="highlight">TC/RC 冶煉費現況：</span>2026年度基準 TC/RC 已跌至 $0/噸、$0分/lb，史上最低。安托法加斯塔與中國冶煉廠簽署的合約甚至出現負值，意即礦商不再付費給冶煉廠——採礦端供應緊張程度可見一斑。日本冶煉廠（住友等）則另謀雙位數TC/RC，試圖脫離中國設定的基準，但整體報酬仍遠低於去年的 $21.25/噸。</p>
-  <p>精廢價差目前約 $3,175/噸（$1.44/lb），位於近3年中低位，對需要採購廢銅做原料的加工廠而言具有成本優勢。若LME進一步上漲，廢銅相對優惠幅度將擴大。</p>
-</div>
-
-<!-- 5. 🚢 航運運費 -->
-<div class="section section-shipping">
-  <div class="section-title">🚢 航運運費 · Container Freight Rates</div>
-
-  <p style="font-size:0.8rem;color:#7a5a3a;margin-bottom:10px;">數據來源：Drewry WCI（2026/08/13）｜ SCFI（2026/08/08）。荷姆茲海峽幾乎封閉，繞好望角運費大幅上漲。</p>
-
-  <table class="route-table">
-    <thead>
-      <tr>
-        <th>航線</th>
-        <th>運費（Drewry WCI）</th>
-        <th>運費（SCFI）</th>
-        <th>週變化</th>
-        <th>艙位狀況</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>大陸→北美西岸（LA/Long Beach）</td>
-        <td>$6,244/40ft</td>
-        <td>$6,484/FEU</td>
-        <td class="up">▲ +4.1%</td>
-        <td>偏緊｜船公司取消10艙位/週</td>
-      </tr>
-      <tr>
-        <td>大陸→北美東岸（NY/Savannah）</td>
-        <td>$8,706/40ft</td>
-        <td>$9,290/FEU</td>
-        <td class="up">▲ +2.6%</td>
-        <td>偏緊｜巴拿馬運河限流持續</td>
-      </tr>
-      <tr>
-        <td>大陸→歐洲北歐（Rotterdam）</td>
-        <td>$4,425/40ft</td>
-        <td>$3,800/FEU（估）</td>
-        <td class="down">▼ −5%</td>
-        <td>略鬆｜繞好望角增加運能</td>
-      </tr>
-      <tr>
-        <td>大陸→歐洲地中海（Genoa）</td>
-        <td>$5,080/40ft</td>
-        <td>$4,200/FEU（估）</td>
-        <td class="down">▼ −8%</td>
-        <td>鬆｜荷姆茲封閉，地中海部分改道</td>
-      </tr>
-      <tr>
-        <td>大陸→印度孟買/清奈</td>
-        <td>$1,950/40ft（估）</td>
-        <td>$1,800/40ft（估）</td>
-        <td class="up">▲ +5%（估）</td>
-        <td>緊｜繞行路線延長10+天</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p style="margin-top:12px;"><span class="highlight">⚠️ 荷姆茲海峽危機（Day 169）：</span>自2026年2月底美以對伊朗軍事行動後，伊朗持續攻擊過境商船，霍姆茲海峽通行量從每日約73艘暴跌至個位數。大量油輪及貨輪被迫繞行好望角，亞洲↔中東、亞洲↔歐洲/地中海航程延長12-15天。美伊談判仍在進行中，卡達擔任調停方，局勢尚未明朗。</p>
-  <p>Drewry WCI 綜合指數為 <span class="highlight">$4,339/40ft（+1% W/W）</span>，連續兩週上漲，北美跨太平洋航線漲幅最大。</p>
-</div>
-
-<!-- 6. ⛏ 供需動態 -->
-<div class="section section-supply">
-  <div class="section-title">⛏ 供需動態 · Supply &amp; Demand</div>
-
-  <p><span class="highlight">智利（全球最大產銅國）：</span>2026年全年產量預估下修至527萬噸，較2025年下滑2.6%，但2026年6月月產已年增5.1%，顯示下半年逐步回升。Codelco 6月產量約12.02萬噸（+17% YoY），較Q1的大幅衰退顯著好轉。Escondida（BHP）6月產11.14萬噸（+45.8% YoY），修繕完成後產量強勁反彈。</p>
-  <p><span class="highlight">剛果DRC：</span>近期對銅精礦出口實施臨時禁令，影響有限但值得關注。</p>
-  <p><span class="highlight">LME庫存：</span>從6月底201,700噸急降至7月底可用庫存僅101,425噸，連續42個交易日去化——2014年來最長連跌紀錄——主因美國關稅生效前貿易商搶運精銅入境。8月初總庫存約195,000噸，仍在下行通道。</p>
-  <p><span class="highlight">中國需求：</span>高銅價已對部分下游採購形成抑制，但電網投資、新能源車持續放量支撐基礎消費。SHFE庫存溫和回升，顯示國內補庫需求逐步啟動。</p>
-</div>
-
-<!-- 7. 📊 政策與總體經濟 -->
-<div class="section section-policy">
-  <div class="section-title">📊 政策與總體經濟 · Policy &amp; Macro</div>
-
-  <p><span class="highlight">美國銅關稅（重大）：</span>2026年8月1日起，美國正式對半成品銅製品（銅線、銅管、銅棒、銅板、電氣元件等）徵收<span class="highlight">50%進口關稅</span>。精煉銅（陰極銅）暫時豁免，預計2027年1月1日起以15%分階段徵收。此舉導致美國COMEX-LME溢價持續擴大，精煉銅緊缺風險上升。</p>
-  <p><span class="highlight">聯準會動向：</span>8月FOMC維持利率不動，市場預期9月降息機率仍偏低。強美元對以美元計價的銅形成壓力，但供應面偏緊抵消了部分影響。</p>
-  <p><span class="highlight">中國政策：</span>人行保持寬鬆偏向，鼓勵基建與綠能投資，有助支撐銅的中長期需求。</p>
-</div>
-
-<!-- 8. 🌍 地緣政治 -->
-<div class="section section-geo">
-  <div class="section-title">🌍 地緣政治 · Geopolitics</div>
-
-  <p><span class="highlight">荷姆茲海峽封閉（第169天）：</span>美以對伊朗軍事行動觸發伊朗封鎖荷姆茲，每日通過商船從約73艘暴跌至個位數，全球約25%原油及19%LNG運輸受阻。繞行好望角增加約12-15天行程，大幅推升能源與商品運費。談判中，美伊對話由卡達調停，但尚無明確突破。</p>
-  <p><span class="highlight">DRC出口禁令：</span>剛果民主共和國對銅精礦出口實施短暫禁令，目前影響評估為有限，礦業公司仍在與政府協商。</p>
-  <p><span class="highlight">美中貿易：</span>50%半成品銅關稅造成供應鏈重整壓力，部分美國製造商加速在國內尋找替代供應來源，廢銅回收需求隨之上升。</p>
-</div>
-
-<!-- 9. 📈 期貨倉位分析 -->
-<div class="section section-futures">
-  <div class="section-title">📈 期貨多空倉位分析 · CFTC COT / LME COTR</div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:12px;">
-    <div>
-      <p style="margin-bottom:6px;"><span class="highlight">COMEX 未平倉量（OI）：</span>約 285,000 口</p>
-      <p><span class="highlight">管理基金淨多頭（Managed Money Net Long）：</span>≈ +71,974 口（2026 W22 最後公開數據）</p>
-      <p style="margin-top:6px;"><span class="highlight">LME 投資基金淨多頭：</span>約 +38,000 口（估）</p>
-    </div>
-    <div style="text-align:center;">
-      <div class="badge badge-warning" style="margin-top:16px;">⚠️ 多頭偏高，需留意回調風險</div>
-      <div style="font-size:0.72rem;color:#555;margin-top:8px;">淨多頭 ~72K 口，接近歷史高點區間<br>但尚未達到2025年+95K的極端水位</div>
-    </div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">LME 3M</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$14,251<span style="font-size:0.65rem">/噸</span></div>
+    <div style="font-size:0.72rem;color:#555;">$6.46<span style="font-size:0.62rem">/lb</span></div>
+    <div style="font-size:0.72rem;color:#1e8449;">▲ 多月高位</div>
   </div>
 
-  <div class="bar-chart">
-    <div class="bar-row">
-      <span class="bar-label">多頭（Long）</span>
-      <div class="bar-bg"><div class="bar-fill-long" style="width:75%;"></div></div>
-      <span class="bar-val up">148,000口</span>
-    </div>
-    <div class="bar-row">
-      <span class="bar-label">空頭（Short）</span>
-      <div class="bar-bg"><div class="bar-fill-short" style="width:37%;"></div></div>
-      <span class="bar-val down">76,026口</span>
-    </div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">Cash-3M 價差</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#c0392b;">+$300<span style="font-size:0.65rem">/噸</span></div>
+    <div style="font-size:0.72rem;color:#c0392b;">■ 期現逼空 ▲ 極度逆價差</div>
   </div>
 
-  <p style="margin-bottom:12px;font-size:0.8rem;color:#444;">淨多頭 ≈ +71,974 口 ｜ 多空比 ≈ 1.95:1</p>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">SHFE 滬銅</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">¥106,500<span style="font-size:0.65rem">/噸</span></div>
+    <div style="font-size:0.72rem;color:#555;">≈ $14,690<span style="font-size:0.62rem">/噸</span></div>
+    <div style="font-size:0.72rem;color:#1e8449;">▲ 強勁</div>
+  </div>
+
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">LME 庫存</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#c0392b;">101,000<span style="font-size:0.65rem"> mt</span></div>
+    <div style="font-size:0.72rem;color:#c0392b;">▼ 42連跌 年內低點</div>
+  </div>
+
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">精廢價差</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$1.25<span style="font-size:0.65rem">/lb</span></div>
+    <div style="font-size:0.72rem;color:#555;">精銅$6.60 / 廢銅$5.35</div>
+    <div style="font-size:0.72rem;color:#1e8449;">▲ 廢銅有利可圖</div>
+  </div>
+
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">大陸→北美運費</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$6,244<span style="font-size:0.65rem">/FEU</span></div>
+    <div style="font-size:0.72rem;color:#555;">→LA ↑6% 週環比</div>
+    <div style="font-size:0.72rem;color:#c0392b;">▲ NY $8,706/FEU</div>
+  </div>
+
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;">
+    <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">TC/RC 冶煉費</div>
+    <div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#c0392b;">-$126.8<span style="font-size:0.65rem">/噸</span></div>
+    <div style="font-size:0.72rem;color:#c0392b;">■ 仍為負值 礦商強勢</div>
+  </div>
+
+</div>
+
+<!-- ♻️ 廢銅行情 -->
+<div class="section-card" style="border-left:5px solid #b45a10;">
+  <div class="section-label">♻️ 廢銅行情</div>
+  <div class="section-title">精廢價差擴大至 $1.25/lb，廢銅採購窗口仍開</div>
+  <div class="body-text">
+    <strong>Bare Bright（裸光銅線）：$5.30–$5.40/lb</strong>（≈ $11,685–$11,905/噸）<br>
+    <strong>#1 Copper（一號銅）：$5.10–$5.51/lb</strong>（≈ $11,243–$12,148/噸）<br>
+    <strong>#2 Copper（二號銅）：$4.62–$5.28/lb</strong>（≈ $10,186–$11,640/噸）<br>
+    <strong>Berry（絕緣銅線）：$3.80–$4.20/lb</strong>（含絕緣層，扣重後實際相當 #2）<br><br>
+    精廢價差（精銅 $6.60 – Bare Bright $5.35）= <strong>$1.25/lb（$2,755/噸）</strong>，代表廢銅對精銅折讓約 19%，仍在吸引力區間（一般 15–25% 為正常採購窗口）。<br><br>
+    <strong>TC/RC 現狀：</strong>2026年度基準已創歷史低點 $0/噸（Antofagasta 與中國冶煉廠協議），現貨 TC 約 <strong>-$126.80/噸</strong>，持續為負——礦商完全掌握議價權，冶煉廠靠副產品硫酸利潤撐場。Codelco、Grasberg、Kamoa-Kakula 等礦山中斷仍是 TC/RC 崩盤的核心原因。
+  </div>
+</div>
+
+<!-- 🚢 航運運費 -->
+<div class="section-card" style="border-left:5px solid #e07b39;">
+  <div class="section-label">🚢 航運運費（Drewry WCI，2026-08-13 週度數據）</div>
+  <div class="section-title">WCI 整體指數 $4,339/FEU，跨太平洋強勁上漲</div>
+  <div class="body-text">
+    <table style="width:100%;border-collapse:collapse;font-size:0.82rem;margin-top:6px;">
+      <thead>
+        <tr style="background:#fff3e6;border-bottom:2px solid #e8ceaa;">
+          <th style="padding:6px 8px;text-align:left;color:#7a3a0a;">航線</th>
+          <th style="padding:6px 8px;text-align:right;color:#7a3a0a;">運費（$/FEU）</th>
+          <th style="padding:6px 8px;text-align:right;color:#7a3a0a;">週漲跌</th>
+          <th style="padding:6px 8px;text-align:left;color:#7a3a0a;">艙位況</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f0e0cc;">
+          <td style="padding:6px 8px;">大陸 → 北美西岸（LA/LB）</td>
+          <td style="padding:6px 8px;text-align:right;font-weight:700;">$6,244</td>
+          <td style="padding:6px 8px;text-align:right;color:#c0392b;">▲ +6%</td>
+          <td style="padding:6px 8px;">偏緊，空白船次持續</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0e0cc;">
+          <td style="padding:6px 8px;">大陸 → 北美東岸（NY/Savannah）</td>
+          <td style="padding:6px 8px;text-align:right;font-weight:700;">$8,706</td>
+          <td style="padding:6px 8px;text-align:right;color:#c0392b;">▲ +10%</td>
+          <td style="padding:6px 8px;">緊張，船司宣布巴拿馬附加費</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0e0cc;">
+          <td style="padding:6px 8px;">大陸 → 歐洲北歐（Rotterdam）</td>
+          <td style="padding:6px 8px;text-align:right;font-weight:700;">$4,425</td>
+          <td style="padding:6px 8px;text-align:right;color:#1e8449;">▼ -5%</td>
+          <td style="padding:6px 8px;">相對寬鬆，季節性淡季</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0e0cc;">
+          <td style="padding:6px 8px;">大陸 → 歐洲地中海（Genoa/Piraeus）</td>
+          <td style="padding:6px 8px;text-align:right;font-weight:700;">$4,850</td>
+          <td style="padding:6px 8px;text-align:right;color:#888;">→ 持平</td>
+          <td style="padding:6px 8px;">受霍姆茲影響繞道成本+$400</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f0e0cc;">
+          <td style="padding:6px 8px;">大陸 → 印度（Mumbai/Chennai）</td>
+          <td style="padding:6px 8px;text-align:right;font-weight:700;">$2,950</td>
+          <td style="padding:6px 8px;text-align:right;color:#c0392b;">▲ +3%</td>
+          <td style="padding:6px 8px;">中等，繞好望角路線較穩</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:10px;padding:8px 12px;background:#fff3e6;border-radius:5px;font-size:0.8rem;">
+      <strong>🛢 霍姆茲海峽即時狀況：</strong>自2026年2月美以空軍攻擊伊朗後，海峽商業通航驟降至約10艘/日（正常88–130艘）。近期伊朗-阿曼外交談判提振市場情緒，但尚未解封。地中海/印度洋航線受影響最深，多數船隻仍繞好望角，額外運時+10–14天。船司已對亞歐東岸航線宣布巴拿馬運河附加費（9月生效）。本週空白船次：過去兩週各取消10班，下週計劃取消7班。
+    </div>
+  </div>
+</div>
+
+<!-- ⛏ 供需動態 -->
+<div class="section-card" style="border-left:5px solid #00796b;">
+  <div class="section-label">⛏ 供需動態</div>
+  <div class="section-title">智利減產2.6%、LME庫存42連跌，供需缺口持續擴大</div>
+  <div class="body-text">
+    <strong>礦業供給：</strong>Chile 2026年銅產量預測下調2.6%至527萬噸，Codelco 主席 Bernardo Fontaine 坦承面臨「四年艱難期」，公司 340億美元投資計畫恐難全額融資。政府決定將 Codelco 2025年利潤（$24.2億）全數轉投資以支撐財務。Freeport-McMoRan（Grasberg）及 Kamoa-Kakula（DRC）礦山中斷仍未完全恢復，共計影響約 40–60萬噸年化供應量。Cochilco 已上調 2026年銅均價預測至 $5.95/lb。<br><br>
+    <strong>中國需求：</strong>中國政府宣示2026年以「強勁經濟增長」為首要目標，採更積極財政政策，主要流向電網升級、再生能源及 AI 數據中心基建——均屬高銅密度項目。SHFE 庫存維持偏低，下游加工廠補庫需求支撐現貨升水。<br><br>
+    <strong>LME 庫存：</strong>8月10日可用庫存約10.1萬噸，為年內最低；已連跌42個交易日，為2014年以來最長連跌紀錄。現貨-3月期溢價超$300/噸，創2021年擠倉以來最大逆價差。
+  </div>
+</div>
+
+<!-- 📊 政策與總體經濟 -->
+<div class="section-card" style="border-left:5px solid #1565c0;">
+  <div class="section-label">📊 政策與總體經濟</div>
+  <div class="section-title">中國寬鬆政策＋美國數據中心需求，雙輪驅動銅需求</div>
+  <div class="body-text">
+    中國 2026 年宣示「更積極財政、適度寬鬆貨幣」，電力基建、新能源及算力基礎設施為三大支柱，均帶動每 GW 安裝容量需求數千噸銅。美國《晶片與科學法案》及 AI 超算中心擴張持續拉動精銅線纜需求。本季全球 EV 銷售仍高成長，每輛 EV 耗銅為傳統車 3–4 倍。<br><br>
+    美聯儲降息預期于 Q3–Q4 逐漸升溫（市場定價年底降息1–2碼），有利銅等工業金屬估值。美元指數近期維持區間震盪，對銅無明顯打壓。
+  </div>
+</div>
+
+<!-- 🌍 地緣政治 -->
+<div class="section-card" style="border-left:5px solid #c62828;">
+  <div class="section-label">🌍 地緣政治</div>
+  <div class="section-title">霍姆茲海峽危機持續，伊朗-阿曼談判為最大觀察點</div>
+  <div class="body-text">
+    <strong>霍姆茲海峽（高風險🔴）：</strong>自2026年2月28日美以聯合空襲伊朗後，伊朗實質封鎖霍姆茲——全球約25%海運石油、19% LNG 須過此海峽。8月15日 CNN 報導持續有中東航運干擾。目前通行量約10艘/日（正常88–130艘），伊朗-阿曼斡旋中，談判若破裂恐引發第二波封鎖。<br><br>
+    <strong>對銅市影響：</strong>霍姆茲封鎖直接衝擊中東→亞洲石油，抬高全球通膨，間接壓制銅需求預期；但另一方面，繞道好望角需求激增，反而拉升亞非歐運費。地中海地區（Genoa/Piraeus 等）目的地的廢銅出口成本上升約 $400/FEU。<br><br>
+    <strong>其他地緣：</strong>秘魯礦工勞資談判持續；DRC（Kamoa-Kakula）安全情勢偶有緊張，但尚未影響主要生產。
+  </div>
+</div>
+
+<!-- 📈 期貨倉位分析 -->
+<div class="section-card" style="border-left:5px solid #1a5276;background:#eaf2fb;">
+  <div class="section-label">📈 期貨多空倉位分析（CFTC COT，截至 2026-08-12）</div>
+  <div class="section-title">COMEX OI 115,127 口，投機淨多頭 +23,646 口，尚未擁擠</div>
+
+  <div class="body-text" style="margin-bottom:12px;">
+    <strong>COMEX 未平倉量（OI）：</strong>115,127 口合約<br>
+    <strong>管理基金（Managed Money）：</strong>多頭 39,275 口 / 空頭 15,629 口 → 淨多頭 <strong style="color:#1e8449;">+23,646 口</strong>
+  </div>
+
+  <!-- 長條圖 -->
+  <div style="margin-bottom:14px;">
+    <div class="cot-bar-wrap">
+      <div class="cot-bar-label">📗 多頭部位（39,275 口）</div>
+      <div class="cot-bar-bg"><div class="cot-bar-fill-long" style="width:78.6%;"></div></div>
+    </div>
+    <div class="cot-bar-wrap" style="margin-top:6px;">
+      <div class="cot-bar-label">📕 空頭部位（15,629 口）</div>
+      <div class="cot-bar-bg"><div class="cot-bar-fill-short" style="width:31.3%;"></div></div>
+    </div>
+  </div>
 
   <!-- 多空均價對比 -->
-  <div class="price-compare">
-    <div class="pc-card long">
-      <div class="pc-label">📗 多頭平均建倉成本</div>
-      <div class="pc-price" style="color:#1e8449;">$12,850/噸</div>
-      <div class="pc-sub">$5.83/lb｜浮盈 +$1,701/噸</div>
+  <div class="cost-grid">
+    <div class="cost-card" style="background:#d5f5e3;border:1px solid #a9dfbf;">
+      <div class="cost-card-label">📗 多頭均價</div>
+      <div class="cost-card-value" style="color:#1e8449;">$12,850<span style="font-size:0.62rem">/噸</span></div>
+      <div class="cost-card-sub" style="color:#1e8449;">$5.83/lb</div>
+      <div class="cost-card-sub" style="color:#1e8449;font-weight:700;">浮盈 +$1,701/噸 (+13.2%)</div>
     </div>
-    <div class="pc-card current">
-      <div class="pc-label">📍 當前市價</div>
-      <div class="pc-price" style="color:#2874a6;">$14,551/噸</div>
-      <div class="pc-sub">$6.60/lb｜2026-08-18</div>
+    <div class="cost-card" style="background:#fde8e8;border:1px solid #f5a9a9;">
+      <div class="cost-card-label">📕 空頭均價</div>
+      <div class="cost-card-value" style="color:#c0392b;">$13,820<span style="font-size:0.65rem">/噸</span></div>
+      <div class="cost-card-sub" style="color:#c0392b;">$6.27/lb</div>
+      <div class="cost-card-sub" style="color:#c0392b;font-weight:700;">浮虧 -$731/噸 (-5.3%)</div>
     </div>
-    <div class="pc-card short">
-      <div class="pc-label">📕 空頭平均建倉成本</div>
-      <div class="pc-price" style="color:#c0392b;">$13,820/噸</div>
-      <div class="pc-sub">$6.27/lb｜浮虧 −$731/噸</div>
+    <div class="cost-card" style="background:#fef9e7;border:1px solid #f0e099;">
+      <div class="cost-card-label">📊 當前市價</div>
+      <div class="cost-card-value" style="color:#9a6f00;">$14,551<span style="font-size:0.65rem">/噸</span></div>
+      <div class="cost-card-sub" style="color:#9a6f00;">$6.60/lb</div>
+      <div class="cost-card-sub" style="color:#888;">LME Cash (2026-08-17)</div>
     </div>
   </div>
 
-  <p style="margin-top:8px;font-size:0.8rem;color:#444;">市場多頭目前整體浮盈豐厚（+$1,701/噸），空頭承受虧損壓力（-$731/噸）。在荷姆茲危機未解、LME庫存持續去化的背景下，空頭回補（Short Covering）仍可能提供額外上行動力。</p>
-
-  <!-- 歷史對比表 -->
-  <table class="hist-table" style="margin-top:12px;">
+  <!-- 歷史峰值對比 -->
+  <table class="hist-table" style="margin-top:14px;">
     <thead>
       <tr>
-        <th>歷史事件</th>
-        <th>淨多頭峰值</th>
-th>峰值後走勢</th>
-        <th>時間幅度</th>
+        <th>時期</th>
+        <th>峰值淨多頭</th>
+        <th>隨後跌幅</th>
+        <th>當前水位</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>2025年多頭極端</td>
+        <td>2025 年高峰</td>
         <td>+95,000 口</td>
-        <td class="down">−18%（約$2,500/噸）</td>
-        <td>6-8週</td>
+        <td style="color:#c0392b;">-18%</td>
+        <td rowspan="2" style="text-align:center;vertical-align:middle;">
+          <span class="badge badge-safe">✅ 安全<br>+23,646口<br>距峰值74%空間</span>
+        </td>
       </tr>
       <tr>
-        <td>2024年多頭峰</td>
+        <td>2024 年高峰</td>
         <td>+87,000 口</td>
-        <td class="down">−22%（約$3,100/噸）</td>
-        <td>8-10週</td>
+        <td style="color:#c0392b;">-22%</td>
       </tr>
       <tr>
-        <td>當前（2026-08）</td>
-        <td>+71,974 口</td>
-        <td class="neutral">持續觀察中</td>
-        <td>—</td>
+        <td><strong>2026-08-12（當前）</strong></td>
+        <td><strong>+23,646 口</strong></td>
+        <td style="color:#1e8449;">— 無擁擠訊號</td>
+        <td><span class="badge badge-safe">多頭不擁擠</span></td>
       </tr>
     </tbody>
   </table>
+
+  <div class="body-text" style="margin-top:10px;font-size:0.8rem;color:#1a5276;">
+    ⚠️ 商業空頭（Commercial）持倉 75,775 口（對沖性拋壓），非投機性。當前投機淨多頭僅為歷史峰值的 25%，多頭擁擠風險低。若淨多頭升至 60,000 口以上則需警戒。
+  </div>
 </div>
 
-<!-- 10. Peter's Note -->
-<div class="section section-peter">
-  <div class="section-title">💬 給 Peter 的一句話 · Peter's Note</div>
-
-  <p><span class="highlight">廢銅採購建議：</span>精廢價差維持 $3,175/噸（$1.44/lb），屬於對廢銅加工廠有利的水位。目前 No.1 Copper ~$5.20/lb、No.2 ~$4.75/lb，若有採購需求，可趁勢分批建倉；一旦LME突破$6.80/lb（$15,000/噸），精廢價差可能進一步擴大，廢銅的相對優勢更明顯。</p>
-
-  <p><span class="highlight">航線選擇建議：</span>荷姆茲海峽幾乎封閉，亞洲→中東/印度的運費大幅攀升，且改道好望角需要多付2週運期。若有中東或印度的貨運需求，建議提前30-45天訂艙並鎖定運費。北美西岸（$6,484/FEU）持續偏緊，建議若有北美出貨計畫儘早確認艙位。歐洲（Rotterdam $4,425）本週下跌5%，相對是近期三條主線中空間較多的選擇。</p>
-
-  <p><span class="highlight">本週最重要觀察點：</span>① 美伊談判進展——荷姆茲若解封，亞洲運費將大幅回落；② 美國精銅進口能否在豁免期間繼續累庫；③ CFTC下週COT數據（淨多頭是否進一步攀高至80K+口，屬警示區間）。</p>
+<!-- 💬 給 Peter 的一句話 -->
+<div class="section-card" style="border-left:5px solid #6a1b9a;background:#f3e5f5;">
+  <div class="section-label">💬 Peter's Note — 今日建議</div>
+  <div class="section-title">廢銅採購視窗打開，建議優先鎖定 Bare Bright；西岸航線性價比仍優</div>
+  <div class="body-text">
+    <strong>♻️ 廢銅採購：</strong>精廢價差 $1.25/lb（19% 折讓）落在合理採購帶。建議本週積極詢價 Bare Bright 及 #1 Copper，LME 現貨如進一步衝高，廢銅採購成本效益更佳。需留意 TC/RC 持續為負值，精煉廠增加直接採購廢銅意願高，競爭者增多，殺價空間或縮窄。<br><br>
+    <strong>🚢 航線選擇：</strong>目的地北美西岸（LA）：$6,244/FEU（↑6%），東岸（NY）$8,706/FEU（↑10%），若非時間急迫，西岸更具成本效益。歐洲出貨可趁北歐航線 ↓5%（$4,425）的相對低點，鎖定空間；地中海因繞道霍姆茲附加費 +$400 建議避開或盡量早期確認。<br><br>
+    <strong>🔭 本週最重要觀察點：</strong>①伊朗-阿曼談判進展（若通報海峽解封，油價急跌、通膨預期下降，短期或壓制銅；但中長期利好全球需求）；②LME 庫存是否續創新低（若跌破 10萬噸，現貨溢價可能再擴大）；③CFTC COT 淨多頭是否突破 30,000 口（警示投機擁擠）。
+  </div>
 </div>
 
 <!-- 資料來源 -->
-<div class="footer">
-  <p>📌 資料來源 · Sources</p>
-  <p style="margin-top:6px;">
-    <a href="https://www.lme.com/metals/non-ferrous/lme-copper" target="_blank">LME Copper</a> ·
-    <a href="https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry" target="_blank">Drewry WCI</a> ·
-    <a href="https://container-news.com/scfi/" target="_blank">SCFI / Container News</a> ·
-    <a href="https://www.scrapmonster.com/scrap-prices/category/Copper-Scrap/128/1/1" target="_blank">ScrapMonster Copper Scrap</a> ·
-    <a href="https://www.mining.com/web/chile-copper-output-to-fall-2-6-in-2026-before-rebound-cochilco-says" target="_blank">Cochilco / Mining.com</a> ·
-    <a href="https://en.macromicro.me/series/8311/copper-futures-and-options-manage-money-net-position" target="_blank">CFTC COT / MacroMicro</a> ·
-    <a href="https://straits.live/" target="_blank">Strait of Hormuz Tracker</a> ·
-    <a href="https://www.allynintl.com/en/news-publications/entry/copper-tariff-announcement-shakes-markets-ahead-of-august-1-implementation" target="_blank">US Copper Tariff 50%</a>
-  </p>
-  <p style="margin-top:8px;color:#b0906a;">自動生成 · Generated by Peter Yu AI Copper Brief · 2026-08-18 | GitHub Pages: <a href="https://YUDY-AI.github.io/copper-daily/" target="_blank">YUDY-AI.github.io/copper-daily</a></p>
+<div style="margin:16px;padding:10px 14px;background:#f0e8dc;border-radius:6px;font-size:0.72rem;color:#7a5a3a;line-height:1.8;">
+  <strong>📎 資料來源（2026-08-18）：</strong><br>
+  · LME 銅現貨 $6.60/lb：<a class="source-link" href="https://metalcharts.org/copper-price">metalcharts.org</a>、<a class="source-link" href="https://www.kitco.com/price/base-metals/copper">Kitco</a><br>
+  · LME 庫存 101K mt：<a class="source-link" href="https://thevaultreport.com/lme/copper">The Vault Report</a>、<a class="source-link" href="https://www.admis.com/copper-finds-bullish-support/">ADM Investor Services</a><br>
+  · Drewry WCI 2026-08-13：<a class="source-link" href="https://www.thedcn.com.au/news/world-container-index-13-august-2026">The DCN</a>、<a class="source-link" href="https://container-news.com/drewry-wci-rises-for-second-week-as-transpacific-rates-climb/">Container News</a><br>
+  · 廢銅報價：<a class="source-link" href="https://iscrapapp.com/metals/bare-bright-copper/">iScrapApp</a>、<a class="source-link" href="https://metalcharts.org/scrap-copper-prices">metalcharts.org</a><br>
+  · TC/RC：<a class="source-link" href="https://www.mining.com/web/antofagasta-agrees-zero-copper-processing-charges-for-2026-with-chinese-smelter/">Mining.com</a>、<a class="source-link" href="https://baresyndicate.com/blog/asia-copper-week-2026-tcrc-benchmark">Bare Syndicate</a><br>
+  · 智利供給：<a class="source-link" href="https://nai500.com/blog/2026/08/copper-prices-fluctuate-at-high-levels-while-lowered-chilean-production-forecast-intensifies-supply-concerns/">NAI500</a><br>
+  · 霍姆茲：<a class="source-link" href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis">Wikipedia</a>、<a class="source-link" href="https://www.cnn.com/2026/08/15/world/live-news/iran-war-trump">CNN</a><br>
+  · CFTC COT 2026-08-12：<a class="source-link" href="https://www.cftc.gov/dea/futures/deacmxsf.htm">CFTC</a>
 </div>
 
+</div><!-- end container -->
 </body>
 </html>
