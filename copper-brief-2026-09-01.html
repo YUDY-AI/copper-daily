@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>銅金屬日報 2026-09-01</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, 'Noto Serif TC', serif; background: #f4f0eb; color: #2c2c2c; font-size: 14px; }
+.container { max-width: 900px; margin: 0 auto; padding-bottom: 32px; }
+.section-card { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 10px 16px; }
+.section-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.tag { display: inline-block; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; margin-bottom: 6px; }
+p { font-size: 0.88rem; line-height: 1.65; color: #3a2a1a; margin-top: 6px; }
+.grid-8 { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin: 14px 16px; }
+.kpi-card { background: #fff; border-radius: 8px; border-top: 3px solid #c8730a; padding: 11px 13px; }
+.kpi-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #7a5a3a; }
+.kpi-value { font-size: 1.3rem; font-weight: 800; font-family: Georgia, serif; color: #2c1a0a; line-height: 1.15; margin-top: 3px; }
+.kpi-unit { font-size: 0.6rem; font-weight: 400; }
+.kpi-change-up { font-size: 0.72rem; color: #1e8449; margin-top: 2px; }
+.kpi-change-down { font-size: 0.72rem; color: #c0392b; margin-top: 2px; }
+.kpi-change-neutral { font-size: 0.72rem; color: #888; margin-top: 2px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-top: 8px; }
+th { background: #f5ede0; color: #5a3a10; font-size: 0.68rem; text-transform: uppercase; padding: 5px 8px; text-align: left; }
+td { padding: 5px 8px; border-bottom: 1px solid #f0e8dd; }
+tr:last-child td { border-bottom: none; }
+.bar-wrap { background: #eee; border-radius: 3px; height: 8px; margin-top: 3px; overflow: hidden; }
+.bar-long { background: #c0392b; height: 8px; border-radius: 3px; }
+.bar-short { background: #1a5276; height: 8px; border-radius: 3px; }
+.signal-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.68rem; font-weight: 700; margin-top: 6px; }
+.badge-warn { background: #fdebd0; color: #a04000; border: 1px solid #e8a000; }
+.cost-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+.cost-box { background: #f9f5f0; border-radius: 6px; padding: 8px 10px; text-align: center; }
+.cost-box-title { font-size: 0.6rem; text-transform: uppercase; color: #7a5a3a; font-weight: 700; }
+.cost-box-val { font-size: 1.05rem; font-weight: 800; font-family: Georgia, serif; margin-top: 3px; }
+.cost-box-sub { font-size: 0.65rem; color: #888; margin-top: 1px; }
+footer { text-align: center; font-size: 0.68rem; color: #9a8070; margin: 18px 16px 0; line-height: 1.8; }
+footer a { color: #c8730a; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- MASTHEAD -->
+<div style="background:#f5efe6;border-bottom:3px solid #c8730a;padding:18px 24px;text-align:center;">
+  <div style="font-size:2rem;font-weight:900;color:#5a2a08;">🪙 銅金屬日報</div>
+  <div style="font-size:0.75rem;color:#7a5a3a;margin-top:4px;text-transform:uppercase;">
+    2026年9月1日（星期二）· Peter Yu 專屬版
+  </div>
+</div>
+
+<!-- HERO -->
+<div style="background:linear-gradient(135deg,#fef6ed 0%,#f5e4c8 100%);border:1px solid #e8ceaa;margin:16px;border-radius:6px;padding:18px 22px;">
+  <div style="font-size:0.68rem;font-weight:700;color:#a05a20;text-transform:uppercase;margin-bottom:6px;">今日頭條</div>
+  <div class="hero-headline" style="font-size:1.4rem;font-weight:800;color:#2c1a0a;line-height:1.3;margin-bottom:8px;">
+    【銅價攀近歷史高位 $14,500／噸，Grasberg 泥災斷供，精廢價差擴至 $2,695 廢銅採購窗口乍現】
+  </div>
+  <div style="font-size:0.88rem;line-height:1.6;color:#4a3020;">
+    9月1日 LME 銅現貨收報每噸 $14,500（$6.62/磅），全年累計漲幅達 44.6%，強勁 Backwardation（現貨升水 $434）反映現貨極度緊俏。印尼 Grasberg 礦山9月遭泥石流封礦，預計損失相當於 Collahuasi 全年產量；智利硫酸進口斷絕加劇供給壓力。精廢價差擴至約 $2,695/噸，廢銅短線具備採購吸引力。
+  </div>
+</div>
+
+<!-- 儀表板 8 張 KPI 卡片 -->
+<div class="grid-8">
+  <div class="kpi-card">
+    <div class="kpi-label">LME 銅 Cash</div>
+    <div class="kpi-value">$14,500<span class="kpi-unit">/噸</span></div>
+    <div class="kpi-change-up">▲ +0.47%　$6.62/lb</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">LME 3 個月</div>
+    <div class="kpi-value">$14,066<span class="kpi-unit">/噸</span></div>
+    <div class="kpi-change-up">▲ +0.3%　$6.38/lb</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Cash-3M 價差</div>
+    <div class="kpi-value" style="color:#c0392b;">+$434<span class="kpi-unit">/噸</span></div>
+    <div class="kpi-change-neutral">現貨升水（Backwardation）</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">SHFE 滬銅主力</div>
+    <div class="kpi-value">¥104,550<span class="kpi-unit">/噸</span></div>
+    <div class="kpi-change-up">▲ 近期走強</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">LME 庫存</div>
+    <div class="kpi-value">234,000<span class="kpi-unit"> 噸</span></div>
+    <div class="kpi-change-up">▲ 8月底反彈，仍低位</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">精廢價差</div>
+    <div class="kpi-value">$2,695<span class="kpi-unit">/噸</span></div>
+    <div class="kpi-change-up">▲ 採購窗口偏寬</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">北美西岸運費</div>
+    <div class="kpi-value">$6,818<span class="kpi-unit">/FEU</span></div>
+    <div class="kpi-change-neutral">Drewry WCI 8/27</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">TC／RC 現貨</div>
+    <div class="kpi-value" style="color:#c0392b;">-$127<span class="kpi-unit">/噸</span></div>
+    <div class="kpi-change-down">▼ 冶煉費仍為負值</div>
+  </div>
+</div>
+
+<!-- 1. 廢銅行情 -->
+<div class="section-card" style="border-left:5px solid #b45a10;">
+  <div class="section-title" style="color:#b45a10;">♻️ 廢銅行情</div>
+  <table>
+    <thead><tr><th>品種</th><th>美元／磅</th><th>美元／噸</th><th>vs LME Cash</th></tr></thead>
+    <tbody>
+      <tr><td><strong>No.1 Copper（光銅／Bare Bright）</strong></td><td>$5.40</td><td>$11,905</td><td>折扣 $2,595/噸</td></tr>
+      <tr><td><strong>No.2 Copper（混合廢銅）</strong></td><td>$5.20</td><td>$11,464</td><td>折扣 $3,036/噸</td></tr>
+      <tr><td><strong>Berry（絕緣銅線）</strong></td><td>~$4.80</td><td>~$10,582</td><td>折扣 $3,918/噸</td></tr>
+    </tbody>
+  </table>
+  <p><strong>精廢價差分析：</strong>LME Cash $14,500 vs No.1 廢銅 $11,905，價差約 $2,695/噸（18.6%），處於偏寬區間。對 Peter 而言：若廠內 No.1 加工成本低於 $2,695/噸，此時採購廢銅具備成本優勢，建議積極補庫。No.2 與 Berry 折扣更大，但需評估分揀成本。</p>
+  <p><strong>TC/RC 冶煉費：</strong>2026 年年度基準已定為 $0/噸，而現貨 TC 已跌至 <strong>-$126.80/噸</strong>，即礦山不付冶煉費、反而由冶煉廠倒貼礦山。CSPT 已決議削減超過 10% 產量因應。廢銅對於不依賴礦石的二次冶煉廠而言，是當前最具競爭力的原料。</p>
+</div>
+
+<!-- 2. 航運運費 -->
+<div class="section-card" style="border-left:5px solid #e07b39;">
+  <div class="section-title" style="color:#e07b39;">🚢 航運運費（Drewry WCI / SCFI 最新）</div>
+  <table>
+    <thead><tr><th>航線</th><th>費率</th><th>週變動</th><th>艙位狀況</th></tr></thead>
+    <tbody>
+      <tr><td>🇺🇸 大陸→北美西岸（LA）</td><td><strong>$6,818/FEU</strong></td><td>±0%</td><td>偏緊，前置補庫效應持續</td></tr>
+      <tr><td>🇺🇸 大陸→北美東岸（NY）</td><td><strong>$9,333/FEU</strong></td><td>-2%</td><td>略有壓力，但仍高位</td></tr>
+      <tr><td>🇩🇪 大陸→歐洲北歐（Rotterdam）</td><td><strong>$3,900/FEU</strong></td><td>-3%</td><td>艙位充裕，費率回落</td></tr>
+      <tr><td>🇮🇹 大陸→歐洲地中海（Genoa）</td><td><strong>~$4,200/FEU</strong></td><td>-2%</td><td>略高於北歐，荷姆茲繞行溢價</td></tr>
+      <tr><td>🇮🇳 大陸→印度孟買/清奈</td><td><strong>$1,750/40GP</strong></td><td>-43%</td><td>大幅回落，艙位寬鬆</td></tr>
+    </tbody>
+  </table>
+  <p><strong>荷姆茲／中東狀況：</strong>中東衝突持續影響硫酸等散雜貨船運；貨櫃航線雖多繞道好望角，但部分班輪仍嘗試霍姆茲通道，增加地中海航線不確定性溢價。印度航線費率8月大跌逾42%，反映前期高位後的急速修正。</p>
+  <p style="margin-top:6px;"><strong>Drewry WCI 綜合指數（8月27日）：</strong>$4,473/FEU，週環比 -1%。歐洲航線費率持續回落，跨太平洋費率高位震盪。</p>
+</div>
+
+<!-- 3. 供需動態 -->
+<div class="section-card" style="border-left:5px solid #00796b;">
+  <div class="section-title" style="color:#00796b;">⛏ 供需動態</div>
+  <p><strong>礦業供給衝擊：</strong>印尼 <strong>Grasberg 礦山</strong>（Freeport 持股）9月遭遇大規模泥石流，估計 80 萬公噸的泥土湧入，從現在至12月底的損失產量預計超越 Collahuasi 全年產量，是本年度最重大單一礦難事件。智利 Codelco、Escondida、Collahuasi 今年產量均年比下滑；Cochilco 預估智利 2026 年礦銅產量為 527 萬噸，年減 2.6%。Freeport 旗下 El Abra 礦山計劃投入 75 億美元擴建，但2033年才投產。秘魯方面整體穩定，Southern Copper、Las Bambas 和 Cerro Verde 支撐產出。</p>
+  <p style="margin-top:6px;"><strong>硫酸供給危機：</strong>智利結構性缺少硫酸，原來從中國進口已因地緣因素基本斷絕，中東衝突也嚴重影響其他硫酸來源流向，成為業界最受關注的議題，對智利礦山電積銅（SX-EW）產量構成威脅。</p>
+  <p style="margin-top:6px;"><strong>中國需求與 SHFE 庫存：</strong>中國精銅需求仍由基建、電動車、電網升級、可再生能源等驅動。SHFE 銅庫存與 LME 同步下降，連續九周去庫（截至8月底），是推動銅價第九連漲的主要動力。LME 庫存8月中降至 204,975 噸後，因高升水吸引實物入庫，短暫反彈至約 234,000 噸，但整體仍處低位。</p>
+</div>
+
+<!-- 4. 政策與總體經濟 -->
+<div class="section-card" style="border-left:5px solid #1565c0;">
+  <div class="section-title" style="color:#1565c0;">📊 政策與總體經濟</div>
+  <p><strong>美國關稅政策：</strong>美中雙方對銅的爭奪持續推高溢價，部分銅流量向美國傾斜，加劇全球其他地區的緊俏。現貨升水（Backwardation $434/噸）部分源自關稅不確定性創造的「搶貨效應」。</p>
+  <p style="margin-top:6px;"><strong>銅價年比表現：</strong>銅價年比上漲 44.6%，月比上漲 1.69%（截至9月1日）。Cochilco 已上調2026年銅價預測至 $5.95/磅。JP Morgan 及多數機構維持銅長線看多。</p>
+  <p style="margin-top:6px;"><strong>中國宏觀：</strong>中國持續推進電網與新能源基建，對精銅的結構性需求未見明顯轉弱。市場正密切關注任何中國刺激政策落地情況。</p>
+</div>
+
+<!-- 5. 地緣政治 -->
+<div class="section-card" style="border-left:5px solid #c62828;">
+  <div class="section-title" style="color:#c62828;">🌍 地緣政治</div>
+  <p><strong>中東衝突持續：</strong>中東局勢影響硫酸供應鏈，亦使部分貨輪繞道好望角，推高地中海至歐洲航線保費。荷姆茲海峽通道安全疑慮未消，地中海/歐洲航線因此存在不確定性溢價。</p>
+  <p style="margin-top:6px;"><strong>美中供應鏈博弈：</strong>智利/秘魯銅礦出口流向受美中雙方拉鋸影響，美國採購商增加長期採購合約以規避關稅風險，令現貨市場更加緊張。智利硫酸來源被中國切斷的效應目前尚難完全評估，但已引發業界高度關注。</p>
+  <p style="margin-top:6px;"><strong>DRC／非洲：</strong>Kamoa-Kakula 項目運營困難（安全事故、電力不足等），原本預計填補的供給缺口出現延誤，進一步支撐銅價。</p>
+</div>
+
+<!-- 6. 期貨多空倉位 -->
+<div class="section-card" style="border-left:5px solid #1a5276;background:#eaf2fb;">
+  <div class="section-title" style="color:#1a5276;">📈 期貨多空倉位分析（CFTC COT）</div>
+
+  <table>
+    <thead><tr><th>指標</th><th>數值</th><th>說明</th></tr></thead>
+    <tbody>
+      <tr><td>COMEX 管理基金（MM）多頭</td><td><strong>92,107 張</strong></td><td>截至 2026/8/25</td></tr>
+      <tr><td>COMEX 管理基金（MM）空頭</td><td><strong>15,836 張</strong></td><td>截至 2026/8/25</td></tr>
+      <tr><td>淨多頭（Net Long）</td><td><strong>+76,271 張</strong></td><td>前週 +78,648（小幅回落）</td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:10px;">
+    <div style="font-size:0.72rem;color:#1a5276;margin-bottom:4px;">多頭倉位（92,107張）</div>
+    <div class="bar-wrap"><div class="bar-long" style="width:85%;"></div></div>
+    <div style="font-size:0.72rem;color:#1a5276;margin-top:5px;">空頭倉位（15,836張）</div>
+    <div class="bar-wrap"><div class="bar-short" style="width:15%;"></div></div>
+  </div>
+
+  <div class="cost-grid" style="margin-top:12px;">
+    <div class="cost-box" style="background:#fdebd0;">
+      <div class="cost-box-title">🔴 多頭均價</div>
+      <div class="cost-box-val" style="color:#c0392b;">$12,850/噸</div>
+      <div class="cost-box-sub">$5.83/磅<br>浮盈 +$1,650/噸</div>
+    </div>
+    <div class="cost-box" style="background:#d6eaf8;">
+      <div class="cost-box-title">🔵 空頭均價</div>
+      <div class="cost-box-val" style="color:#1a5276;">$13,820/噸</div>
+      <div class="cost-box-sub">$6.27/磅<br>浮虧 -$680/噸</div>
+    </div>
+    <div class="cost-box" style="background:#eafaf1;">
+      <div class="cost-box-title">⚪ 當前市價</div>
+      <div class="cost-box-val" style="color:#1e8449;">$14,500/噸</div>
+      <div class="cost-box-sub">$6.62/磅<br>2026/09/01</div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px;font-size:0.82rem;line-height:1.6;">
+    <strong>歷史多頭峰值對比：</strong>2025年多頭高峰 +95K 張後，銅價回落 -18%；2024年高峰 +87K 張後回落 -22%。目前 +76K 張仍處高位，但尚未達到歷史警戒峰值。
+  </div>
+  <div style="margin-top:8px;">
+    <span class="signal-badge badge-warn">⚠️ 多頭擁擠中度警示：淨多頭 76K 張，接近歷史高危區間，需關注倉位鬆動風險</span>
+  </div>
+</div>
+
+<!-- 7. Peter's Note -->
+<div class="section-card" style="border-left:5px solid #6a1b9a;background:#f3e5f5;">
+  <div class="section-title" style="color:#6a1b9a;">💬 給 Peter 的一句話</div>
+  <p><strong>廢銅採購建議：</strong>精廢價差 $2,695/噸（18.6%）處於採購甜蜜點，No.1 廢銅 $5.40/lb 具備成本優勢，建議積極補庫 No.1 及 No.2。Grasberg 斷供消息將進一步拉抬精銅，精廢價差仍可能擴大，方向性利多廢銅採購。</p>
+  <p style="margin-top:6px;"><strong>航線選擇建議：</strong>若貨物出口目的地為印度，本月是近年難得的低運費窗口（下跌 43%，約 $1,750/40GP），可考慮搭機會艙；歐洲北歐費率也在回落，Rotterdam 約 $3,900/FEU 相對合理。北美線仍在高位，需預留運費預算。</p>
+  <p style="margin-top:6px;"><strong>本週最重要觀察點：</strong>① Grasberg 泥災後續產量損失評估報告（市場目前消化中，若損失確認超預期銅價恐再衝高）；② CFTC COT 最新週報（多空倉位是否進一步集中）；③ 智利硫酸進口替代方案進展。</p>
+</div>
+
+<!-- 歷史多空峰值對比 -->
+<div class="section-card" style="border-left:5px solid #1a5276;background:#eaf2fb;margin-top:0;">
+  <div style="font-size:0.72rem;color:#1a5276;font-weight:700;margin-bottom:6px;">📉 歷史淨多頭峰值後走勢對比</div>
+  <table>
+    <thead><tr><th>時間</th><th>淨多頭峰值</th><th>銅價峰值</th><th>隨後最大跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>2025年高點</td><td>+95,000 張</td><td>~$15,000/噸</td><td>-18%</td></tr>
+      <tr><td>2024年高點</td><td>+87,000 張</td><td>~$11,100/噸</td><td>-22%</td></tr>
+      <tr><td>當前（2026/8/25）</td><td><strong>+76,271 張</strong></td><td><strong>~$14,500/噸</strong></td><td>待觀察</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 資料來源 -->
+<footer>
+  <strong>資料來源：</strong>
+  <a href="https://www.mining.com/copper-price-holds-near-record-as-london-warehouse-bidding-war-looms/">Mining.com – LME 銅現貨</a> ·
+  <a href="https://tradingeconomics.com/commodity/copper">TradingEconomics – 銅價</a> ·
+  <a href="https://scrapvisor.com/current-scrap-metal-prices/1-copper/">ScrapVisor – No.1 廢銅</a> ·
+  <a href="https://scrapvisor.com/current-scrap-metal-prices/2-copper/">ScrapVisor – No.2 廢銅</a> ·
+  <a href="https://www.drewry.co.uk/trackers-and-indices/latest-trackers-and-indices/world-container-index-assessed-by-drewry">Drewry WCI 8/27</a> ·
+  <a href="https://www.indexbox.io/blog/cot-report-august-18-2026-managed-money-boosts-gold-and-copper-cuts-crude-oil-and-sugar/">COT Report 8/25</a> ·
+  <a href="https://www.riotimesonline.com/copper-markets-latam-tuesday-september-1-2026/">RioTimes – 9/1 行情</a> ·
+  <a href="https://www.mining.com/web/antofagasta-agrees-zero-copper-processing-charges-for-2026-with-chinese-smelter/">Mining.com – TC/RC 2026</a><br>
+  本報告由 Claude AI 自動生成 · 2026-09-01 · yudy.tw@gmail.com
+</footer>
+
+</div>
+</body>
+</html>
