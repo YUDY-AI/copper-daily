@@ -4,84 +4,115 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Georgia, 'Noto Serif TC', serif; background: #f4f0eb; color: #2c2c2c; }
-.card{background:#fff;border-radius:8px;margin:12px 16px;padding:16px 20px;font-size:.88rem;line-height:1.7}
+.wrap{max-width:980px;margin:0 auto;padding-bottom:30px}
+.card{background:#fff;border-radius:8px;margin:14px 16px;padding:16px 20px;line-height:1.7;font-size:0.9rem}
 .card h2{font-size:1.1rem;margin-bottom:8px;color:#2c1a0a}
-.card li{margin-left:18px}
-table{width:100%;border-collapse:collapse;font-size:.8rem;margin:8px 0}
-td,th{border-bottom:1px solid #e5ddd0;padding:5px 6px;text-align:left}
-.note{font-size:.72rem;color:#7a5a3a}
-.bar{height:16px;border-radius:3px;color:#fff;font-size:.7rem;padding-left:6px;line-height:16px;margin:4px 0}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:10px 0}
-.cols div{background:#fff;border-radius:6px;padding:10px;text-align:center}
-footer{font-size:.68rem;color:#7a5a3a;margin:16px;line-height:1.6}
-</style></head><body>
+.card p{margin-bottom:8px}
+.card ul{margin:4px 0 8px 20px}
+table{border-collapse:collapse;width:100%;font-size:0.82rem;margin:8px 0}
+th,td{border:1px solid #e0d6c8;padding:5px 8px;text-align:left}
+th{background:#f5efe6}
+.note{font-size:0.72rem;color:#7a5a3a}
+.bar{height:18px;border-radius:3px;color:#fff;font-size:0.7rem;padding:0 6px;line-height:18px;margin:3px 0}
+.badge{display:inline-block;background:#e67e22;color:#fff;border-radius:12px;padding:2px 12px;font-size:0.78rem;font-weight:700}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:10px 0}
+.three div{background:#fff;border:1px solid #bcd3ea;border-radius:6px;padding:10px;text-align:center}
+.foot{font-size:0.68rem;color:#7a5a3a;margin:16px;line-height:1.6;word-break:break-all}
+</style></head><body><div class="wrap">
+
 <div style="background:#f5efe6;border-bottom:3px solid #c8730a;padding:18px 24px;text-align:center;">
   <div style="font-size:2rem;font-weight:900;color:#5a2a08;">🪙 銅金屬日報</div>
   <div style="font-size:0.75rem;color:#7a5a3a;margin-top:4px;text-transform:uppercase;">2026年10月05日（星期一）· Peter Yu 專屬版</div>
 </div>
-<div style="background:linear-gradient(135deg,#fef6ed,#f5e4c8);border:1px solid #e8ceaa;margin:16px;border-radius:6px;padding:18px 22px;">
+
+<div style="background:linear-gradient(135deg,#fef6ed 0%,#f5e4c8 100%);border:1px solid #e8ceaa;margin:16px;border-radius:6px;padding:18px 22px;">
   <div style="font-size:0.68rem;font-weight:700;color:#a05a20;text-transform:uppercase;margin-bottom:6px;">今日頭條</div>
-  <div class="hero-headline" style="font-size:1.4rem;font-weight:800;color:#2c1a0a;line-height:1.3;margin-bottom:8px;">銅價週跌近3%後反彈：Centinela 罷工10/13倒數，美伊緊張與關稅未明牽動方向</div>
-  <div style="font-size:0.88rem;line-height:1.6;color:#4a3020;">COMEX 銅今日報約 $6.57/磅（+1.2%），本週仍下跌近3%、單月 -2.5%，距9月高點 $6.85 約 -4%。智利 Antofagasta 旗下 Centinela（2025年產銅24萬噸）兩工會若調解無果，最快10/13可罷工；美國精煉銅關稅決定持續延後。</div>
+  <div class="hero-headline" style="font-size:1.4rem;font-weight:800;color:#2c1a0a;line-height:1.3;margin-bottom:8px;">銅價自9月高點回落約4%至$14,260/噸：Escondida罷工風險與滬庫存見底撐盤，基金多頭逼近歷史擁擠區</div>
+  <div style="font-size:0.88rem;line-height:1.6;color:#4a3020;">LME三月銅10/2收$14,262.5，週跌約2%，仍較9月紀錄高點低約4%。上海交易所因國慶休市至10/8，上海庫存降至38,744噸（2024年1月以來最低）；Fed 9月意外升息、美債10年期約5.3%壓抑風險偏好。</div>
 </div>
+
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin:14px 16px;">
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">COMEX 銅</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$6.57<span style="font-size:0.65rem">/磅</span></div><div style="font-size:0.72rem;color:#1e8449;">▲ +1.2%（≈$14,480/噸）</div></div>
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">LME 銅 Cash</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">未取得</div><div style="font-size:0.72rem;color:#7a5a3a;">官方結算價未公開來源</div></div>
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">LME 銅 3M</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">未取得</div><div style="font-size:0.72rem;color:#7a5a3a;">—</div></div>
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">Cash-3M 價差</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">未取得</div><div style="font-size:0.72rem;color:#7a5a3a;">—</div></div>
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">SHFE 滬銅</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">未取得</div><div style="font-size:0.72rem;color:#7a5a3a;">中國國慶休市期間</div></div>
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">LME 庫存</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">未取得</div><div style="font-size:0.72rem;color:#7a5a3a;">—</div></div>
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">精廢價差（No.1 對 COMEX）</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">≈$1.48<span style="font-size:0.65rem">/磅</span></div><div style="font-size:0.72rem;color:#7a5a3a;">廢銅折價約 22.5%</div></div>
-<div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;color:#7a5a3a;">WCI 上海→洛杉磯</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$7,835<span style="font-size:0.65rem">/FEU</span></div><div style="font-size:0.72rem;color:#7a5a3a;">持平（10/1）</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">LME 銅 3M（10/2）</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$14,262.5<span style="font-size:0.65rem">/噸</span></div><div style="font-size:0.72rem;color:#1e8449;">▲ +0.1%（週 -2%）</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">LME Cash / Cash-3M 價差</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">未取得</div><div style="font-size:0.72rem;color:#7a5a3a;">本次未查到可信數據</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">SHFE 滬銅 2611（9/29）</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">¥109,260<span style="font-size:0.65rem">/噸</span></div><div style="font-size:0.72rem;color:#7a5a3a;">國慶休市，10/8復市</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">庫存：SHFE / LME</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">38,744<span style="font-size:0.65rem">噸</span></div><div style="font-size:0.72rem;color:#c62828;">SHFE 4個月 -79%；LME庫存未取得</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">COMEX 銅（10/5）</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$6.54<span style="font-size:0.65rem">/lb</span></div><div style="font-size:0.72rem;color:#7a5a3a;">≈ $14,420/噸；對LME約+$120</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">精廢價差（No.1 vs COMEX）</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">≈$1.45<span style="font-size:0.65rem">/lb</span></div><div style="font-size:0.72rem;color:#7a5a3a;">約 $3,200/噸（中值估算）</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">上海→美西 WCI（10/1）</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">$7,835<span style="font-size:0.65rem">/FEU</span></div><div style="font-size:0.72rem;color:#7a5a3a;">持平</div></div>
+  <div style="background:#fff;border-radius:8px;border-top:3px solid #c8730a;padding:11px 13px;"><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#7a5a3a;">TC/RC（Platts 7/9）</div><div style="font-size:1.3rem;font-weight:800;font-family:Georgia,serif;color:#2c1a0a;">-$132<span style="font-size:0.65rem">/噸</span></div><div style="font-size:0.72rem;color:#c62828;">RC -13.2¢/lb，仍為負值</div></div>
 </div>
 
-<div class="card" style="border-left:5px solid #b45a10;"><h2>♻️ 廢銅行情</h2>
-<table><tr><th>品項（美國收購價區間）</th><th>$/磅</th><th>約 $/噸（中值）</th></tr>
-<tr><td>Bare Bright 光亮銅線</td><td>5.12–5.65</td><td>≈11,870</td></tr>
-<tr><td>No.1 Copper</td><td>4.86–5.32</td><td>≈11,220</td></tr>
-<tr><td>No.2 Copper</td><td>4.66–5.12</td><td>≈10,780</td></tr>
-<tr><td>Berry／絕緣線</td><td colspan="2">無直接報價；THHN/Romex 回收率約65–85%，Romex 剝皮後折光亮銅約 $3.33–3.67/磅</td></tr></table>
-<p><b>精廢價差：</b>COMEX $6.57/磅，No.1 中值 $5.09，折價約 $1.48/磅（22.5%）；No.2 折價約 $1.68（25.6%）。價格為場端收購區間，各地不同。</p>
-<p><b>TC/RC：</b>今日未取得新數據，沿用目前約 -$126.80/噸（仍為負值），冶煉廠利潤承壓、對廢銅原料需求偏強。</p>
-<p class="note">來源：metalcharts.org 廢銅價（2026-10-05）。</p></div>
+<div class="card" style="border-left:5px solid #b45a10;">
+<h2>♻️ 廢銅行情</h2>
+<p class="note">來源：metalcharts.org 美國廢銅場收購價區間（2026-10-05，COMEX基準 $6.56/lb）；$/噸為本報告以 ×2,204.62 換算。</p>
+<table><tr><th>品級</th><th>$/lb</th><th>$/噸（換算）</th></tr>
+<tr><td>Bare Bright</td><td>5.12 – 5.65</td><td>11,288 – 12,456</td></tr>
+<tr><td>No.1 Copper</td><td>4.86 – 5.32</td><td>10,714 – 11,729</td></tr>
+<tr><td>No.2 Copper</td><td>4.66 – 5.12</td><td>10,273 – 11,288</td></tr>
+<tr><td>Berry（絕緣銅線）</td><td colspan="2">未取得（依回收率計價：THHN 約75–85%、Romex 約60–68%）</td></tr></table>
+<p><b>精廢價差：</b>以No.1中值約$5.09/lb對COMEX $6.54/lb，價差約$1.45/lb（約$3,200/噸，折價約22%）。此為區間中值粗估，且廢銅為美國收購價、與LME基準不同，僅供方向參考。</p>
+<p><b>TC/RC：</b>Platts 7/9評估 CIF中國 TC -$132/噸、RC -13.2¢/lb，創紀錄低位；預期Q3持續受壓（中國新增冶煉產能搶料）。今日未取得更新值。另據報導，中國「廢銅開票瓶頸」與VAT限制使400–800kt未進入正規市場（1–7月），支撐精煉廠對廢料需求。</p>
+</div>
 
-<div class="card" style="border-left:5px solid #e07b39;"><h2>🚢 航運運費</h2>
-<table><tr><th>航線（Drewry WCI 10/1）</th><th>$/40ft</th><th>週變動</th><th>艙位／備註</th></tr>
-<tr><td>上海→洛杉磯（北美西岸）</td><td>7,835</td><td>持平</td><td>承運人以空班控運力，艙位偏緊</td></tr>
-<tr><td>上海→紐約（北美東岸）</td><td>10,428</td><td>+1%</td><td>空班支撐</td></tr>
-<tr><td>上海→鹿特丹（北歐）</td><td>3,399</td><td>-2%</td><td>連跌12週，艙位寬鬆</td></tr>
-<tr><td>上海→熱那亞（地中海）</td><td>3,702</td><td>-3%</td><td>蘇伊士通行增加，運力寬鬆</td></tr>
-<tr><td>大陸→印度孟買／清奈</td><td colspan="3">本次未取得可靠週度數據，請向船公司詢價</td></tr></table>
-<p>WCI 綜合指數 $4,434（-1%）；SCFI 綜合 3,662 點（10/2）。國慶黃金週工廠停工壓低貨量，節後美中貿易休戰延長或帶動美線回升。</p>
-<p><b>荷姆茲／中東：</b>今日搜尋未找到10月最新通航數據；近期線索為美伊緊張升溫、油價上漲（Trading Economics 10/5），7月曾有美軍打擊、油輪遇襲與通行量降至兩個月低點。繞行與保險成本風險仍在。</p>
-<p class="note">來源：Drewry WCI（經 DCN 10/1）、oilpriceapi SCFI。</p></div>
+<div class="card" style="border-left:5px solid #e07b39;">
+<h2>🚢 航運運費</h2>
+<p class="note">Drewry WCI（2026-10-01，上海出發，$/40ft）與 SCFI（9/24）。SCFI 本次僅取得 9/24 數據。</p>
+<table><tr><th>航線</th><th>運費</th><th>週變化 / 艙位</th></tr>
+<tr><td>大陸→北美西岸（Shanghai–LA）</td><td>$7,835/FEU（SCFI 9/24：$7,463）</td><td>持平；船公司減少空班（13→10班），基本需求穩</td></tr>
+<tr><td>大陸→北美東岸（Shanghai–NY）</td><td>$10,428/FEU（SCFI：$10,497）</td><td>+1%；Drewry預期下週回落（黃金週停工）</td></tr>
+<tr><td>大陸→北歐（Shanghai–Rotterdam）</td><td>$3,399/FEU（SCFI歐洲：$2,313/TEU）</td><td>-2%；連續12週下跌，運力過剩（蘇伊士通行量年增68%）</td></tr>
+<tr><td>大陸→地中海（Shanghai–Genoa）</td><td>$3,702/FEU（SCFI：$3,065/TEU）</td><td>-3%；船公司試圖10月中下旬漲價，成功與否不確定</td></tr>
+<tr><td>大陸→印度（Nhava Sheva/Mundra）</td><td>約$4,000/40ft（單一貨代9月下旬報價，9/23 ETD）</td><td>印度艙位吃緊，超重櫃易被甩櫃，須先確認艙位；孟買/清奈即期週度指數未取得（Chennai 2026區間$850–3,400）</td></tr></table>
+<p>SCFI綜合指數9/24為3,686.62點。<b>荷姆茲/中東：</b>美伊衝突持續，高能源成本壓抑市場；SCFI波斯灣航線9/24升5.4%至$6,586/TEU，中東/紅海/次大陸航線運價偏高。複合指數WCI $4,434/FEU（-1%）。</p>
+</div>
 
-<div class="card" style="border-left:5px solid #00796b;"><h2>⛏ 供需動態</h2>
-<ul><li><b>智利 Centinela：</b>708名工會成員拒絕資方方案，政府強制調解中；若無協議最快10/13合法罷工。該礦2025年產銅240,400噸，且已受礦石品位下降與天候影響。</li>
-<li><b>巴拿馬：</b>政府提議重啟一座大型銅礦（細節待確認）。</li>
-<li><b>中國需求：</b>9月製造業回到擴張，但工業利潤增速由17.6%降至15.7%，需求信號偏弱。SHFE 庫存今日未取得。</li>
-<li>Codelco、Freeport、DRC 今日無查證到的新動態。</li></ul></div>
+<div class="card" style="border-left:5px solid #00796b;">
+<h2>⛏ 供需動態</h2>
+<ul>
+<li><b>Escondida：</b>BHP全球最大銅礦9/23因死亡事故全面停工，9/24起逐步復工；主管級員工95%投票授權罷工，仍有罷工風險。</li>
+<li><b>智利：</b>8月產量369.5kt（7月403.4kt），年減12.8%；中東局勢導致硫酸供應吃緊，影響濕法產出。</li>
+<li><b>秘魯：</b>礦業部長稱今年產量2.5–2.7Mt。</li>
+<li><b>中國：</b>9月製造業PMI 50.1；上海保稅區/社會庫存：上海社庫51.2kt（9/29，週增4.9kt），全國主流庫存7萬噸以上；SHFE庫存38,744噸創2024年1月來新低。上海現貨升水約¥1,000–1,280。</li>
+<li><b>美國庫存：</b>COMEX倉庫約70萬噸（去年同期約29萬噸），LME庫存本次未取得。</li>
+<li><b>2026年缺口預估：</b>摩根士丹利約600kt、高盛640kt（不含美國）、Wood Mackenzie約350kt、摩根大通330kt、ICSG 150kt。</li>
+</ul></div>
 
-<div class="card" style="border-left:5px solid #1565c0;"><h2>📊 政策與總體經濟</h2>
-<p>美元偏強、債券殖利率偏高、油價上升（美伊緊張的通膨疑慮）共同壓抑銅價。川普政府再度延後精煉銅關稅決定，先前關稅憂慮曾驅動貿易商把精煉銅囤進美國倉庫；延後使 COMEX/LME 價差與美國庫存預期持續不明。</p></div>
+<div class="card" style="border-left:5px solid #1565c0;">
+<h2>📊 政策與總體經濟</h2>
+<ul>
+<li>Fed 9/16升息25bp至3.75–4.00%（2023年來首次升息），預期年底前再升一次；美債10年期殖利率約5.3%。</li>
+<li>10/2美國就業數據疲弱，美元走軟，銅價小幅反彈。</li>
+<li>美國精煉銅關稅決議期限已過但無決定，COMEX–LME價差收窄至約$120/噸，關稅溢價消退。</li>
+<li>年初至今銅價約+30%；9月高點COMEX $15,100、LME $14,875。</li>
+</ul></div>
 
-<div class="card" style="border-left:5px solid #c62828;"><h2>🌍 地緣政治</h2>
-<p>美伊緊張升溫為主要風險：能源價格上行推升通膨與利率預期，對銅偏空；同時荷姆茲航運風險可能推高運費與保險。中國黃金週後與美中貿易休戰延長情況為本週觀察重點。</p></div>
+<div class="card" style="border-left:5px solid #c62828;">
+<h2>🌍 地緣政治</h2>
+<p>美伊衝突持續推升能源成本，中東局勢並使硫酸供應與印度/中東航線運價承壓（荷姆茲海峽通行情況本次未取得當日確認資料）。能源成本上升與升息預期是目前銅價主要利空；若衝突擴大，亦可能再度推高海運與保險成本。</p>
+</div>
 
-<div class="card" style="border-left:5px solid #1a5276;background:#eaf2fb;"><h2>📈 期貨多空倉位分析（CFTC COT / LME COTR）</h2>
-<p class="note">今日未能取得最新 COMEX OI、管理基金淨多與 LME 基金倉位；以下均價與歷史數字為日報模板的參考值，非今日查證數據，請勿作為交易依據。</p>
-<div style="margin:8px 0"><div class="bar" style="width:62%;background:#1e8449;">多頭倉量（示意）</div><div class="bar" style="width:38%;background:#c62828;">空頭倉量（示意）</div></div>
-<div class="cols">
-<div><div class="note">多頭平均成本</div><b>$12,850/噸</b><br>($5.83/磅)<br><span style="color:#1e8449">浮盈約 +12.7%</span></div>
-<div><div class="note">當前市價（COMEX）</div><b>≈$14,480/噸</b><br>($6.57/磅)</div>
-<div><div class="note">空頭平均成本</div><b>$13,820/噸</b><br>($6.27/磅)<br><span style="color:#c62828">浮虧約 -4.8%</span></div></div>
-<table><tr><th>歷史多頭峰值</th><th>淨多</th><th>之後走勢</th></tr><tr><td>2025年</td><td>+95K</td><td>跌 -18%</td></tr><tr><td>2024年</td><td>+87K</td><td>跌 -22%</td></tr></table>
-<p><b>信號：</b>⚠️ 價格距高點僅約4%且倉位數據缺失，請以「多頭可能擁擠、數據待確認」看待；等 CFTC 週五公布後再判斷。</p></div>
+<div class="card" style="border-left:5px solid #1a5276;background:#eaf2fb;">
+<h2>📈 期貨多空倉位分析（CFTC COT / LME COTR）</h2>
+<p class="note">COT資料日期：2026-09-29（metalcharts.org）。多空均價與歷史峰值為模板參考值，<b>非當日查證</b>。</p>
+<p><b>COMEX 未平倉量（OI）：</b>301.2K 口　｜　<b>管理基金淨多頭：</b>+78.1K 口　｜　<b>LME投資基金淨多頭：</b>未取得</p>
+<p style="margin-top:8px;font-size:0.8rem">管理基金淨多（對歷史峰值+95K）</p>
+<div class="bar" style="width:82%;background:#1a5276;">+78.1K（約為2025峰值之82%）</div>
+<div class="bar" style="width:100%;background:#7a9bb8;">2025峰值 +95K</div>
+<div class="three">
+<div><div class="note">多頭平均建倉成本（模板）</div><div style="font-size:1.2rem;font-weight:800;color:#1e8449;">$12,850</div><div class="note">$5.83/lb</div><div style="color:#1e8449;font-size:0.8rem;">浮盈約 +$1,412（+11.0%）</div></div>
+<div><div class="note">當前市價（LME 3M）</div><div style="font-size:1.2rem;font-weight:800;">$14,262.5</div><div class="note">10/2 收盤</div></div>
+<div><div class="note">空頭平均建倉成本（模板）</div><div style="font-size:1.2rem;font-weight:800;color:#c62828;">$13,820</div><div class="note">$6.27/lb</div><div style="color:#c62828;font-size:0.8rem;">浮虧約 -$442（-3.2%）</div></div>
+</div>
+<table><tr><th>歷史多頭峰值（模板參考）</th><th>淨多頭</th><th>後續</th></tr>
+<tr><td>2025年</td><td>+95K</td><td>後跌 -18%</td></tr>
+<tr><td>2024年</td><td>+87K</td><td>後跌 -22%</td></tr></table>
+<p>信號：<span class="badge">⚠ 多頭偏擁擠警示</span> 淨多頭+78.1K已接近過往回檔前的峰值區（87–95K），若Fed續升息或美元轉強，易引發多頭平倉；但上海庫存低與Escondida風險提供下方支撐。</p>
+</div>
 
-<div class="card" style="border-left:5px solid #6a1b9a;background:#f3e5f5;"><h2>💬 給 Peter 的一句話</h2>
-<ul><li><b>廢銅採購：</b>No.1 折價逾22%，現價偏有吸引力但本週罷工與關稅可能放大波動；建議分批、先鎖基本量，不要一次追高，並備一部分觀望到10/13。</li>
-<li><b>航線：</b>歐洲線運費下滑且艙位鬆，優先談歐洲方向；美線高檔（LA $7,835）若非急單，等黃金週後觀察。印度線請直接詢價。</li>
-<li><b>本週觀察：</b>10/13 Centinela 罷工是否成真；美伊局勢與油價；精煉銅關稅是否表態；週五 CFTC 倉位。</li></ul></div>
+<div class="card" style="border-left:5px solid #6a1b9a;background:#f3e5f5;">
+<h2>💬 給 Peter 的一句話</h2>
+<p><b>廢銅採購：</b>基金多頭擁擠、價格距高點僅回落約4%，不宜追高；建議採分批、短單報價，並留意No.1/Bare Bright價差，優先鎖定貨源穩定的批次。<b>航線：</b>歐洲線運價連12週下跌、運力寬鬆，可談較長期優惠；北美線高位且黃金週後可能回落，先觀望再訂；印度線艙位吃緊，務必先確認艙位再下單。<b>本週觀察：</b>10/8上海復市後的開盤與庫存變化、Escondida罷工談判、Fed官員談話。</p>
+</div>
 
-<footer>資料來源：Trading Economics 銅價；metalcharts.org 廢銅與COMEX；Drewry WCI（thedcn.com.au 10/1）；oilpriceapi.com SCFI；Mining Weekly《Centinela 罷工》2026-09-30；Rio Times 銅市場 9/25。未標明處為未取得之資料，非估算。</footer>
-</body></html>
+<div class="foot">資料來源：copper.com.au 週報（10/2）；Kitco/路透（2026-10-02）；SMM 早會摘要（9/29）；metalcharts.org（廢銅、COT、COMEX）；Drewry WCI（thedcn.com.au、sourcing.center，10/1）；DataPortuaria SCFI（9/24）；goodhopefreight.com（印度線）；S&P Global Platts TC/RC（7/9）；Rio Times（9/25）。<br>資料誠信：查不到的數字已標「未取得」；多空均價與歷史峰值為模板參考值，非當日查證；$/噸換算與精廢價差為本報告估算。非投資建議。</div>
+</div></body></html>
